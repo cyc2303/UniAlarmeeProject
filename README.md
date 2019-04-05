@@ -5,9 +5,12 @@ application for assignment manager
 
 # 최예찬  
 2017030373  
+1  
 
 # 한다진
 2016026080
+2  
 
 # 서윤희
 2017029770
+3  
