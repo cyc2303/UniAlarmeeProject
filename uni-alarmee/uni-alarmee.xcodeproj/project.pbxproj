@@ -14,6 +14,14 @@
 		957F9C10228FB15B001AC942 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 957F9C0E228FB15B001AC942 /* LaunchScreen.storyboard */; };
 		957F9C1B228FB15B001AC942 /* uni_alarmeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957F9C1A228FB15B001AC942 /* uni_alarmeeTests.swift */; };
 		957F9C26228FB15B001AC942 /* uni_alarmeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957F9C25228FB15B001AC942 /* uni_alarmeeUITests.swift */; };
+		9582E8692292702B00BD3F2A /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9582E8682292702B00BD3F2A /* DataCenter.swift */; };
+		9582E86B2292713A00BD3F2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9582E86A2292713900BD3F2A /* UIKit.framework */; };
+		9582E86D2292713F00BD3F2A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9582E86C2292713F00BD3F2A /* CoreGraphics.framework */; };
+		9582E86F2292714400BD3F2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9582E86E2292714300BD3F2A /* Foundation.framework */; };
+		9582E87B22927D8F00BD3F2A /* FSCalendar in Resources */ = {isa = PBXBuildFile; fileRef = 9582E87A22927D8E00BD3F2A /* FSCalendar */; };
+		9582E87C22927D9F00BD3F2A /* FSCalendar in Sources */ = {isa = PBXBuildFile; fileRef = 9582E87A22927D8E00BD3F2A /* FSCalendar */; };
+		9582E87E22927DB500BD3F2A /* OpenAPI_SDK_FW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9582E87D22927DB500BD3F2A /* OpenAPI_SDK_FW.framework */; };
+		9582E88022927E9100BD3F2A /* OAuthSample.m in Sources */ = {isa = PBXBuildFile; fileRef = 9582E87F22927E9100BD3F2A /* OAuthSample.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +55,14 @@
 		957F9C21228FB15B001AC942 /* uni-alarmeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "uni-alarmeeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		957F9C25228FB15B001AC942 /* uni_alarmeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uni_alarmeeUITests.swift; sourceTree = "<group>"; };
 		957F9C27228FB15B001AC942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9582E86022926B3300BD3F2A /* uni_alarmee-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "uni_alarmee-Bridging-Header.h"; sourceTree = "<group>"; };
+		9582E8682292702B00BD3F2A /* DataCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCenter.swift; sourceTree = "<group>"; };
+		9582E86A2292713900BD3F2A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9582E86C2292713F00BD3F2A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9582E86E2292714300BD3F2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9582E87A22927D8E00BD3F2A /* FSCalendar */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FSCalendar; sourceTree = "<group>"; };
+		9582E87D22927DB500BD3F2A /* OpenAPI_SDK_FW.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAPI_SDK_FW.framework; path = "uni-alarmee/OAuthSample/OpenAPI_SDK_FW.framework"; sourceTree = "<group>"; };
+		9582E87F22927E9100BD3F2A /* OAuthSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAuthSample.m; path = OAuthSample/OAuthSample.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9582E87E22927DB500BD3F2A /* OpenAPI_SDK_FW.framework in Frameworks */,
+				9582E86F2292714400BD3F2A /* Foundation.framework in Frameworks */,
+				9582E86D2292713F00BD3F2A /* CoreGraphics.framework in Frameworks */,
+				9582E86B2292713A00BD3F2A /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +101,7 @@
 				957F9C19228FB15B001AC942 /* uni-alarmeeTests */,
 				957F9C24228FB15B001AC942 /* uni-alarmeeUITests */,
 				957F9C03228FB15A001AC942 /* Products */,
+				9582E86122926B5600BD3F2A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,11 +118,15 @@
 		957F9C04228FB15A001AC942 /* uni-alarmee */ = {
 			isa = PBXGroup;
 			children = (
+				9582E87F22927E9100BD3F2A /* OAuthSample.m */,
+				9582E87A22927D8E00BD3F2A /* FSCalendar */,
+				9582E86022926B3300BD3F2A /* uni_alarmee-Bridging-Header.h */,
 				957F9C05228FB15A001AC942 /* AppDelegate.swift */,
 				957F9C07228FB15A001AC942 /* ViewController.swift */,
 				957F9C09228FB15A001AC942 /* Main.storyboard */,
 				957F9C0C228FB15B001AC942 /* Assets.xcassets */,
 				957F9C0E228FB15B001AC942 /* LaunchScreen.storyboard */,
+				9582E8682292702B00BD3F2A /* DataCenter.swift */,
 				957F9C11228FB15B001AC942 /* Info.plist */,
 			);
 			path = "uni-alarmee";
@@ -123,6 +148,17 @@
 				957F9C27228FB15B001AC942 /* Info.plist */,
 			);
 			path = "uni-alarmeeUITests";
+			sourceTree = "<group>";
+		};
+		9582E86122926B5600BD3F2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9582E87D22927DB500BD3F2A /* OpenAPI_SDK_FW.framework */,
+				9582E86E2292714300BD3F2A /* Foundation.framework */,
+				9582E86C2292713F00BD3F2A /* CoreGraphics.framework */,
+				9582E86A2292713900BD3F2A /* UIKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				957F9C10228FB15B001AC942 /* LaunchScreen.storyboard in Resources */,
+				9582E87B22927D8F00BD3F2A /* FSCalendar in Resources */,
 				957F9C0D228FB15B001AC942 /* Assets.xcassets in Resources */,
 				957F9C0B228FB15A001AC942 /* Main.storyboard in Resources */,
 			);
@@ -256,7 +293,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9582E88022927E9100BD3F2A /* OAuthSample.m in Sources */,
+				9582E87C22927D9F00BD3F2A /* FSCalendar in Sources */,
 				957F9C08228FB15A001AC942 /* ViewController.swift in Sources */,
+				9582E8692292702B00BD3F2A /* DataCenter.swift in Sources */,
 				957F9C06228FB15A001AC942 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +473,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/uni-alarmee/OAuthSample",
+				);
 				INFOPLIST_FILE = "uni-alarmee/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -440,6 +484,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "CSH.uni-alarmee";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "uni-alarmee/uni_alarmee-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -450,6 +497,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/uni-alarmee/OAuthSample",
+				);
 				INFOPLIST_FILE = "uni-alarmee/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -457,6 +508,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "CSH.uni-alarmee";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "uni-alarmee/uni_alarmee-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

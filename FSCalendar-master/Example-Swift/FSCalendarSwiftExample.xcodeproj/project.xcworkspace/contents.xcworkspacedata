@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/wenchaoding/Developer/Xcode/FSCalendar/Example-Swift/FSCalendarSwiftExample.xcodeproj">
+      location = "group:../../OAuthSample">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

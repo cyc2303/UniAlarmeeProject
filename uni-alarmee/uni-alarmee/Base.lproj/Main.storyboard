@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c1Q-O2-SH5">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,9 +13,9 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="uni_alarmee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -19,6 +23,169 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1655" y="-434"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SAP-eO-2sM">
+            <objects>
+                <navigationController id="c1Q-O2-SH5" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tbw-WP-V09">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tK2-JG-ip7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-769" y="269"/>
+        </scene>
+        <!--Data Source-->
+        <scene sceneID="6zE-GP-Lud">
+            <objects>
+                <viewController title="FSCalendarView" id="UNg-9x-D1H" customClass="FSCalendarViewController" customModule="uni_alarmee" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QbC-pz-SLz"/>
+                        <viewControllerLayoutGuide type="bottom" id="obN-IL-dZO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hoi-nC-65E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fvf-AI-RNB" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="44" width="414" height="300"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="9nI-rW-kWM"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fakedSelectedDay">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="UNg-9x-D1H" id="87m-YL-UxX"/>
+                                    <outlet property="delegate" destination="UNg-9x-D1H" id="GAf-mf-0j2"/>
+                                </connections>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="snS-OP-J4s">
+                                <rect key="frame" x="0.0" y="360" width="414" height="502"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="TTS-hz-ik0" userLabel="Footer">
+                                    <rect key="frame" x="0.0" y="197.5" width="414" height="69"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h8D-BQ-Gu7">
+                                            <rect key="frame" x="104" y="19" width="51" height="31"/>
+                                        </switch>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animated" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWz-YA-Uxn">
+                                            <rect key="frame" x="14" y="9" width="73" height="51"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="h8D-BQ-Gu7" firstAttribute="leading" secondItem="mWz-YA-Uxn" secondAttribute="trailing" constant="17" id="8CB-Yy-hO8"/>
+                                        <constraint firstItem="mWz-YA-Uxn" firstAttribute="leading" secondItem="TTS-hz-ik0" secondAttribute="leading" constant="14" id="DRU-PB-dge"/>
+                                        <constraint firstItem="mWz-YA-Uxn" firstAttribute="top" secondItem="TTS-hz-ik0" secondAttribute="top" constant="9" id="DhU-vj-Pp1"/>
+                                        <constraint firstItem="h8D-BQ-Gu7" firstAttribute="centerY" secondItem="mWz-YA-Uxn" secondAttribute="centerY" id="GOt-yl-n5F"/>
+                                        <constraint firstItem="mWz-YA-Uxn" firstAttribute="centerY" secondItem="TTS-hz-ik0" secondAttribute="centerY" id="XUc-S2-qaA"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell_month" textLabel="PdP-BZ-J6V" style="IBUITableViewCellStyleDefault" id="co8-WT-QJK">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="co8-WT-QJK" id="Osr-l6-2Hc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="FSCalendarScopeMonth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PdP-BZ-J6V">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell_week" textLabel="8gy-07-hBW" style="IBUITableViewCellStyleDefault" id="KRj-Pu-kVp">
+                                        <rect key="frame" x="0.0" y="99.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KRj-Pu-kVp" id="c68-uL-bq4">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="FSCalendarScopeWeek" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8gy-07-hBW">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="cell" textLabel="yVE-Oa-Zei" imageView="p5v-ew-jbr" style="IBUITableViewCellStyleDefault" id="gCf-yR-sxV">
+                                        <rect key="frame" x="0.0" y="143.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gCf-yR-sxV" id="q0u-Z6-6IN">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Label. informations." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yVE-Oa-Zei">
+                                                    <rect key="frame" x="51" y="0.0" width="343" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="icon_cat" id="p5v-ew-jbr">
+                                                    <rect key="frame" x="20" y="13" width="16" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="UNg-9x-D1H" id="By6-3r-W41"/>
+                                    <outlet property="delegate" destination="UNg-9x-D1H" id="xgW-n6-SDv"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="obN-IL-dZO" firstAttribute="top" secondItem="snS-OP-J4s" secondAttribute="bottom" id="4XC-RG-TRL"/>
+                            <constraint firstItem="snS-OP-J4s" firstAttribute="leading" secondItem="Fvf-AI-RNB" secondAttribute="leading" id="4p1-iS-zFi"/>
+                            <constraint firstItem="Fvf-AI-RNB" firstAttribute="leading" secondItem="hoi-nC-65E" secondAttribute="leading" id="9FE-C1-uJ7"/>
+                            <constraint firstAttribute="trailing" secondItem="Fvf-AI-RNB" secondAttribute="trailing" id="JVg-NG-CnH"/>
+                            <constraint firstItem="snS-OP-J4s" firstAttribute="trailing" secondItem="Fvf-AI-RNB" secondAttribute="trailing" id="QTy-Rx-Ycm"/>
+                            <constraint firstItem="Fvf-AI-RNB" firstAttribute="top" secondItem="QbC-pz-SLz" secondAttribute="bottom" id="iVi-dN-dHo"/>
+                            <constraint firstItem="snS-OP-J4s" firstAttribute="top" secondItem="Fvf-AI-RNB" secondAttribute="bottom" constant="16" id="qvb-NM-8sY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="T1M-9f-PIQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="FSCalendar" id="Fbh-ve-YzV">
+                        <barButtonItem key="rightBarButtonItem" title="Toggle" id="qbE-kY-njD">
+                            <connections>
+                                <action selector="toggleClickedWithSender:" destination="UNg-9x-D1H" id="MZZ-4d-x7b"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="animationSwitch" destination="h8D-BQ-Gu7" id="X19-Yx-ZzW"/>
+                        <outlet property="calendar" destination="Fvf-AI-RNB" id="MXF-PJ-BeB"/>
+                        <outlet property="calendarHeightConstraint" destination="9nI-rW-kWM" id="7rg-oJ-2X5"/>
+                        <outlet property="tableView" destination="snS-OP-J4s" id="RGI-I9-45i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kBd-c1-u5Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="175" y="269"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_cat" width="16" height="16"/>
+    </resources>
 </document>

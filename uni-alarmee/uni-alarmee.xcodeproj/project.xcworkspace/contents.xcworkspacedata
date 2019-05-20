@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:uni-alarmee.xcodeproj">
+      location = "group:../uni-alarmee/FSCalendar">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

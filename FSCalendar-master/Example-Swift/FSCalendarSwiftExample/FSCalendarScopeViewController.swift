@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import OpenAPI_SDK_FW
 
 class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FSCalendarDataSource, FSCalendarDelegate, UIGestureRecognizerDelegate {
     
@@ -29,6 +30,8 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
         panGesture.maximumNumberOfTouches = 2
         return panGesture
     }()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,7 +62,7 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
         
         var newTodo3:Todo = Todo(title: "성주놀리기", detail:"우냐?", type: .Normal)
         myManager.AddTodo(newDate: cshtoday, newTodo: newTodo3)
-
+        
         
         
 

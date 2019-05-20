@@ -1,0 +1,6 @@
+framework module OpenAPI_SDK_FW {
+  umbrella header "OpenAPI_SDK_FW.h"
+
+  export *
+  module * { export * }
+}
