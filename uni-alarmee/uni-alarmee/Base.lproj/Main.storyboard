@@ -41,7 +41,7 @@
         <!--Data Source-->
         <scene sceneID="6zE-GP-Lud">
             <objects>
-                <viewController title="FSCalendarView" id="UNg-9x-D1H" customClass="FSCalendarViewController" customModule="uni_alarmee" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="FSCalendarView" id="UNg-9x-D1H" customClass="FSCalendarScopeViewController" customModule="uni_alarmee" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QbC-pz-SLz"/>
                         <viewControllerLayoutGuide type="bottom" id="obN-IL-dZO"/>

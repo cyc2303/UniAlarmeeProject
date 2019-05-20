@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import OpenAPI_SDK_FW
 
-class FSCalendarViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FSCalendarDataSource, FSCalendarDelegate, UIGestureRecognizerDelegate {
+class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FSCalendarDataSource, FSCalendarDelegate, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var calendar: FSCalendar!
@@ -28,7 +29,7 @@ class FSCalendarViewController: UIViewController, UITableViewDataSource, UITable
         panGesture.minimumNumberOfTouches = 1
         panGesture.maximumNumberOfTouches = 2
         return panGesture
-        }()
+    }()
     
     
     
@@ -64,7 +65,7 @@ class FSCalendarViewController: UIViewController, UITableViewDataSource, UITable
         
         
         
-        
+
     }
     
     deinit {
@@ -100,7 +101,7 @@ class FSCalendarViewController: UIViewController, UITableViewDataSource, UITable
             calendar.setCurrentPage(date, animated: true)
         }
     }
-    
+
     func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
         print("\(self.dateFormatter.string(from: calendar.currentPage))")
     }
@@ -132,15 +133,15 @@ class FSCalendarViewController: UIViewController, UITableViewDataSource, UITable
             return cell
         }
         /*
-         if indexPath.section == 0 {
-         let identifier = ["cell_month", "cell_week"][indexPath.row]
-         let cell = tableView.dequeueReusableCell(withIdentifier: identifier)!
-         return cell
-         } else {
-         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-         return cell
-         }
-         */
+        if indexPath.section == 0 {
+            let identifier = ["cell_month", "cell_week"][indexPath.row]
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier)!
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+            return cell
+        }
+        */
     }
     
     
