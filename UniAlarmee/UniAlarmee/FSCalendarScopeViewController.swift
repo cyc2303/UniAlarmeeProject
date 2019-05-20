@@ -168,5 +168,12 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
             self.calendar.setScope(.month, animated: self.animationSwitch.isOn)
         }
     }
-    
+    @IBAction func addWork(sender: AnyObject) {
+        var cshtoday:CSHDate = CSHDate(y: 2019, m: 5, d: 5, wd: 0)
+        var myManager:PlannerManager = PlannerManager.sharedInstance
+        var myAlarm:AlarmManager = AlarmManager.sharedInstance
+        var newTodo:Todo = Todo(title: "Soybean souce", detail: "hot souce", type: .Assignment)
+        
+        myManager.AddTodo(newDate: cshtoday, newTodo: newTodo)
+    }
 }
