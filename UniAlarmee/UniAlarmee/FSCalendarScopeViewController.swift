@@ -14,7 +14,6 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var animationSwitch: UISwitch!
-    
     @IBOutlet weak var calendarHeightConstraint: NSLayoutConstraint!
     
     fileprivate lazy var dateFormatter: DateFormatter = {
@@ -168,6 +167,7 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
             self.calendar.setScope(.month, animated: self.animationSwitch.isOn)
         }
     }
+
     @IBAction func addWork(sender: AnyObject) {
         var cshtoday:CSHDate = CSHDate(y: 2019, m: 5, d: 5, wd: 0)
         var myManager:PlannerManager = PlannerManager.sharedInstance
@@ -175,5 +175,6 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
         var newTodo:Todo = Todo(title: "Soybean souce", detail: "hot souce", type: .Assignment)
         
         myManager.AddTodo(newDate: cshtoday, newTodo: newTodo)
+        print("add")
     }
 }
