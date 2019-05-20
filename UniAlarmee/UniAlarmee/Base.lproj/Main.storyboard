@@ -71,11 +71,19 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yb4-vA-bh6">
-                                            <rect key="frame" x="314" y="-1.5" width="46" height="61"/>
+                                            <rect key="frame" x="306" y="-1.5" width="62" height="61"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button"/>
+                                            <state key="normal" title="AddTodo"/>
                                             <connections>
                                                 <action selector="addWorkWithSender:" destination="Z04-2e-kZ7" eventType="touchUpInside" id="Ctf-Jk-1Jt"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMR-VN-CVU">
+                                            <rect key="frame" x="210" y="19" width="52" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="APITest"/>
+                                            <connections>
+                                                <action selector="testAPI:" destination="Z04-2e-kZ7" eventType="touchUpInside" id="XaZ-9Q-4S7"/>
                                             </connections>
                                         </button>
                                     </subviews>
