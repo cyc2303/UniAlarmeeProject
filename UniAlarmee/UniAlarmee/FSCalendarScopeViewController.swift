@@ -176,6 +176,7 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
         
         myManager.AddTodo(newDate: cshtoday, newTodo: newTodo)
         print("add")
+        tableView.reloadData()
     }
     @IBAction func testAPI(_ sender: Any) {
         print("result")
