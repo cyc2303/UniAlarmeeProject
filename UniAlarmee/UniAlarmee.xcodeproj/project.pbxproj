@@ -1,0 +1,739 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9582E90C22928D7A00BD3F2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9582E90B22928D7A00BD3F2A /* AppDelegate.swift */; };
+		9582E90E22928D7A00BD3F2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9582E90D22928D7A00BD3F2A /* ViewController.swift */; };
+		9582E91122928D7A00BD3F2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9582E90F22928D7A00BD3F2A /* Main.storyboard */; };
+		9582E91322928D7B00BD3F2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9582E91222928D7B00BD3F2A /* Assets.xcassets */; };
+		9582E91622928D7B00BD3F2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9582E91422928D7B00BD3F2A /* LaunchScreen.storyboard */; };
+		9582E92122928D7B00BD3F2A /* UniAlarmeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9582E92022928D7B00BD3F2A /* UniAlarmeeTests.swift */; };
+		9582E92C22928D7B00BD3F2A /* UniAlarmeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9582E92B22928D7B00BD3F2A /* UniAlarmeeUITests.swift */; };
+		9582E95F22928DCE00BD3F2A /* FSCalendarCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9582E93B22928DCE00BD3F2A /* FSCalendarCollectionView.m */; };
+		9582E96022928DCE00BD3F2A /* FSCalendarDelegationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9582E93E22928DCE00BD3F2A /* FSCalendarDelegationProxy.m */; };
+		9582E96122928DCE00BD3F2A /* FSCalendarDelegationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9582E94022928DCE00BD3F2A /* FSCalendarDelegationFactory.m */; };
+		9582E96222928DCE00BD3F2A /* FSCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9582E94722928DCE00BD3F2A /* FSCalendarCell.m */; };
+		9582E96322928DCE00BD3F2A /* FSCalendarStickyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9582E94822928DCE00BD3F2A /* FSCalendarStickyHeader.m */; };
+		9582E96422928DCE00BD3F2A /* FSCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9582E94922928DCE00BD3F2A /* FSCalendar.m */; };
+		9582E96522928DCE00BD3F2A /* FSCalendarCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9582E94A22928DCE00BD3F2A /* FSCalendarCollectionViewLayout.m */; };
+		9582E96622928DCE00BD3F2A /* FSCalendarWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9582E94B22928DCE00BD3F2A /* FSCalendarWeekdayView.m */; };
+		9582E96722928DCE00BD3F2A /* FSCalendarSeparatorDecorationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9582E94E22928DCE00BD3F2A /* FSCalendarSeparatorDecorationView.m */; };
+		9582E96822928DCE00BD3F2A /* FSCalendarExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9582E95022928DCE00BD3F2A /* FSCalendarExtensions.m */; };
+		9582E96922928DCE00BD3F2A /* FSCalendarConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9582E95222928DCE00BD3F2A /* FSCalendarConstants.m */; };
+		9582E96A22928DCE00BD3F2A /* FSCalendarCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9582E95322928DCE00BD3F2A /* FSCalendarCalculator.m */; };
+		9582E96B22928DCE00BD3F2A /* FSCalendarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9582E95422928DCE00BD3F2A /* FSCalendarHeaderView.m */; };
+		9582E96C22928DCE00BD3F2A /* FSCalendarTransitionCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9582E95822928DCE00BD3F2A /* FSCalendarTransitionCoordinator.m */; };
+		9582E96E22928DCE00BD3F2A /* FSCalendarAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 9582E95A22928DCE00BD3F2A /* FSCalendarAppearance.m */; };
+		9582E96F22928DCE00BD3F2A /* OAuthSample.m in Sources */ = {isa = PBXBuildFile; fileRef = 9582E95C22928DCE00BD3F2A /* OAuthSample.m */; };
+		9582E97022928DCE00BD3F2A /* OpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9582E95D22928DCE00BD3F2A /* OpenAPI.framework */; };
+		9582E97122928DCE00BD3F2A /* OpenAPI_SDK_FW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9582E95E22928DCE00BD3F2A /* OpenAPI_SDK_FW.framework */; };
+		9582E97522928FCB00BD3F2A /* FSCalendarScopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9582E97422928FCB00BD3F2A /* FSCalendarScopeViewController.swift */; };
+		9582E97722928FFD00BD3F2A /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9582E97622928FFD00BD3F2A /* DataCenter.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9582E91D22928D7B00BD3F2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9582E90022928D7900BD3F2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9582E90722928D7A00BD3F2A;
+			remoteInfo = UniAlarmee;
+		};
+		9582E92822928D7B00BD3F2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9582E90022928D7900BD3F2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9582E90722928D7A00BD3F2A;
+			remoteInfo = UniAlarmee;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9582E90822928D7A00BD3F2A /* UniAlarmee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniAlarmee.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9582E90B22928D7A00BD3F2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9582E90D22928D7A00BD3F2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9582E91022928D7A00BD3F2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9582E91222928D7B00BD3F2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9582E91522928D7B00BD3F2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9582E91722928D7B00BD3F2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9582E91C22928D7B00BD3F2A /* UniAlarmeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UniAlarmeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9582E92022928D7B00BD3F2A /* UniAlarmeeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniAlarmeeTests.swift; sourceTree = "<group>"; };
+		9582E92222928D7B00BD3F2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9582E92722928D7B00BD3F2A /* UniAlarmeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UniAlarmeeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9582E92B22928D7B00BD3F2A /* UniAlarmeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniAlarmeeUITests.swift; sourceTree = "<group>"; };
+		9582E92D22928D7B00BD3F2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9582E93B22928DCE00BD3F2A /* FSCalendarCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCollectionView.m; sourceTree = "<group>"; };
+		9582E93C22928DCE00BD3F2A /* FSCalendarWeekdayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarWeekdayView.h; sourceTree = "<group>"; };
+		9582E93D22928DCE00BD3F2A /* FSCalendarCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarCollectionViewLayout.h; sourceTree = "<group>"; };
+		9582E93E22928DCE00BD3F2A /* FSCalendarDelegationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarDelegationProxy.m; sourceTree = "<group>"; };
+		9582E93F22928DCE00BD3F2A /* FSCalendarExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarExtensions.h; sourceTree = "<group>"; };
+		9582E94022928DCE00BD3F2A /* FSCalendarDelegationFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarDelegationFactory.m; sourceTree = "<group>"; };
+		9582E94122928DCE00BD3F2A /* FSCalendarSeparatorDecorationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarSeparatorDecorationView.h; sourceTree = "<group>"; };
+		9582E94222928DCE00BD3F2A /* FSCalendarCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarCalculator.h; sourceTree = "<group>"; };
+		9582E94322928DCE00BD3F2A /* FSCalendarHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarHeaderView.h; sourceTree = "<group>"; };
+		9582E94422928DCE00BD3F2A /* FSCalendarConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarConstants.h; sourceTree = "<group>"; };
+		9582E94522928DCE00BD3F2A /* FSCalendarAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarAppearance.h; sourceTree = "<group>"; };
+		9582E94622928DCE00BD3F2A /* FSCalendarTransitionCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarTransitionCoordinator.h; sourceTree = "<group>"; };
+		9582E94722928DCE00BD3F2A /* FSCalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCell.m; sourceTree = "<group>"; };
+		9582E94822928DCE00BD3F2A /* FSCalendarStickyHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarStickyHeader.m; sourceTree = "<group>"; };
+		9582E94922928DCE00BD3F2A /* FSCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendar.m; sourceTree = "<group>"; };
+		9582E94A22928DCE00BD3F2A /* FSCalendarCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCollectionViewLayout.m; sourceTree = "<group>"; };
+		9582E94B22928DCE00BD3F2A /* FSCalendarWeekdayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarWeekdayView.m; sourceTree = "<group>"; };
+		9582E94C22928DCE00BD3F2A /* FSCalendarCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarCollectionView.h; sourceTree = "<group>"; };
+		9582E94D22928DCE00BD3F2A /* FSCalendarDynamicHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarDynamicHeader.h; sourceTree = "<group>"; };
+		9582E94E22928DCE00BD3F2A /* FSCalendarSeparatorDecorationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarSeparatorDecorationView.m; sourceTree = "<group>"; };
+		9582E94F22928DCE00BD3F2A /* FSCalendarDelegationFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarDelegationFactory.h; sourceTree = "<group>"; };
+		9582E95022928DCE00BD3F2A /* FSCalendarExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarExtensions.m; sourceTree = "<group>"; };
+		9582E95122928DCE00BD3F2A /* FSCalendarDelegationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarDelegationProxy.h; sourceTree = "<group>"; };
+		9582E95222928DCE00BD3F2A /* FSCalendarConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarConstants.m; sourceTree = "<group>"; };
+		9582E95322928DCE00BD3F2A /* FSCalendarCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCalculator.m; sourceTree = "<group>"; };
+		9582E95422928DCE00BD3F2A /* FSCalendarHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarHeaderView.m; sourceTree = "<group>"; };
+		9582E95522928DCE00BD3F2A /* FSCalendarStickyHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarStickyHeader.h; sourceTree = "<group>"; };
+		9582E95622928DCE00BD3F2A /* FSCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendar.h; sourceTree = "<group>"; };
+		9582E95722928DCE00BD3F2A /* FSCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarCell.h; sourceTree = "<group>"; };
+		9582E95822928DCE00BD3F2A /* FSCalendarTransitionCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarTransitionCoordinator.m; sourceTree = "<group>"; };
+		9582E95922928DCE00BD3F2A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9582E95A22928DCE00BD3F2A /* FSCalendarAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarAppearance.m; sourceTree = "<group>"; };
+		9582E95C22928DCE00BD3F2A /* OAuthSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthSample.m; sourceTree = "<group>"; };
+		9582E95D22928DCE00BD3F2A /* OpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenAPI.framework; sourceTree = "<group>"; };
+		9582E95E22928DCE00BD3F2A /* OpenAPI_SDK_FW.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenAPI_SDK_FW.framework; sourceTree = "<group>"; };
+		9582E97322928E8300BD3F2A /* UniAlarmee-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UniAlarmee-Bridging-Header.h"; sourceTree = "<group>"; };
+		9582E97422928FCB00BD3F2A /* FSCalendarScopeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSCalendarScopeViewController.swift; sourceTree = "<group>"; };
+		9582E97622928FFD00BD3F2A /* DataCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCenter.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9582E90522928D7A00BD3F2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9582E97022928DCE00BD3F2A /* OpenAPI.framework in Frameworks */,
+				9582E97122928DCE00BD3F2A /* OpenAPI_SDK_FW.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9582E91922928D7B00BD3F2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9582E92422928D7B00BD3F2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9582E8FF22928D7900BD3F2A = {
+			isa = PBXGroup;
+			children = (
+				9582E97322928E8300BD3F2A /* UniAlarmee-Bridging-Header.h */,
+				9582E93922928DCE00BD3F2A /* Library */,
+				9582E90A22928D7A00BD3F2A /* UniAlarmee */,
+				9582E91F22928D7B00BD3F2A /* UniAlarmeeTests */,
+				9582E92A22928D7B00BD3F2A /* UniAlarmeeUITests */,
+				9582E90922928D7A00BD3F2A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9582E90922928D7A00BD3F2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9582E90822928D7A00BD3F2A /* UniAlarmee.app */,
+				9582E91C22928D7B00BD3F2A /* UniAlarmeeTests.xctest */,
+				9582E92722928D7B00BD3F2A /* UniAlarmeeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9582E90A22928D7A00BD3F2A /* UniAlarmee */ = {
+			isa = PBXGroup;
+			children = (
+				9582E90B22928D7A00BD3F2A /* AppDelegate.swift */,
+				9582E90D22928D7A00BD3F2A /* ViewController.swift */,
+				9582E97422928FCB00BD3F2A /* FSCalendarScopeViewController.swift */,
+				9582E90F22928D7A00BD3F2A /* Main.storyboard */,
+				9582E91222928D7B00BD3F2A /* Assets.xcassets */,
+				9582E91422928D7B00BD3F2A /* LaunchScreen.storyboard */,
+				9582E97622928FFD00BD3F2A /* DataCenter.swift */,
+				9582E91722928D7B00BD3F2A /* Info.plist */,
+			);
+			path = UniAlarmee;
+			sourceTree = "<group>";
+		};
+		9582E91F22928D7B00BD3F2A /* UniAlarmeeTests */ = {
+			isa = PBXGroup;
+			children = (
+				9582E92022928D7B00BD3F2A /* UniAlarmeeTests.swift */,
+				9582E92222928D7B00BD3F2A /* Info.plist */,
+			);
+			path = UniAlarmeeTests;
+			sourceTree = "<group>";
+		};
+		9582E92A22928D7B00BD3F2A /* UniAlarmeeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9582E92B22928D7B00BD3F2A /* UniAlarmeeUITests.swift */,
+				9582E92D22928D7B00BD3F2A /* Info.plist */,
+			);
+			path = UniAlarmeeUITests;
+			sourceTree = "<group>";
+		};
+		9582E93922928DCE00BD3F2A /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				9582E93A22928DCE00BD3F2A /* FSCalendar */,
+				9582E95B22928DCE00BD3F2A /* OAuthSample */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		9582E93A22928DCE00BD3F2A /* FSCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				9582E93B22928DCE00BD3F2A /* FSCalendarCollectionView.m */,
+				9582E93C22928DCE00BD3F2A /* FSCalendarWeekdayView.h */,
+				9582E93D22928DCE00BD3F2A /* FSCalendarCollectionViewLayout.h */,
+				9582E93E22928DCE00BD3F2A /* FSCalendarDelegationProxy.m */,
+				9582E93F22928DCE00BD3F2A /* FSCalendarExtensions.h */,
+				9582E94022928DCE00BD3F2A /* FSCalendarDelegationFactory.m */,
+				9582E94122928DCE00BD3F2A /* FSCalendarSeparatorDecorationView.h */,
+				9582E94222928DCE00BD3F2A /* FSCalendarCalculator.h */,
+				9582E94322928DCE00BD3F2A /* FSCalendarHeaderView.h */,
+				9582E94422928DCE00BD3F2A /* FSCalendarConstants.h */,
+				9582E94522928DCE00BD3F2A /* FSCalendarAppearance.h */,
+				9582E94622928DCE00BD3F2A /* FSCalendarTransitionCoordinator.h */,
+				9582E94722928DCE00BD3F2A /* FSCalendarCell.m */,
+				9582E94822928DCE00BD3F2A /* FSCalendarStickyHeader.m */,
+				9582E94922928DCE00BD3F2A /* FSCalendar.m */,
+				9582E94A22928DCE00BD3F2A /* FSCalendarCollectionViewLayout.m */,
+				9582E94B22928DCE00BD3F2A /* FSCalendarWeekdayView.m */,
+				9582E94C22928DCE00BD3F2A /* FSCalendarCollectionView.h */,
+				9582E94D22928DCE00BD3F2A /* FSCalendarDynamicHeader.h */,
+				9582E94E22928DCE00BD3F2A /* FSCalendarSeparatorDecorationView.m */,
+				9582E94F22928DCE00BD3F2A /* FSCalendarDelegationFactory.h */,
+				9582E95022928DCE00BD3F2A /* FSCalendarExtensions.m */,
+				9582E95122928DCE00BD3F2A /* FSCalendarDelegationProxy.h */,
+				9582E95222928DCE00BD3F2A /* FSCalendarConstants.m */,
+				9582E95322928DCE00BD3F2A /* FSCalendarCalculator.m */,
+				9582E95422928DCE00BD3F2A /* FSCalendarHeaderView.m */,
+				9582E95522928DCE00BD3F2A /* FSCalendarStickyHeader.h */,
+				9582E95622928DCE00BD3F2A /* FSCalendar.h */,
+				9582E95722928DCE00BD3F2A /* FSCalendarCell.h */,
+				9582E95822928DCE00BD3F2A /* FSCalendarTransitionCoordinator.m */,
+				9582E95922928DCE00BD3F2A /* Info.plist */,
+				9582E95A22928DCE00BD3F2A /* FSCalendarAppearance.m */,
+			);
+			path = FSCalendar;
+			sourceTree = "<group>";
+		};
+		9582E95B22928DCE00BD3F2A /* OAuthSample */ = {
+			isa = PBXGroup;
+			children = (
+				9582E95C22928DCE00BD3F2A /* OAuthSample.m */,
+				9582E95D22928DCE00BD3F2A /* OpenAPI.framework */,
+				9582E95E22928DCE00BD3F2A /* OpenAPI_SDK_FW.framework */,
+			);
+			path = OAuthSample;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9582E90722928D7A00BD3F2A /* UniAlarmee */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9582E93022928D7B00BD3F2A /* Build configuration list for PBXNativeTarget "UniAlarmee" */;
+			buildPhases = (
+				9582E90422928D7A00BD3F2A /* Sources */,
+				9582E90522928D7A00BD3F2A /* Frameworks */,
+				9582E90622928D7A00BD3F2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UniAlarmee;
+			productName = UniAlarmee;
+			productReference = 9582E90822928D7A00BD3F2A /* UniAlarmee.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9582E91B22928D7B00BD3F2A /* UniAlarmeeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9582E93322928D7B00BD3F2A /* Build configuration list for PBXNativeTarget "UniAlarmeeTests" */;
+			buildPhases = (
+				9582E91822928D7B00BD3F2A /* Sources */,
+				9582E91922928D7B00BD3F2A /* Frameworks */,
+				9582E91A22928D7B00BD3F2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9582E91E22928D7B00BD3F2A /* PBXTargetDependency */,
+			);
+			name = UniAlarmeeTests;
+			productName = UniAlarmeeTests;
+			productReference = 9582E91C22928D7B00BD3F2A /* UniAlarmeeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9582E92622928D7B00BD3F2A /* UniAlarmeeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9582E93622928D7B00BD3F2A /* Build configuration list for PBXNativeTarget "UniAlarmeeUITests" */;
+			buildPhases = (
+				9582E92322928D7B00BD3F2A /* Sources */,
+				9582E92422928D7B00BD3F2A /* Frameworks */,
+				9582E92522928D7B00BD3F2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9582E92922928D7B00BD3F2A /* PBXTargetDependency */,
+			);
+			name = UniAlarmeeUITests;
+			productName = UniAlarmeeUITests;
+			productReference = 9582E92722928D7B00BD3F2A /* UniAlarmeeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9582E90022928D7900BD3F2A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = CSH;
+				TargetAttributes = {
+					9582E90722928D7A00BD3F2A = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					9582E91B22928D7B00BD3F2A = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 9582E90722928D7A00BD3F2A;
+					};
+					9582E92622928D7B00BD3F2A = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 9582E90722928D7A00BD3F2A;
+					};
+				};
+			};
+			buildConfigurationList = 9582E90322928D7900BD3F2A /* Build configuration list for PBXProject "UniAlarmee" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9582E8FF22928D7900BD3F2A;
+			productRefGroup = 9582E90922928D7A00BD3F2A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9582E90722928D7A00BD3F2A /* UniAlarmee */,
+				9582E91B22928D7B00BD3F2A /* UniAlarmeeTests */,
+				9582E92622928D7B00BD3F2A /* UniAlarmeeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9582E90622928D7A00BD3F2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9582E91622928D7B00BD3F2A /* LaunchScreen.storyboard in Resources */,
+				9582E91322928D7B00BD3F2A /* Assets.xcassets in Resources */,
+				9582E91122928D7A00BD3F2A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9582E91A22928D7B00BD3F2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9582E92522928D7B00BD3F2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9582E90422928D7A00BD3F2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9582E96822928DCE00BD3F2A /* FSCalendarExtensions.m in Sources */,
+				9582E97522928FCB00BD3F2A /* FSCalendarScopeViewController.swift in Sources */,
+				9582E97722928FFD00BD3F2A /* DataCenter.swift in Sources */,
+				9582E96B22928DCE00BD3F2A /* FSCalendarHeaderView.m in Sources */,
+				9582E96322928DCE00BD3F2A /* FSCalendarStickyHeader.m in Sources */,
+				9582E96222928DCE00BD3F2A /* FSCalendarCell.m in Sources */,
+				9582E96722928DCE00BD3F2A /* FSCalendarSeparatorDecorationView.m in Sources */,
+				9582E96622928DCE00BD3F2A /* FSCalendarWeekdayView.m in Sources */,
+				9582E96922928DCE00BD3F2A /* FSCalendarConstants.m in Sources */,
+				9582E96A22928DCE00BD3F2A /* FSCalendarCalculator.m in Sources */,
+				9582E96422928DCE00BD3F2A /* FSCalendar.m in Sources */,
+				9582E96522928DCE00BD3F2A /* FSCalendarCollectionViewLayout.m in Sources */,
+				9582E96C22928DCE00BD3F2A /* FSCalendarTransitionCoordinator.m in Sources */,
+				9582E96F22928DCE00BD3F2A /* OAuthSample.m in Sources */,
+				9582E90E22928D7A00BD3F2A /* ViewController.swift in Sources */,
+				9582E96E22928DCE00BD3F2A /* FSCalendarAppearance.m in Sources */,
+				9582E95F22928DCE00BD3F2A /* FSCalendarCollectionView.m in Sources */,
+				9582E90C22928D7A00BD3F2A /* AppDelegate.swift in Sources */,
+				9582E96122928DCE00BD3F2A /* FSCalendarDelegationFactory.m in Sources */,
+				9582E96022928DCE00BD3F2A /* FSCalendarDelegationProxy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9582E91822928D7B00BD3F2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9582E92122928D7B00BD3F2A /* UniAlarmeeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9582E92322928D7B00BD3F2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9582E92C22928D7B00BD3F2A /* UniAlarmeeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9582E91E22928D7B00BD3F2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9582E90722928D7A00BD3F2A /* UniAlarmee */;
+			targetProxy = 9582E91D22928D7B00BD3F2A /* PBXContainerItemProxy */;
+		};
+		9582E92922928D7B00BD3F2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9582E90722928D7A00BD3F2A /* UniAlarmee */;
+			targetProxy = 9582E92822928D7B00BD3F2A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9582E90F22928D7A00BD3F2A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9582E91022928D7A00BD3F2A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9582E91422928D7B00BD3F2A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9582E91522928D7B00BD3F2A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9582E92E22928D7B00BD3F2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "UniAlarmee-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9582E92F22928D7B00BD3F2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "UniAlarmee-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9582E93122928D7B00BD3F2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/OAuthSample",
+				);
+				INFOPLIST_FILE = UniAlarmee/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CSH.UniAlarmee;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9582E93222928D7B00BD3F2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/OAuthSample",
+				);
+				INFOPLIST_FILE = UniAlarmee/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CSH.UniAlarmee;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9582E93422928D7B00BD3F2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = UniAlarmeeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CSH.UniAlarmeeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UniAlarmee.app/UniAlarmee";
+			};
+			name = Debug;
+		};
+		9582E93522928D7B00BD3F2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = UniAlarmeeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CSH.UniAlarmeeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UniAlarmee.app/UniAlarmee";
+			};
+			name = Release;
+		};
+		9582E93722928D7B00BD3F2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = UniAlarmeeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CSH.UniAlarmeeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = UniAlarmee;
+			};
+			name = Debug;
+		};
+		9582E93822928D7B00BD3F2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = UniAlarmeeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CSH.UniAlarmeeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = UniAlarmee;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9582E90322928D7900BD3F2A /* Build configuration list for PBXProject "UniAlarmee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9582E92E22928D7B00BD3F2A /* Debug */,
+				9582E92F22928D7B00BD3F2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9582E93022928D7B00BD3F2A /* Build configuration list for PBXNativeTarget "UniAlarmee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9582E93122928D7B00BD3F2A /* Debug */,
+				9582E93222928D7B00BD3F2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9582E93322928D7B00BD3F2A /* Build configuration list for PBXNativeTarget "UniAlarmeeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9582E93422928D7B00BD3F2A /* Debug */,
+				9582E93522928D7B00BD3F2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9582E93622928D7B00BD3F2A /* Build configuration list for PBXNativeTarget "UniAlarmeeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9582E93722928D7B00BD3F2A /* Debug */,
+				9582E93822928D7B00BD3F2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9582E90022928D7900BD3F2A /* Project object */;
+}
