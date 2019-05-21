@@ -16,7 +16,7 @@ class table: UIViewController,UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //tableView.reloadData()
+        //tableView.reloadData() 리로드데이터 함수를 어디에 써야할지 모르겠어여
         let cell = tableView.dequeueReusableCell(withIdentifier: "asdf", for: indexPath)
         cell.textLabel?.text = String(indexPath.row)
         cell.detailTextLabel?.text = YunniArray[indexPath.row].id
