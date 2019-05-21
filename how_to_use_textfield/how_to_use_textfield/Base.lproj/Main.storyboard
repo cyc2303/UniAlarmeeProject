@@ -102,7 +102,6 @@
                                 <state key="normal" title="Set"/>
                                 <connections>
                                     <action selector="setID" destination="BYZ-38-t0r" eventType="touchUpInside" id="qrY-pu-yLP"/>
-                                    <segue destination="0qR-cW-wUM" kind="show" id="DFK-Qf-x1c"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -136,8 +135,4 @@
             <point key="canvasLocation" x="-739.13043478260875" y="100.44642857142857"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="XET-Mb-Dsv"/>
-        <segue reference="DFK-Qf-x1c"/>
-    </inferredMetricsTieBreakers>
 </document>
