@@ -10,23 +10,31 @@ import UIKit
 
 class table: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
+    //
+    
+    //
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return YunniArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //tableView.reloadData() 리로드데이터 함수를 어디에 써야할지 모르겠어여
         let cell = tableView.dequeueReusableCell(withIdentifier: "asdf", for: indexPath)
         cell.textLabel?.text = String(indexPath.row)
         cell.detailTextLabel?.text = YunniArray[indexPath.row].id
         //cell.imageView 텍스트라벨, 디테일텍스트라벨, 이미지뷰는 기본적으로 있지만 나타나지 않는 경우가 존재하기 때문에 이렇게 옵셔널로 지정이 되어 있음
         return cell
     }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        // 데이터 삭제
+        YunniArray.remove(at:indexPath.row) 
+        // 셀 삭제
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //tableView?.reloadData() 에러나서 이렇게 해놓음
         // Do any additional setup after loading the view.
     }
     
