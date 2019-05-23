@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBAction func setID() {
         YunniArray.append(Yunni(id:textid.text))
         print(YunniArray)
+        print("append!!!")
     }
     override func viewDidLoad() {
         super.viewDidLoad()

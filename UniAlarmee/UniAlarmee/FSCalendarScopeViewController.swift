@@ -112,6 +112,8 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(calendar.currentPage)
+        
         var myManager:PlannerManager = PlannerManager.sharedInstance
         let NOA:Int = myManager.planner[2019][5][5]!.NumOfAssignment()
         let NOT:Int = myManager.planner[2019][5][5]!.NumOfNormal()
@@ -168,15 +170,21 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
         }
     }
 
+    @IBAction func toBase(segue:UIStoryboardSegue){
+        tableView.reloadData()
+        print("asdfasdfasdfasdf")
+    }
+    
     @IBAction func addWork(sender: AnyObject) {
+        /*
         var cshtoday:CSHDate = CSHDate(y: 2019, m: 5, d: 5, wd: 0)
         var myManager:PlannerManager = PlannerManager.sharedInstance
         var myAlarm:AlarmManager = AlarmManager.sharedInstance
         var newTodo:Todo = Todo(title: "Soybean souce", detail: "hot souce", type: .Assignment)
-        
-        myManager.AddTodo(newDate: cshtoday, newTodo: newTodo)
-        print("add")
-        tableView.reloadData()
+        */
+        //myManager.AddTodo(newDate: cshtoday, newTodo: newTodo)
+        //print("add")
+        //tableView.reloadData()
     }
     @IBAction func testAPI(_ sender: Any) {
         print("result")
