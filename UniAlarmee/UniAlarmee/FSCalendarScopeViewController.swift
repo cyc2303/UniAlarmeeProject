@@ -99,6 +99,13 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
         if monthPosition == .next || monthPosition == .previous {
             calendar.setCurrentPage(date, animated: true)
         }
+        
+        let date_String =  selectedDates[0].components(separatedBy: "/")
+        let date_Int = date_String.map({Int($0)!})
+        let myManager:PlannerManager = PlannerManager.sharedInstance
+        myManager.RenewSelectedDate( selected_date: CSHDate(y: date_Int[0], m: date_Int[1], d: date_Int[2], wd: 0))
+        tableView.reloadData()
+        
     }
 
     func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
@@ -113,23 +120,31 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(calendar.currentPage)
+    
+        let myManager:PlannerManager = PlannerManager.sharedInstance
+        let selectedDate=myManager.selectedDate
         
-        var myManager:PlannerManager = PlannerManager.sharedInstance
-        let NOA:Int = myManager.planner[2019][5][5]!.NumOfAssignment()
-        let NOT:Int = myManager.planner[2019][5][5]!.NumOfNormal()
+        guard let oneDayPlanner = myManager.planner[selectedDate.year][selectedDate.month][selectedDate.day] else{
+            return [0,0][section]
+        }
+        
+        let NOA:Int = oneDayPlanner.NumOfAssignment()
+        let NOT:Int = oneDayPlanner.NumOfNormal()
         return [NOA, NOT][section]
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var myManager:PlannerManager = PlannerManager.sharedInstance
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        let selectedDate=myManager.selectedDate
+        let oneDayPlanner = myManager.planner[selectedDate.year][selectedDate.month][selectedDate.day]!
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
         if indexPath.section == 0 {
-            let tmpList = myManager.planner[2019][5][5]!.todoList.filter{$0.type.typeTitle == "Assignment"}
+            let tmpList = oneDayPlanner.todoList.filter{$0.type.typeTitle == "Assignment"}
             cell.textLabel!.text = tmpList[indexPath.row].todoTitle
             return cell
         } else {
-            let tmpList = myManager.planner[2019][5][5]!.todoList.filter{$0.type.typeTitle == "Normal"}
+            let tmpList = oneDayPlanner.todoList.filter{$0.type.typeTitle == "Normal"}
             cell.textLabel!.text = tmpList[indexPath.row].todoTitle
             return cell
         }

@@ -111,6 +111,7 @@ class PlannerManager{
     }()
     
     var todayDate:CSHDate = CSHDate(y: 1997, m: 4, d: 7, wd: 1)
+    var selectedDate:CSHDate = CSHDate(y: 1997, m: 4, d: 7, wd: 1)
     var planner:[[[OneDayPlanner?]]] = Array(repeating:Array(repeating:Array(repeating:nil, count:32),count:13),count:3000)
     
     private init(){
@@ -125,6 +126,10 @@ class PlannerManager{
     }
     func UpdateDate(){
         
+    }
+    
+    func RenewSelectedDate(selected_date:CSHDate){
+        self.selectedDate=selected_date
     }
     
     // functions for app
