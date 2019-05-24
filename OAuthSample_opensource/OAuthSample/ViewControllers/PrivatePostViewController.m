@@ -14,7 +14,7 @@
 
 @implementation PrivatePostViewController
 
-NSString *const API_POST_URL = @"/rs/exam/write";
+NSString *const API_POST_URL = @"https://learn.hanyang.ac.kr/";
 
 @synthesize tfName, tfPhone;
 @synthesize tvResponse;
