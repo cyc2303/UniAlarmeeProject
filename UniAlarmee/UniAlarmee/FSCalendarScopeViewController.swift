@@ -62,6 +62,10 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
         var newTodo3:Todo = Todo(title: "성주놀리기", detail:"우냐?", type: .Normal)
         myManager.AddTodo(newDate: cshtoday, newTodo: newTodo3)
         
+        let selectedDates = self.calendar.selectedDates.map({self.dateFormatter.string(from: $0)})
+        let date_String =  selectedDates[0].components(separatedBy: "/")
+        let date_Int = date_String.map({Int($0)!})
+        myManager.RenewSelectedDate( selected_date: CSHDate(y: date_Int[0], m: date_Int[1], d: date_Int[2], wd: 0))
         
         
 

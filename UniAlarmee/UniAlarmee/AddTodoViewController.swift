@@ -24,6 +24,10 @@ class AddTodoViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let myManager:PlannerManager = PlannerManager.sharedInstance
+        Date_year.text=String(myManager.selectedDate.year)
+        Date_month.text=String(myManager.selectedDate.month)
+        Date_day.text=String(myManager.selectedDate.day)
 
         // Do any additional setup after loading the view.
     }
