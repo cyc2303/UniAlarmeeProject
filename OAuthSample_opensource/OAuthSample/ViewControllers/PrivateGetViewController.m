@@ -8,13 +8,15 @@
 
 #import "PrivateGetViewController.h"
 
+
+
 @interface PrivateGetViewController ()
 - (void)initRequestBundle;
 @end
 
 @implementation PrivateGetViewController
 
-NSString *const API_PRIVATE_URL = @"/rs/exam/detail";
+NSString *const API_PRIVATE_URL = @"https://learn.hanyang.ac.kr/";
 
 @synthesize tvResponse;
 

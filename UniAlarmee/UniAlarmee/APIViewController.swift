@@ -21,19 +21,21 @@ class APIViewController: UIViewController {
         manager.saveOAuthInfo()
         let token = manager.oAuthInfo.accessToken
         let api:APIRequest = APIRequest.init()
-        let req_url: NSString = "https://learn.hanyang.ac.kr/learn/api/public/v1/courses/_9859_1/announcements"
+        let req_url: NSString = "https://learn.hanyang.ac.kr/learn/api/public/v1/courses/_9776_1/contents/_177603_1/children"
         let param: NSMutableDictionary = NSMutableDictionary.init()
         param.setValue(_ : "test", forKey: "한양과제알리미")
         let req: RequestBundle = RequestBundle.init()
         req.url = String(req_url)
         req.parameters = param as! [AnyHashable : Any]
+        req.httpMethod = eSmartHttpMethod.GET
         req.responseType = eSmartContentType.JSON
-        
+
         let error: NSError? = nil;
         
         do{
             let resp :ResponseMessage = try api.request(req)
-            test.text = resp.resultMessage
+                test.text = resp.resultMessage
+                print(resp.resultMessage)
         }
         catch{
             print(error.localizedDescription)
