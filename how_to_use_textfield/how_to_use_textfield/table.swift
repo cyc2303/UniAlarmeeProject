@@ -9,7 +9,6 @@
 import UIKit
 
 class table: UIViewController,UITableViewDelegate,UITableViewDataSource {
-    @IBOutlet weak var tableView: UITableView!
     //
     
     //
@@ -19,6 +18,7 @@ class table: UIViewController,UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "asdf", for: indexPath)
         cell.textLabel?.text = String(indexPath.row)
         cell.detailTextLabel?.text = YunniArray[indexPath.row].id
@@ -35,6 +35,7 @@ class table: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
     }
     
