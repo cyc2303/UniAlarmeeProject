@@ -14,6 +14,7 @@ class WebkitViewController: UIViewController, WKUIDelegate, WKNavigationDelegate
     @IBAction func Go(_ sender: Any) {
         let url = URL(string: text)
         let request = URLRequest(url: url!)
+        print(request)
         webView.load(request)
     }
     var webView: WKWebView!
@@ -48,6 +49,8 @@ class WebkitViewController: UIViewController, WKUIDelegate, WKNavigationDelegate
         alert.addAction(otherAction)
         
         self.present(alert, animated: true, completion: nil)
+        let getData = frame.request.url?.absoluteString
+        print(getData)
     }
     
     @available(iOS 8.0, *)
@@ -58,6 +61,8 @@ class WebkitViewController: UIViewController, WKUIDelegate, WKNavigationDelegate
         alert.addAction(cancelAction)
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
+        let getData = frame.request.url?.absoluteString
+        print(getData)
     }
     
     @available(iOS 8.0, *)
@@ -69,6 +74,7 @@ class WebkitViewController: UIViewController, WKUIDelegate, WKNavigationDelegate
         activityIndicator.hidesWhenStopped = true
         activityIndicator.startAnimating()
         self.view.addSubview(activityIndicator)
+        
     }
     
     @available(iOS 8.0, *)
