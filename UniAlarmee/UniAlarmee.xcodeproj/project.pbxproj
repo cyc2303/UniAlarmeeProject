@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		501E51897EDB5E7E70DEA4E9 /* Pods_UniAlarmeeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335662C517E06B77EDDF8B23 /* Pods_UniAlarmeeUITests.framework */; };
+		87830BA841FB84C2EA69D061 /* Pods_UniAlarmee_UniAlarmeeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8676198415266AC6B955611E /* Pods_UniAlarmee_UniAlarmeeTests.framework */; };
 		9582E90C22928D7A00BD3F2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9582E90B22928D7A00BD3F2A /* AppDelegate.swift */; };
 		9582E90E22928D7A00BD3F2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9582E90D22928D7A00BD3F2A /* ViewController.swift */; };
 		9582E91122928D7A00BD3F2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9582E90F22928D7A00BD3F2A /* Main.storyboard */; };
@@ -37,6 +39,7 @@
 		95BCE7B22296CBD8000B0690 /* AddTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCE7B12296CBD8000B0690 /* AddTodoViewController.swift */; };
 		AA1A6ECB2296F2DC00E0BD69 /* OpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA1A6ECA2296F2DC00E0BD69 /* OpenAPI.framework */; };
 		AA1A6ECD2296F53F00E0BD69 /* APIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1A6ECC2296F53F00E0BD69 /* APIViewController.swift */; };
+		FA8AB6EE19030A3129480C20 /* Pods_UniAlarmee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 473A5E84B4E92A8E9F5F47F1 /* Pods_UniAlarmee.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0790CEF517F0FAEC01D8B3AD /* Pods-UniAlarmee-UniAlarmeeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniAlarmee-UniAlarmeeTests.debug.xcconfig"; path = "Target Support Files/Pods-UniAlarmee-UniAlarmeeTests/Pods-UniAlarmee-UniAlarmeeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		335662C517E06B77EDDF8B23 /* Pods_UniAlarmeeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UniAlarmeeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		335E8E3D9DFFD9E4E5A5097A /* Pods-UniAlarmee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniAlarmee.release.xcconfig"; path = "Target Support Files/Pods-UniAlarmee/Pods-UniAlarmee.release.xcconfig"; sourceTree = "<group>"; };
+		3579B1E0E50BB2EDAEB85F96 /* Pods-UniAlarmeeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniAlarmeeUITests.release.xcconfig"; path = "Target Support Files/Pods-UniAlarmeeUITests/Pods-UniAlarmeeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		473A5E84B4E92A8E9F5F47F1 /* Pods_UniAlarmee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UniAlarmee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8676198415266AC6B955611E /* Pods_UniAlarmee_UniAlarmeeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UniAlarmee_UniAlarmeeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9582E90822928D7A00BD3F2A /* UniAlarmee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniAlarmee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9582E90B22928D7A00BD3F2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9582E90D22928D7A00BD3F2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +193,9 @@
 		AA1A6EC92296F2CE00E0BD69 /* Briging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Briging-Header.h"; sourceTree = "<group>"; };
 		AA1A6ECA2296F2DC00E0BD69 /* OpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenAPI.framework; sourceTree = "<group>"; };
 		AA1A6ECC2296F53F00E0BD69 /* APIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIViewController.swift; sourceTree = "<group>"; };
+		CF90D35CD2425CA0F8516849 /* Pods-UniAlarmee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniAlarmee.debug.xcconfig"; path = "Target Support Files/Pods-UniAlarmee/Pods-UniAlarmee.debug.xcconfig"; sourceTree = "<group>"; };
+		D216C155EF6BBB7733CA4521 /* Pods-UniAlarmee-UniAlarmeeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniAlarmee-UniAlarmeeTests.release.xcconfig"; path = "Target Support Files/Pods-UniAlarmee-UniAlarmeeTests/Pods-UniAlarmee-UniAlarmeeTests.release.xcconfig"; sourceTree = "<group>"; };
+		E4270A31805AC027983B3B75 /* Pods-UniAlarmeeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniAlarmeeUITests.debug.xcconfig"; path = "Target Support Files/Pods-UniAlarmeeUITests/Pods-UniAlarmeeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +206,7 @@
 				9582E97022928DCE00BD3F2A /* OpenAPI.framework in Frameworks */,
 				AA1A6ECB2296F2DC00E0BD69 /* OpenAPI.framework in Frameworks */,
 				9582E97122928DCE00BD3F2A /* OpenAPI_SDK_FW.framework in Frameworks */,
+				FA8AB6EE19030A3129480C20 /* Pods_UniAlarmee.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +214,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87830BA841FB84C2EA69D061 /* Pods_UniAlarmee_UniAlarmeeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,12 +222,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				501E51897EDB5E7E70DEA4E9 /* Pods_UniAlarmeeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AB72CAFDDDD339AD0F19171 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF90D35CD2425CA0F8516849 /* Pods-UniAlarmee.debug.xcconfig */,
+				335E8E3D9DFFD9E4E5A5097A /* Pods-UniAlarmee.release.xcconfig */,
+				0790CEF517F0FAEC01D8B3AD /* Pods-UniAlarmee-UniAlarmeeTests.debug.xcconfig */,
+				D216C155EF6BBB7733CA4521 /* Pods-UniAlarmee-UniAlarmeeTests.release.xcconfig */,
+				E4270A31805AC027983B3B75 /* Pods-UniAlarmeeUITests.debug.xcconfig */,
+				3579B1E0E50BB2EDAEB85F96 /* Pods-UniAlarmeeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9582E8FF22928D7900BD3F2A = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +253,7 @@
 				9582E92A22928D7B00BD3F2A /* UniAlarmeeUITests */,
 				9582E90922928D7A00BD3F2A /* Products */,
 				9582E9782292C83500BD3F2A /* Frameworks */,
+				3AB72CAFDDDD339AD0F19171 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -336,6 +366,9 @@
 			isa = PBXGroup;
 			children = (
 				9582E9792292C83600BD3F2A /* SnapKit-develop */,
+				473A5E84B4E92A8E9F5F47F1 /* Pods_UniAlarmee.framework */,
+				8676198415266AC6B955611E /* Pods_UniAlarmee_UniAlarmeeTests.framework */,
+				335662C517E06B77EDDF8B23 /* Pods_UniAlarmeeUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -478,6 +511,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9582E93022928D7B00BD3F2A /* Build configuration list for PBXNativeTarget "UniAlarmee" */;
 			buildPhases = (
+				F3D3DA723413AD627E7C0CA7 /* [CP] Check Pods Manifest.lock */,
 				9582E90422928D7A00BD3F2A /* Sources */,
 				9582E90522928D7A00BD3F2A /* Frameworks */,
 				9582E90622928D7A00BD3F2A /* Resources */,
@@ -495,9 +529,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9582E93322928D7B00BD3F2A /* Build configuration list for PBXNativeTarget "UniAlarmeeTests" */;
 			buildPhases = (
+				DF603960EE627C26BA3E2CBB /* [CP] Check Pods Manifest.lock */,
 				9582E91822928D7B00BD3F2A /* Sources */,
 				9582E91922928D7B00BD3F2A /* Frameworks */,
 				9582E91A22928D7B00BD3F2A /* Resources */,
+				186880EC73EA43EBE42EE116 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -513,6 +549,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9582E93622928D7B00BD3F2A /* Build configuration list for PBXNativeTarget "UniAlarmeeUITests" */;
 			buildPhases = (
+				AB242261053B1DD6C24C756C /* [CP] Check Pods Manifest.lock */,
 				9582E92322928D7B00BD3F2A /* Sources */,
 				9582E92422928D7B00BD3F2A /* Frameworks */,
 				9582E92522928D7B00BD3F2A /* Resources */,
@@ -619,6 +656,92 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		186880EC73EA43EBE42EE116 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UniAlarmee-UniAlarmeeTests/Pods-UniAlarmee-UniAlarmeeTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UniAlarmee-UniAlarmeeTests/Pods-UniAlarmee-UniAlarmeeTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UniAlarmee-UniAlarmeeTests/Pods-UniAlarmee-UniAlarmeeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB242261053B1DD6C24C756C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UniAlarmeeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF603960EE627C26BA3E2CBB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UniAlarmee-UniAlarmeeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3D3DA723413AD627E7C0CA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UniAlarmee-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9582E90422928D7A00BD3F2A /* Sources */ = {
@@ -831,6 +954,7 @@
 		};
 		9582E93122928D7B00BD3F2A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF90D35CD2425CA0F8516849 /* Pods-UniAlarmee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -854,6 +978,7 @@
 		};
 		9582E93222928D7B00BD3F2A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 335E8E3D9DFFD9E4E5A5097A /* Pods-UniAlarmee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -877,6 +1002,7 @@
 		};
 		9582E93422928D7B00BD3F2A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0790CEF517F0FAEC01D8B3AD /* Pods-UniAlarmee-UniAlarmeeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -897,6 +1023,7 @@
 		};
 		9582E93522928D7B00BD3F2A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D216C155EF6BBB7733CA4521 /* Pods-UniAlarmee-UniAlarmeeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -917,6 +1044,7 @@
 		};
 		9582E93722928D7B00BD3F2A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4270A31805AC027983B3B75 /* Pods-UniAlarmeeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -936,6 +1064,7 @@
 		};
 		9582E93822928D7B00BD3F2A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3579B1E0E50BB2EDAEB85F96 /* Pods-UniAlarmeeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

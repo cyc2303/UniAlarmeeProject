@@ -1,0 +1,6 @@
+framework module Pods_UniAlarmeeUITests {
+  umbrella header "Pods-UniAlarmeeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

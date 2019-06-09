@@ -8,25 +8,44 @@
 
 import UIKit
 import WebKit
-
-class WebkitViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
+import Alamofire
+class WebkitViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
+    
     var text: String = "https://learn.hanyang.ac.kr/learn/api/public/v1/courses/_9776_1/contents/_177603_1/children"
     @IBAction func Go(_ sender: Any) {
         let url = URL(string: text)
         let request = URLRequest(url: url!)
-        print(request)
+        //print(request)
+        Alamofire.request( "https://learn.hanyang.ac.kr/learn/api/public/v1/courses/_9776_1/contents/_177603_1/children").responseJSON { response in
+            debugPrint(response)
+            
+            if let json = response.result.value {
+                print("JSON: \(json)")
+            }
+            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                print("Data: \(utf8Text)") // original server data as UTF8 string
+            }
+        }
         webView.load(request)
+        
     }
     var webView: WKWebView!
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
     override func loadView() {
+        let webConfiguration = WKWebViewConfiguration()
+        let userScript = WKUserScript(source: "test()", injectionTime: .atDocumentEnd, forMainFrameOnly: true)
+        let contentController = WKUserContentController()
+        contentController.addUserScript(userScript)
+        webConfiguration.userContentController = contentController
         super.loadView()
         webView = WKWebView(frame: self.view.frame)
         webView.uiDelegate = self
         webView.navigationDelegate = self
         
+        
         self.view = self.webView!
+        
     }
     
     override func viewDidLoad() {
@@ -35,6 +54,20 @@ class WebkitViewController: UIViewController, WKUIDelegate, WKNavigationDelegate
         let myBlog = "http://learn.hanyang.ac.kr"
         let url = URL(string: myBlog)
         let request = URLRequest(url: url!)
+        
+
+        Alamofire.request( "https://learn.hanyang.ac.kr/learn/api/public/v1/courses/_9776_1/contents/_177603_1/children"
+            ).responseJSON { response in
+                debugPrint(response)
+                
+                if let json = response.result.value {
+                    print("JSON: \(json)")
+                }
+                if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                    print("Data: \(utf8Text)") // original server data as UTF8 string
+                }
+
+        }
         webView.load(request)
     }
     
@@ -49,8 +82,7 @@ class WebkitViewController: UIViewController, WKUIDelegate, WKNavigationDelegate
         alert.addAction(otherAction)
         
         self.present(alert, animated: true, completion: nil)
-        let getData = frame.request.url?.absoluteString
-        print(getData)
+        //print(message.localizedUppercase)
     }
     
     @available(iOS 8.0, *)
@@ -61,8 +93,7 @@ class WebkitViewController: UIViewController, WKUIDelegate, WKNavigationDelegate
         alert.addAction(cancelAction)
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
-        let getData = frame.request.url?.absoluteString
-        print(getData)
+     //print(message.localizedUppercase)
     }
     
     @available(iOS 8.0, *)
