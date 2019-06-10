@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -38,7 +38,7 @@
 		9582E97722928FFD00BD3F2A /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9582E97622928FFD00BD3F2A /* DataCenter.swift */; };
 		95BCE7B22296CBD8000B0690 /* AddTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCE7B12296CBD8000B0690 /* AddTodoViewController.swift */; };
 		AA1A6ECB2296F2DC00E0BD69 /* OpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA1A6ECA2296F2DC00E0BD69 /* OpenAPI.framework */; };
-		AA1A6ECD2296F53F00E0BD69 /* APIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1A6ECC2296F53F00E0BD69 /* APIViewController.swift */; };
+		AAEE59F822AE02A500F7561D /* WebkitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE59F722AE02A500F7561D /* WebkitViewController.swift */; };
 		FA8AB6EE19030A3129480C20 /* Pods_UniAlarmee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 473A5E84B4E92A8E9F5F47F1 /* Pods_UniAlarmee.framework */; };
 /* End PBXBuildFile section */
 
@@ -192,7 +192,7 @@
 		95BCE7B12296CBD8000B0690 /* AddTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewController.swift; sourceTree = "<group>"; };
 		AA1A6EC92296F2CE00E0BD69 /* Briging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Briging-Header.h"; sourceTree = "<group>"; };
 		AA1A6ECA2296F2DC00E0BD69 /* OpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenAPI.framework; sourceTree = "<group>"; };
-		AA1A6ECC2296F53F00E0BD69 /* APIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIViewController.swift; sourceTree = "<group>"; };
+		AAEE59F722AE02A500F7561D /* WebkitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebkitViewController.swift; sourceTree = "<group>"; };
 		CF90D35CD2425CA0F8516849 /* Pods-UniAlarmee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniAlarmee.debug.xcconfig"; path = "Target Support Files/Pods-UniAlarmee/Pods-UniAlarmee.debug.xcconfig"; sourceTree = "<group>"; };
 		D216C155EF6BBB7733CA4521 /* Pods-UniAlarmee-UniAlarmeeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniAlarmee-UniAlarmeeTests.release.xcconfig"; path = "Target Support Files/Pods-UniAlarmee-UniAlarmeeTests/Pods-UniAlarmee-UniAlarmeeTests.release.xcconfig"; sourceTree = "<group>"; };
 		E4270A31805AC027983B3B75 /* Pods-UniAlarmeeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniAlarmeeUITests.debug.xcconfig"; path = "Target Support Files/Pods-UniAlarmeeUITests/Pods-UniAlarmeeUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -239,7 +239,6 @@
 				E4270A31805AC027983B3B75 /* Pods-UniAlarmeeUITests.debug.xcconfig */,
 				3579B1E0E50BB2EDAEB85F96 /* Pods-UniAlarmeeUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -277,11 +276,11 @@
 				9582E97422928FCB00BD3F2A /* FSCalendarScopeViewController.swift */,
 				95BCE7B12296CBD8000B0690 /* AddTodoViewController.swift */,
 				9582E90F22928D7A00BD3F2A /* Main.storyboard */,
-				AA1A6ECC2296F53F00E0BD69 /* APIViewController.swift */,
 				9582E91222928D7B00BD3F2A /* Assets.xcassets */,
 				9582E91422928D7B00BD3F2A /* LaunchScreen.storyboard */,
 				9582E97622928FFD00BD3F2A /* DataCenter.swift */,
 				9582E91722928D7B00BD3F2A /* Info.plist */,
+				AAEE59F722AE02A500F7561D /* WebkitViewController.swift */,
 			);
 			path = UniAlarmee;
 			sourceTree = "<group>";
@@ -515,6 +514,7 @@
 				9582E90422928D7A00BD3F2A /* Sources */,
 				9582E90522928D7A00BD3F2A /* Frameworks */,
 				9582E90622928D7A00BD3F2A /* Resources */,
+				60A058B820891EEAB04B244E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -675,6 +675,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UniAlarmee-UniAlarmeeTests/Pods-UniAlarmee-UniAlarmeeTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		60A058B820891EEAB04B244E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UniAlarmee/Pods-UniAlarmee-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UniAlarmee/Pods-UniAlarmee-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UniAlarmee/Pods-UniAlarmee-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		AB242261053B1DD6C24C756C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -748,6 +765,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAEE59F822AE02A500F7561D /* WebkitViewController.swift in Sources */,
 				9582E96822928DCE00BD3F2A /* FSCalendarExtensions.m in Sources */,
 				95BCE7B22296CBD8000B0690 /* AddTodoViewController.swift in Sources */,
 				9582E97522928FCB00BD3F2A /* FSCalendarScopeViewController.swift in Sources */,
@@ -769,7 +787,6 @@
 				9582E90C22928D7A00BD3F2A /* AppDelegate.swift in Sources */,
 				9582E96122928DCE00BD3F2A /* FSCalendarDelegationFactory.m in Sources */,
 				9582E96022928DCE00BD3F2A /* FSCalendarDelegationProxy.m in Sources */,
-				AA1A6ECD2296F53F00E0BD69 /* APIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -992,6 +1009,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = CSH.UniAlarmee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Bridging-Header.h";

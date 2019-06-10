@@ -3,33 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01058714B890CF623C3061371F1391D9 /* Pods-UniAlarmeeUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 17D7E2D8848010AD3B98462B890F3103 /* Pods-UniAlarmeeUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01058714B890CF623C3061371F1391D9 /* Pods-UniAlarmeeUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BD566345F489A880E86F3BEA451D381 /* Pods-UniAlarmeeUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		14ECF6E40B0356170FEDE170B2EB6F2F /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D59E1AD3CC394A93392FF3DC8CF2961 /* Request.swift */; };
-		24538D62229B6F6F980EAE676EE85252 /* Pods-UniAlarmeeUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFED72B2A9F29D36E8251904FEB21E3 /* Pods-UniAlarmeeUITests-dummy.m */; };
-		434238A3BDD0715EA9559FE69B6F647F /* Pods-UniAlarmee-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F2ECE9993A71A2E06C124BC575117E /* Pods-UniAlarmee-dummy.m */; };
+		24538D62229B6F6F980EAE676EE85252 /* Pods-UniAlarmeeUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFC5DEE4B0B53339547283F56DD9BC2 /* Pods-UniAlarmeeUITests-dummy.m */; };
 		4920AD2B3D668DB550BEDED6747F925B /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4453BE339B79900FDC53E34FE5589CB /* ServerTrustPolicy.swift */; };
 		505B75241DCEA8C1FBF9F479C2DDEF31 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DB5272AD01ECD0B09A86818A7754C4 /* Timeline.swift */; };
 		559368DD6966DB1193B3FD6E7CBF5FED /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 341BDAD0026CDA8E7BCE35AC122E1C8C /* Alamofire-dummy.m */; };
 		594494BAB3E029862D7009DE60FCC904 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C759635F88377BD7E2DEDE04C23C62 /* TaskDelegate.swift */; };
 		5B1086B0A866704A6CAF72B5A47582C6 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C15C076B531E2E7744C358418A0C0B5 /* Alamofire.swift */; };
 		5C2F9E5485166B59DD032D7DF4C29CF0 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC6858C85690F7AFEA7F6542EE9A69A /* Response.swift */; };
-		614BEFE2352715855EFFF012807E50EF /* Pods-UniAlarmee-UniAlarmeeTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 429C1D46A9AA98F50F86400205F9D3F2 /* Pods-UniAlarmee-UniAlarmeeTests-dummy.m */; };
+		614BEFE2352715855EFFF012807E50EF /* Pods-UniAlarmee-UniAlarmeeTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C5F36C1D8232E5106AF7E470F0ED54 /* Pods-UniAlarmee-UniAlarmeeTests-dummy.m */; };
 		6347B1BA6D146FE1BF6D4C140D5CDA04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		72C2F0877FAB758F102C1D5FB6641559 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5460AD0F6241621B45A17AB23A8E5B7 /* NetworkReachabilityManager.swift */; };
-		7350FB2E79B1348D3AB802AF53840267 /* Pods-UniAlarmee-UniAlarmeeTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B40CFB335DDA287534CD4D5D20BA55F /* Pods-UniAlarmee-UniAlarmeeTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7350FB2E79B1348D3AB802AF53840267 /* Pods-UniAlarmee-UniAlarmeeTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B721BECB0E76D106E4861213BDA7A8D4 /* Pods-UniAlarmee-UniAlarmeeTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A4EB0D36809175CF11C6148640ACC97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		9B759DA4FE9E6C0491F5684C9E9F33A6 /* Pods-UniAlarmee-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C349326F1FEC3BB0C6B4E6CDF6BCC40 /* Pods-UniAlarmee-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5ADEF55257E4C1A482BF072C205F388 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D01BA8472F25D39F718F71557EDC8DD /* ParameterEncoding.swift */; };
+		A6443DC2AE649CC4494ADEE742923AC1 /* Pods-UniAlarmee-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BEC57E84829C3F1750FDD64FE0DB0A /* Pods-UniAlarmee-dummy.m */; };
+		AB017BE804BD2DAA0354F1C591BAC60D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		ABAEB9DEE3CE05729A9442CFA1988407 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E25E371731FAE44F46A9F392CB5D5 /* SessionManager.swift */; };
 		ADB18D94C4F71AE2FCE388100D556B0F /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B03859BDC36782899379E222720A297 /* ResponseSerialization.swift */; };
 		B082FA7223428C8DE32F7DE7F5AF441C /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5A0E300C04A6DF88D620788FE38780 /* AFError.swift */; };
 		B2E54789768E4F4EE35F11E0034C7383 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06639F7A76DB8A9D0D0E41CDD7A6684 /* Notifications.swift */; };
-		B2EFCAF68A04D0D7EA6FE2F37F4A6F26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		B6F6E4CC26451E91B59FAE0F6841DC1F /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D54AEF5647A987180EDAD7E1CEF7387B /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C260A587A00C7748EACEC92E486BDDCA /* Pods-UniAlarmee-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D8120B2809C3A2F222B74734B1AB5831 /* Pods-UniAlarmee-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D191F19C5AEFDC90856B790BE66F716A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		D2B384893454A891D32CB20A53E4EDAF /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF7F7716086D54E6308EE52C8227B87 /* DispatchQueue+Alamofire.swift */; };
 		D583829CA1D3C6B9B8F5C085B1D597EF /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33115EC2A5164913C68F8BD170389EEE /* Validation.swift */; };
@@ -53,63 +53,71 @@
 			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
 			remoteInfo = Alamofire;
 		};
+		63A5388D30445157255E824599208DE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
+			remoteInfo = Alamofire;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07FAD73548D1B8D718048A81458DEE2D /* Pods-UniAlarmeeUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UniAlarmeeUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		04BAC5B1D8985EBAFBE3728FE701E777 /* Pods-UniAlarmeeUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UniAlarmeeUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0BD566345F489A880E86F3BEA451D381 /* Pods-UniAlarmeeUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UniAlarmeeUITests-umbrella.h"; sourceTree = "<group>"; };
 		0D01BA8472F25D39F718F71557EDC8DD /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
-		15F2ECE9993A71A2E06C124BC575117E /* Pods-UniAlarmee-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UniAlarmee-dummy.m"; sourceTree = "<group>"; };
-		17D7E2D8848010AD3B98462B890F3103 /* Pods-UniAlarmeeUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UniAlarmeeUITests-umbrella.h"; sourceTree = "<group>"; };
-		1A00F282E2ECFB19DD694D8E6E42596A /* Pods-UniAlarmeeUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UniAlarmeeUITests.modulemap"; sourceTree = "<group>"; };
-		1A5277FA2448054FD317751ABDF80774 /* Pods-UniAlarmee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UniAlarmee.debug.xcconfig"; sourceTree = "<group>"; };
+		0D08225B605173D0F691A2BA6C341ED9 /* Pods-UniAlarmeeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UniAlarmeeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0D68187465C609A50ED694E475F6EECA /* Pods-UniAlarmee-UniAlarmeeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UniAlarmee-UniAlarmeeTests.release.xcconfig"; sourceTree = "<group>"; };
+		109737F4B60E782EABF95AA3EEDD2BA0 /* Pods-UniAlarmee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UniAlarmee.release.xcconfig"; sourceTree = "<group>"; };
+		12486C07BC31C4A0978FEFDCCB6FBEB7 /* Pods-UniAlarmeeUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UniAlarmeeUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		19E63F4EFF2D2082C7CE6C3588CB0FC7 /* Pods-UniAlarmee-UniAlarmeeTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UniAlarmee-UniAlarmeeTests-frameworks.sh"; sourceTree = "<group>"; };
 		1C15C076B531E2E7744C358418A0C0B5 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		22740B0EAB757BC9EE42E051E25C21E8 /* Pods-UniAlarmee-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UniAlarmee-Info.plist"; sourceTree = "<group>"; };
-		2E4F87E4DB3B3840491CE4789E267E22 /* Pods-UniAlarmee.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UniAlarmee.modulemap"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		32D0579DA1B397DB70E36D45A49B7D84 /* Pods-UniAlarmee-UniAlarmeeTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UniAlarmee-UniAlarmeeTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		32DB5272AD01ECD0B09A86818A7754C4 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
 		33115EC2A5164913C68F8BD170389EEE /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		341BDAD0026CDA8E7BCE35AC122E1C8C /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		39E617BBEFCCD67FEE005F5BDB8F661A /* Pods-UniAlarmee-UniAlarmeeTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UniAlarmee-UniAlarmeeTests-Info.plist"; sourceTree = "<group>"; };
 		3D7E25E371731FAE44F46A9F392CB5D5 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
-		429C1D46A9AA98F50F86400205F9D3F2 /* Pods-UniAlarmee-UniAlarmeeTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UniAlarmee-UniAlarmeeTests-dummy.m"; sourceTree = "<group>"; };
-		4CA82CF1B551A509B2782F5A03BAC6FD /* Pods-UniAlarmee-UniAlarmeeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UniAlarmee-UniAlarmeeTests.release.xcconfig"; sourceTree = "<group>"; };
-		52B7999BFB4A71F45FDD1131CB3ED743 /* Pods-UniAlarmee-UniAlarmeeTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UniAlarmee-UniAlarmeeTests.modulemap"; sourceTree = "<group>"; };
+		4EFC5DEE4B0B53339547283F56DD9BC2 /* Pods-UniAlarmeeUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UniAlarmeeUITests-dummy.m"; sourceTree = "<group>"; };
+		5335EF12686D2168926BBB33DF06F4C4 /* Pods-UniAlarmee-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UniAlarmee-acknowledgements.plist"; sourceTree = "<group>"; };
+		5C07761CBBCD23E9EEC84190CFD76F1F /* Pods-UniAlarmeeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UniAlarmeeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63EF2E56D3380DB85264B6F3ACFC9320 /* Pods_UniAlarmeeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UniAlarmeeUITests.framework; path = "Pods-UniAlarmeeUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6EFED72B2A9F29D36E8251904FEB21E3 /* Pods-UniAlarmeeUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UniAlarmeeUITests-dummy.m"; sourceTree = "<group>"; };
-		71A42713DDDBFA731A79A8691C1C85AF /* Pods-UniAlarmee-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UniAlarmee-acknowledgements.markdown"; sourceTree = "<group>"; };
-		744FE2DCB1D997812BF9E13712152622 /* Pods-UniAlarmee-UniAlarmeeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UniAlarmee-UniAlarmeeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		65E5625892AB06F2921897EAB53CD56A /* Pods-UniAlarmee-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UniAlarmee-Info.plist"; sourceTree = "<group>"; };
+		671686A85A79A8DFBA679B1AF643366D /* Pods-UniAlarmeeUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UniAlarmeeUITests-Info.plist"; sourceTree = "<group>"; };
+		6C6B89A3B13F57EA9DDE4D7FFECEEA36 /* Pods-UniAlarmee-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UniAlarmee-frameworks.sh"; sourceTree = "<group>"; };
 		75C759635F88377BD7E2DEDE04C23C62 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
 		7B03859BDC36782899379E222720A297 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
-		7CDA23878ED2E37E6B22789603BAAD33 /* Pods-UniAlarmeeUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UniAlarmeeUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		83B14827471E02B8C5B0734E2EE66D88 /* Pods-UniAlarmee.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UniAlarmee.modulemap"; sourceTree = "<group>"; };
+		84DE619ECDC032AA9C6EC0280A319EFF /* Pods-UniAlarmee-UniAlarmeeTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UniAlarmee-UniAlarmeeTests.modulemap"; sourceTree = "<group>"; };
+		87A5949BB0FC5CCC222C4316BC743FB2 /* Pods-UniAlarmee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UniAlarmee.debug.xcconfig"; sourceTree = "<group>"; };
 		8D5A0E300C04A6DF88D620788FE38780 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
-		9345D6D00D34434F9A4BDD949281247D /* Pods-UniAlarmee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UniAlarmee.release.xcconfig"; sourceTree = "<group>"; };
-		94B428FA124EEB4428D4EC19A192DEF8 /* Pods-UniAlarmeeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UniAlarmeeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		985417470B9341C92A5160D4B2FF2B08 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
-		99D30F86E69CB2E2AEE0FF4849CAB186 /* Pods-UniAlarmeeUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UniAlarmeeUITests-Info.plist"; sourceTree = "<group>"; };
-		9B40CFB335DDA287534CD4D5D20BA55F /* Pods-UniAlarmee-UniAlarmeeTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UniAlarmee-UniAlarmeeTests-umbrella.h"; sourceTree = "<group>"; };
-		9C349326F1FEC3BB0C6B4E6CDF6BCC40 /* Pods-UniAlarmee-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UniAlarmee-umbrella.h"; sourceTree = "<group>"; };
 		9D59E1AD3CC394A93392FF3DC8CF2961 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9E7DE32399F5A2934457FD14E7CDC97F /* Pods-UniAlarmee-UniAlarmeeTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UniAlarmee-UniAlarmeeTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		A393634DCA54747E8BCF68CFD3EAC95E /* Pods_UniAlarmee_UniAlarmeeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UniAlarmee_UniAlarmeeTests.framework; path = "Pods-UniAlarmee-UniAlarmeeTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8710F26B62AABFF387E9CA4F6899A4 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		ADB7CDCCDF316773115EEB9AD84260B9 /* Pods-UniAlarmee-UniAlarmeeTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UniAlarmee-UniAlarmeeTests-frameworks.sh"; sourceTree = "<group>"; };
 		AFF7F7716086D54E6308EE52C8227B87 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		B06639F7A76DB8A9D0D0E41CDD7A6684 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
-		B0BEC9CAD75645ED387D1A3695345818 /* Pods-UniAlarmeeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UniAlarmeeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B68B3E30052940716334CB355262F806 /* Pods_UniAlarmee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UniAlarmee.framework; path = "Pods-UniAlarmee.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B721BECB0E76D106E4861213BDA7A8D4 /* Pods-UniAlarmee-UniAlarmeeTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UniAlarmee-UniAlarmeeTests-umbrella.h"; sourceTree = "<group>"; };
+		BCB4E22CF7293400C7F97D9675DD7DC2 /* Pods-UniAlarmeeUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UniAlarmeeUITests.modulemap"; sourceTree = "<group>"; };
 		BFCE3D7EDCA41F256D471B40BBFD3FCE /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
 		C4453BE339B79900FDC53E34FE5589CB /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		C72B374ECDB2A82C1477A6F0C76D37BE /* Pods-UniAlarmee-UniAlarmeeTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UniAlarmee-UniAlarmeeTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C9C3EF964FFA8A9F78851B59A8D4FFBC /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
 		CCC6858C85690F7AFEA7F6542EE9A69A /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
 		D54AEF5647A987180EDAD7E1CEF7387B /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		D8120B2809C3A2F222B74734B1AB5831 /* Pods-UniAlarmee-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UniAlarmee-umbrella.h"; sourceTree = "<group>"; };
+		D813F8AD377BC93834C934BE2E2900D2 /* Pods-UniAlarmee-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UniAlarmee-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DBFA28C981E08E95550FCC7586B7815A /* Pods-UniAlarmee-UniAlarmeeTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UniAlarmee-UniAlarmeeTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		DD807F155301ECA538A2C1C296E1186D /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		DE2F667C3AF474961E48C71B84B6AD38 /* Pods-UniAlarmee-UniAlarmeeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UniAlarmee-UniAlarmeeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE36AED4DF687B2D37BD230D9D2F69B6 /* Alamofire-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Alamofire-Info.plist"; sourceTree = "<group>"; };
-		EE18EFFEF742AE85BA866B1D438BD21A /* Pods-UniAlarmee-UniAlarmeeTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UniAlarmee-UniAlarmeeTests-Info.plist"; sourceTree = "<group>"; };
+		E2C5F36C1D8232E5106AF7E470F0ED54 /* Pods-UniAlarmee-UniAlarmeeTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UniAlarmee-UniAlarmeeTests-dummy.m"; sourceTree = "<group>"; };
+		E6BEC57E84829C3F1750FDD64FE0DB0A /* Pods-UniAlarmee-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UniAlarmee-dummy.m"; sourceTree = "<group>"; };
 		F5460AD0F6241621B45A17AB23A8E5B7 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		F640F61D5BEE8132009BAEAA65B587A4 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
-		FD31A83DCD42F05F18CC9E8DA097B1F8 /* Pods-UniAlarmee-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UniAlarmee-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,11 +129,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		98F40ABEEBD2D6B9AFF0E06B848CB7EF /* Frameworks */ = {
+		AD4FF4CEFB20598BC153E15D4C46A922 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2EFCAF68A04D0D7EA6FE2F37F4A6F26 /* Foundation.framework in Frameworks */,
+				AB017BE804BD2DAA0354F1C591BAC60D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,14 +156,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		040F67B189EAAA551044EFA4AD694759 /* Targets Support Files */ = {
+		4CF7DF2067AD0C7595761A1FC0961D4F /* Pods-UniAlarmee-UniAlarmeeTests */ = {
 			isa = PBXGroup;
 			children = (
-				DEEE801A405CC396B4F82F10FBC587DF /* Pods-UniAlarmee */,
-				7E09B743A7EDEC195806860F92335820 /* Pods-UniAlarmee-UniAlarmeeTests */,
-				BA4A6CBD21213732B64A5860F00F13CF /* Pods-UniAlarmeeUITests */,
+				84DE619ECDC032AA9C6EC0280A319EFF /* Pods-UniAlarmee-UniAlarmeeTests.modulemap */,
+				32D0579DA1B397DB70E36D45A49B7D84 /* Pods-UniAlarmee-UniAlarmeeTests-acknowledgements.markdown */,
+				DBFA28C981E08E95550FCC7586B7815A /* Pods-UniAlarmee-UniAlarmeeTests-acknowledgements.plist */,
+				E2C5F36C1D8232E5106AF7E470F0ED54 /* Pods-UniAlarmee-UniAlarmeeTests-dummy.m */,
+				19E63F4EFF2D2082C7CE6C3588CB0FC7 /* Pods-UniAlarmee-UniAlarmeeTests-frameworks.sh */,
+				39E617BBEFCCD67FEE005F5BDB8F661A /* Pods-UniAlarmee-UniAlarmeeTests-Info.plist */,
+				B721BECB0E76D106E4861213BDA7A8D4 /* Pods-UniAlarmee-UniAlarmeeTests-umbrella.h */,
+				DE2F667C3AF474961E48C71B84B6AD38 /* Pods-UniAlarmee-UniAlarmeeTests.debug.xcconfig */,
+				0D68187465C609A50ED694E475F6EECA /* Pods-UniAlarmee-UniAlarmeeTests.release.xcconfig */,
 			);
-			name = "Targets Support Files";
+			name = "Pods-UniAlarmee-UniAlarmeeTests";
+			path = "Target Support Files/Pods-UniAlarmee-UniAlarmeeTests";
+			sourceTree = "<group>";
+		};
+		5848D6A38B0CA53828C2519984F233CD /* Pods-UniAlarmeeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BCB4E22CF7293400C7F97D9675DD7DC2 /* Pods-UniAlarmeeUITests.modulemap */,
+				04BAC5B1D8985EBAFBE3728FE701E777 /* Pods-UniAlarmeeUITests-acknowledgements.markdown */,
+				12486C07BC31C4A0978FEFDCCB6FBEB7 /* Pods-UniAlarmeeUITests-acknowledgements.plist */,
+				4EFC5DEE4B0B53339547283F56DD9BC2 /* Pods-UniAlarmeeUITests-dummy.m */,
+				671686A85A79A8DFBA679B1AF643366D /* Pods-UniAlarmeeUITests-Info.plist */,
+				0BD566345F489A880E86F3BEA451D381 /* Pods-UniAlarmeeUITests-umbrella.h */,
+				5C07761CBBCD23E9EEC84190CFD76F1F /* Pods-UniAlarmeeUITests.debug.xcconfig */,
+				0D08225B605173D0F691A2BA6C341ED9 /* Pods-UniAlarmeeUITests.release.xcconfig */,
+			);
+			name = "Pods-UniAlarmeeUITests";
+			path = "Target Support Files/Pods-UniAlarmeeUITests";
 			sourceTree = "<group>";
 		};
 		5C26875CAEBEFEDA19F66418CD7AE5DB /* Support Files */ = {
@@ -172,29 +203,22 @@
 			path = "../Target Support Files/Alamofire";
 			sourceTree = "<group>";
 		};
-		7E09B743A7EDEC195806860F92335820 /* Pods-UniAlarmee-UniAlarmeeTests */ = {
-			isa = PBXGroup;
-			children = (
-				52B7999BFB4A71F45FDD1131CB3ED743 /* Pods-UniAlarmee-UniAlarmeeTests.modulemap */,
-				C72B374ECDB2A82C1477A6F0C76D37BE /* Pods-UniAlarmee-UniAlarmeeTests-acknowledgements.markdown */,
-				9E7DE32399F5A2934457FD14E7CDC97F /* Pods-UniAlarmee-UniAlarmeeTests-acknowledgements.plist */,
-				429C1D46A9AA98F50F86400205F9D3F2 /* Pods-UniAlarmee-UniAlarmeeTests-dummy.m */,
-				ADB7CDCCDF316773115EEB9AD84260B9 /* Pods-UniAlarmee-UniAlarmeeTests-frameworks.sh */,
-				EE18EFFEF742AE85BA866B1D438BD21A /* Pods-UniAlarmee-UniAlarmeeTests-Info.plist */,
-				9B40CFB335DDA287534CD4D5D20BA55F /* Pods-UniAlarmee-UniAlarmeeTests-umbrella.h */,
-				744FE2DCB1D997812BF9E13712152622 /* Pods-UniAlarmee-UniAlarmeeTests.debug.xcconfig */,
-				4CA82CF1B551A509B2782F5A03BAC6FD /* Pods-UniAlarmee-UniAlarmeeTests.release.xcconfig */,
-			);
-			name = "Pods-UniAlarmee-UniAlarmeeTests";
-			path = "Target Support Files/Pods-UniAlarmee-UniAlarmeeTests";
-			sourceTree = "<group>";
-		};
 		90FDDC7F5D24472360CA259A8D40AE98 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				ABBD6121E62B33A53CF07892A75F2030 /* Alamofire */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		948AD9336EDF907FADD1723CB473A5CF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC6E9E51A329543E8A30B8525A9476BE /* Pods-UniAlarmee */,
+				4CF7DF2067AD0C7595761A1FC0961D4F /* Pods-UniAlarmee-UniAlarmeeTests */,
+				5848D6A38B0CA53828C2519984F233CD /* Pods-UniAlarmeeUITests */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		ABBD6121E62B33A53CF07892A75F2030 /* Alamofire */ = {
@@ -223,20 +247,21 @@
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
-		BA4A6CBD21213732B64A5860F00F13CF /* Pods-UniAlarmeeUITests */ = {
+		BC6E9E51A329543E8A30B8525A9476BE /* Pods-UniAlarmee */ = {
 			isa = PBXGroup;
 			children = (
-				1A00F282E2ECFB19DD694D8E6E42596A /* Pods-UniAlarmeeUITests.modulemap */,
-				07FAD73548D1B8D718048A81458DEE2D /* Pods-UniAlarmeeUITests-acknowledgements.markdown */,
-				7CDA23878ED2E37E6B22789603BAAD33 /* Pods-UniAlarmeeUITests-acknowledgements.plist */,
-				6EFED72B2A9F29D36E8251904FEB21E3 /* Pods-UniAlarmeeUITests-dummy.m */,
-				99D30F86E69CB2E2AEE0FF4849CAB186 /* Pods-UniAlarmeeUITests-Info.plist */,
-				17D7E2D8848010AD3B98462B890F3103 /* Pods-UniAlarmeeUITests-umbrella.h */,
-				B0BEC9CAD75645ED387D1A3695345818 /* Pods-UniAlarmeeUITests.debug.xcconfig */,
-				94B428FA124EEB4428D4EC19A192DEF8 /* Pods-UniAlarmeeUITests.release.xcconfig */,
+				83B14827471E02B8C5B0734E2EE66D88 /* Pods-UniAlarmee.modulemap */,
+				D813F8AD377BC93834C934BE2E2900D2 /* Pods-UniAlarmee-acknowledgements.markdown */,
+				5335EF12686D2168926BBB33DF06F4C4 /* Pods-UniAlarmee-acknowledgements.plist */,
+				E6BEC57E84829C3F1750FDD64FE0DB0A /* Pods-UniAlarmee-dummy.m */,
+				6C6B89A3B13F57EA9DDE4D7FFECEEA36 /* Pods-UniAlarmee-frameworks.sh */,
+				65E5625892AB06F2921897EAB53CD56A /* Pods-UniAlarmee-Info.plist */,
+				D8120B2809C3A2F222B74734B1AB5831 /* Pods-UniAlarmee-umbrella.h */,
+				87A5949BB0FC5CCC222C4316BC743FB2 /* Pods-UniAlarmee.debug.xcconfig */,
+				109737F4B60E782EABF95AA3EEDD2BA0 /* Pods-UniAlarmee.release.xcconfig */,
 			);
-			name = "Pods-UniAlarmeeUITests";
-			path = "Target Support Files/Pods-UniAlarmeeUITests";
+			name = "Pods-UniAlarmee";
+			path = "Target Support Files/Pods-UniAlarmee";
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -254,7 +279,7 @@
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				90FDDC7F5D24472360CA259A8D40AE98 /* Pods */,
 				E30AE00F687DCB280740709FC6DD8BE0 /* Products */,
-				040F67B189EAAA551044EFA4AD694759 /* Targets Support Files */,
+				948AD9336EDF907FADD1723CB473A5CF /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -264,22 +289,6 @@
 				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DEEE801A405CC396B4F82F10FBC587DF /* Pods-UniAlarmee */ = {
-			isa = PBXGroup;
-			children = (
-				2E4F87E4DB3B3840491CE4789E267E22 /* Pods-UniAlarmee.modulemap */,
-				71A42713DDDBFA731A79A8691C1C85AF /* Pods-UniAlarmee-acknowledgements.markdown */,
-				FD31A83DCD42F05F18CC9E8DA097B1F8 /* Pods-UniAlarmee-acknowledgements.plist */,
-				15F2ECE9993A71A2E06C124BC575117E /* Pods-UniAlarmee-dummy.m */,
-				22740B0EAB757BC9EE42E051E25C21E8 /* Pods-UniAlarmee-Info.plist */,
-				9C349326F1FEC3BB0C6B4E6CDF6BCC40 /* Pods-UniAlarmee-umbrella.h */,
-				1A5277FA2448054FD317751ABDF80774 /* Pods-UniAlarmee.debug.xcconfig */,
-				9345D6D00D34434F9A4BDD949281247D /* Pods-UniAlarmee.release.xcconfig */,
-			);
-			name = "Pods-UniAlarmee";
-			path = "Target Support Files/Pods-UniAlarmee";
 			sourceTree = "<group>";
 		};
 		E30AE00F687DCB280740709FC6DD8BE0 /* Products */ = {
@@ -304,19 +313,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A7A2E42F8E0D44F722ED18CD769C021 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9B759DA4FE9E6C0491F5684C9E9F33A6 /* Pods-UniAlarmee-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6D071345F007DF06F2E24E6BFA842761 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				01058714B890CF623C3061371F1391D9 /* Pods-UniAlarmeeUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7102E67183BF25F3B4BDADB8E67A81FF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C260A587A00C7748EACEC92E486BDDCA /* Pods-UniAlarmee-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,16 +342,17 @@
 /* Begin PBXNativeTarget section */
 		8CABEA4C443D64F8F2B8ADE843818C2B /* Pods-UniAlarmee */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 442E45B2248A938254429C0AD183008F /* Build configuration list for PBXNativeTarget "Pods-UniAlarmee" */;
+			buildConfigurationList = BD9C67050448088A5467FE12A54B2809 /* Build configuration list for PBXNativeTarget "Pods-UniAlarmee" */;
 			buildPhases = (
-				6A7A2E42F8E0D44F722ED18CD769C021 /* Headers */,
-				C5044242D6DA9B2D5016EE7788CC2D79 /* Sources */,
-				98F40ABEEBD2D6B9AFF0E06B848CB7EF /* Frameworks */,
-				4B45400FC996C3D9A75DCF2CCEA534C0 /* Resources */,
+				7102E67183BF25F3B4BDADB8E67A81FF /* Headers */,
+				F1D87B2E2E1A9BF9FF358A04EAB1347B /* Sources */,
+				AD4FF4CEFB20598BC153E15D4C46A922 /* Frameworks */,
+				17FE9E4E132AF32543E67AC4907449F1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9093CA0BDF8FEC1B9C27F07957A183EE /* PBXTargetDependency */,
 			);
 			name = "Pods-UniAlarmee";
 			productName = "Pods-UniAlarmee";
@@ -415,7 +425,7 @@
 				LastUpgradeCheck = 1020;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -435,14 +445,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		28FF73341543B6F0A7DF3C20CFFEA0AA /* Resources */ = {
+		17FE9E4E132AF32543E67AC4907449F1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4B45400FC996C3D9A75DCF2CCEA534C0 /* Resources */ = {
+		28FF73341543B6F0A7DF3C20CFFEA0AA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -482,14 +492,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C5044242D6DA9B2D5016EE7788CC2D79 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				434238A3BDD0715EA9559FE69B6F647F /* Pods-UniAlarmee-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CFA11E47B3EB3A36AA49F6F7F060CB98 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -515,6 +517,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F1D87B2E2E1A9BF9FF358A04EAB1347B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6443DC2AE649CC4494ADEE742923AC1 /* Pods-UniAlarmee-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -523,6 +533,12 @@
 			name = Alamofire;
 			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
 			targetProxy = 5C5974603EC8BAD756CA0A51D2F033F0 /* PBXContainerItemProxy */;
+		};
+		9093CA0BDF8FEC1B9C27F07957A183EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
+			targetProxy = 63A5388D30445157255E824599208DE9 /* PBXContainerItemProxy */;
 		};
 		AB084787C4549765C93B338287A3A5A4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -599,7 +615,7 @@
 		};
 		3245B1B3CAEE6360F4018BC87F94281A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4CA82CF1B551A509B2782F5A03BAC6FD /* Pods-UniAlarmee-UniAlarmeeTests.release.xcconfig */;
+			baseConfigurationReference = 0D68187465C609A50ED694E475F6EECA /* Pods-UniAlarmee-UniAlarmeeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -733,7 +749,7 @@
 		};
 		5B373AB953E8D9D12FED9CF006127EB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 744FE2DCB1D997812BF9E13712152622 /* Pods-UniAlarmee-UniAlarmeeTests.debug.xcconfig */;
+			baseConfigurationReference = DE2F667C3AF474961E48C71B84B6AD38 /* Pods-UniAlarmee-UniAlarmeeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -769,9 +785,86 @@
 			};
 			name = Debug;
 		};
+		635B295B86B69A50683BDF1E90606C17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87A5949BB0FC5CCC222C4316BC743FB2 /* Pods-UniAlarmee.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-UniAlarmee/Pods-UniAlarmee-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-UniAlarmee/Pods-UniAlarmee.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		69007A0DCE55FA8C25884E161B85DF0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 109737F4B60E782EABF95AA3EEDD2BA0 /* Pods-UniAlarmee.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-UniAlarmee/Pods-UniAlarmee-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-UniAlarmee/Pods-UniAlarmee.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		8CC92330A596B94CE2E07D83D1B0D127 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B0BEC9CAD75645ED387D1A3695345818 /* Pods-UniAlarmeeUITests.debug.xcconfig */;
+			baseConfigurationReference = 5C07761CBBCD23E9EEC84190CFD76F1F /* Pods-UniAlarmeeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -843,48 +936,9 @@
 			};
 			name = Release;
 		};
-		9A2101E6030FBE0BC50026164F43CA0B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9345D6D00D34434F9A4BDD949281247D /* Pods-UniAlarmee.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-UniAlarmee/Pods-UniAlarmee-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-UniAlarmee/Pods-UniAlarmee.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		A8C122A982DD2F6B304A0D95F0A12E42 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94B428FA124EEB4428D4EC19A192DEF8 /* Pods-UniAlarmeeUITests.release.xcconfig */;
+			baseConfigurationReference = 0D08225B605173D0F691A2BA6C341ED9 /* Pods-UniAlarmeeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -921,44 +975,6 @@
 			};
 			name = Release;
 		};
-		B630F2EBDECAF259ED73890DE1A1E5D7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A5277FA2448054FD317751ABDF80774 /* Pods-UniAlarmee.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-UniAlarmee/Pods-UniAlarmee-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-UniAlarmee/Pods-UniAlarmee.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -967,15 +983,6 @@
 			buildConfigurations = (
 				5B373AB953E8D9D12FED9CF006127EB1 /* Debug */,
 				3245B1B3CAEE6360F4018BC87F94281A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		442E45B2248A938254429C0AD183008F /* Build configuration list for PBXNativeTarget "Pods-UniAlarmee" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B630F2EBDECAF259ED73890DE1A1E5D7 /* Debug */,
-				9A2101E6030FBE0BC50026164F43CA0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -994,6 +1001,15 @@
 			buildConfigurations = (
 				8CC92330A596B94CE2E07D83D1B0D127 /* Debug */,
 				A8C122A982DD2F6B304A0D95F0A12E42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD9C67050448088A5467FE12A54B2809 /* Build configuration list for PBXNativeTarget "Pods-UniAlarmee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				635B295B86B69A50683BDF1E90606C17 /* Debug */,
+				69007A0DCE55FA8C25884E161B85DF0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,9 +1,9 @@
 //
 //  WebkitViewController.swift
-//  how_to_use_webview
+//  UniAlarmee
 //
-//  Created by Choi Yechan on 03/06/2019.
-//  Copyright © 2019 Choi Yechan. All rights reserved.
+//  Created by yuni on 10/06/2019.
+//  Copyright © 2019 CSH. All rights reserved.
 //
 
 import UIKit
@@ -11,8 +11,9 @@ import WebKit
 import Alamofire
 class WebkitViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
     
-    var text: String = "https://learn.hanyang.ac.kr/learn/api/public/v1/courses/_9776_1/contents/_177603_1/children"
-    @IBAction func Go(_ sender: Any) {
+    @IBOutlet weak var webView: WKWebView!
+    
+    @IBAction func getdata(_ sender: Any) {
         let url = URL(string: text)
         let request = URLRequest(url: url!)
         //print(request)
@@ -29,7 +30,8 @@ class WebkitViewController: UIViewController, WKUIDelegate, WKNavigationDelegate
         webView.load(request)
         
     }
-    var webView: WKWebView!
+    var text: String = "https://learn.hanyang.ac.kr/learn/api/public/v1/courses/_9776_1/contents/_177603_1/children"
+
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
     override func loadView() {
@@ -50,12 +52,11 @@ class WebkitViewController: UIViewController, WKUIDelegate, WKNavigationDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let myBlog = "http://learn.hanyang.ac.kr"
         let url = URL(string: myBlog)
         let request = URLRequest(url: url!)
         
-
         Alamofire.request( "https://learn.hanyang.ac.kr/learn/api/public/v1/oauth2/authorizationcode"
             ).responseJSON { response in
                 debugPrint(response)
@@ -66,7 +67,31 @@ class WebkitViewController: UIViewController, WKUIDelegate, WKNavigationDelegate
                 if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
                     print("Data: \(utf8Text)") // original server data as UTF8 string
                 }
-
+                
+        }
+        Alamofire.request( "https://learn.hanyang.ac.kr/learn/api/public/v1/courses/_9776_1/contents/_177603_1/children"
+            ).responseJSON { response in
+                debugPrint(response)
+                
+                if let json = response.result.value {
+                    print("JSON: \(json)")
+                }
+                if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                    print("Data: \(utf8Text)") // original server data as UTF8 string
+                }
+                
+        }
+        Alamofire.request( "https://learn.hanyang.ac.kr/learn/api/public/v1/courses/_9776_1/contents/_177603_1/children"
+            ).responseJSON { response in
+                debugPrint(response)
+                
+                if let json = response.result.value {
+                    print("JSON: \(json)")
+                }
+                if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                    print("Data: \(utf8Text)") // original server data as UTF8 string
+                }
+                
         }
         webView.load(request)
     }
@@ -93,7 +118,7 @@ class WebkitViewController: UIViewController, WKUIDelegate, WKNavigationDelegate
         alert.addAction(cancelAction)
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
-     //print(message.localizedUppercase)
+        //print(message.localizedUppercase)
     }
     
     @available(iOS 8.0, *)
@@ -116,13 +141,14 @@ class WebkitViewController: UIViewController, WKUIDelegate, WKNavigationDelegate
         self.activityIndicator.removeFromSuperview()
     }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
+
