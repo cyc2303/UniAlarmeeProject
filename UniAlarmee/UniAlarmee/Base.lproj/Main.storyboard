@@ -306,6 +306,7 @@
         <image name="icon_cat" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="giX-3Z-JBV"/>
         <segue reference="L2H-Uz-3jO"/>
     </inferredMetricsTieBreakers>
 </document>

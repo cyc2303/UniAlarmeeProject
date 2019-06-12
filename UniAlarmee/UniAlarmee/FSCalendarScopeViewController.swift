@@ -31,7 +31,7 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
     }()
     
     
-    
+    //load the data from db and set. work just once
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,7 +48,7 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
         // For UITest
         self.calendar.accessibilityIdentifier = "calendar"
         
-        
+        //get the data from db. example
         //singleton pattern
         var cshtoday:CSHDate = CSHDate(y: 2019, m: 5, d: 5, wd: 0)
         var myManager:PlannerManager = PlannerManager.sharedInstance
@@ -62,6 +62,7 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
         var newTodo3:Todo = Todo(title: "성주놀리기", detail:"우냐?", type: .Normal)
         myManager.AddTodo(newDate: cshtoday, newTodo: newTodo3)
         
+        //set the clicked dates.
         let selectedDates = self.calendar.selectedDates.map({self.dateFormatter.string(from: $0)})
         let date_String =  selectedDates[0].components(separatedBy: "/")
         let date_Int = date_String.map({Int($0)!})
@@ -76,6 +77,7 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
     }
     
     // MARK:- UIGestureRecognizerDelegate
+    
     
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         let shouldBegin = self.tableView.contentOffset.y <= -self.tableView.contentInset.top
@@ -95,7 +97,7 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
         self.calendarHeightConstraint.constant = bounds.height
         self.view.layoutIfNeeded()
     }
-    
+    //if selected date is changed, renew the infromation of myManager
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         print("did select date \(self.dateFormatter.string(from: date))")
         let selectedDates = calendar.selectedDates.map({self.dateFormatter.string(from: $0)})
@@ -118,10 +120,12 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
     
     // MARK:- UITableViewDataSource
     
+    //show 2 sections. 2 is the number of Todo species. Assignment and normal.
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
+    //set the frame of List(Todo List)
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(calendar.currentPage)
     
@@ -137,6 +141,7 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
         return [NOA, NOT][section]
     }
     
+    //show the data in each section. in this project, just show one data.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var myManager:PlannerManager = PlannerManager.sharedInstance
         let selectedDate=myManager.selectedDate
@@ -194,6 +199,7 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
         print("asdfasdfasdfasdf")
     }
     
+    //link to the addTodoView
     @IBAction func addWork(sender: AnyObject) {
         /*
         var cshtoday:CSHDate = CSHDate(y: 2019, m: 5, d: 5, wd: 0)
@@ -204,8 +210,9 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
         //myManager.AddTodo(newDate: cshtoday, newTodo: newTodo)
         //print("add")
         //tableView.reloadData()
+        print("GOTO AddWork")
     }
     @IBAction func testAPI(_ sender: Any) {
-        print("result")
+        print("GOTO APIView")
     }
 }
