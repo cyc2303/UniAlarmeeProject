@@ -15,6 +15,7 @@
 		4E6D674722A4D52A00F21F84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E6D674522A4D52A00F21F84 /* LaunchScreen.storyboard */; };
 		4E6D674F22A4FBF600F21F84 /* WebkitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6D674E22A4FBF600F21F84 /* WebkitViewController.swift */; };
 		4E6D675222A5210700F21F84 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6D675122A5210700F21F84 /* WebViewController.swift */; };
+		959A6C4022B287A90011E1C0 /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959A6C3F22B287A90011E1C0 /* DataCenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		4E6D675122A5210700F21F84 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		56497C640217102E829F0612 /* Pods-how_to_use_webview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-how_to_use_webview.debug.xcconfig"; path = "Target Support Files/Pods-how_to_use_webview/Pods-how_to_use_webview.debug.xcconfig"; sourceTree = "<group>"; };
 		826034890F65BCBB2BC8B6C8 /* Pods_how_to_use_webview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_how_to_use_webview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		959A6C3F22B287A90011E1C0 /* DataCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				4E6D674022A4D52900F21F84 /* Main.storyboard */,
 				4E6D675122A5210700F21F84 /* WebViewController.swift */,
 				4E6D674E22A4FBF600F21F84 /* WebkitViewController.swift */,
+				959A6C3F22B287A90011E1C0 /* DataCenter.swift */,
 				4E6D674322A4D52A00F21F84 /* Assets.xcassets */,
 				4E6D674522A4D52A00F21F84 /* LaunchScreen.storyboard */,
 				4E6D674822A4D52A00F21F84 /* Info.plist */,
@@ -211,6 +214,7 @@
 			files = (
 				4E6D673F22A4D52900F21F84 /* ViewController.swift in Sources */,
 				4E6D673D22A4D52900F21F84 /* AppDelegate.swift in Sources */,
+				959A6C4022B287A90011E1C0 /* DataCenter.swift in Sources */,
 				4E6D674F22A4FBF600F21F84 /* WebkitViewController.swift in Sources */,
 				4E6D675222A5210700F21F84 /* WebViewController.swift in Sources */,
 			);

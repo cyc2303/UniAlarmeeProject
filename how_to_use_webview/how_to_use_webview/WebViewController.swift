@@ -28,8 +28,12 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     @IBAction func Go(_ sender: Any) {
         let request: NSURLRequest = NSURLRequest(url: URL(string: text)!)
         webView.loadRequest(request as URLRequest)
-    //https://raw.githubusercontent.com/tristanhimmelman/AlamofireObjectMapper/2ee8f34d21e8febfdefb2b3a403f18a43818d70a/sample_keypath_json
+    
+        
+        //how to get the userId
         var userID:String = "_30883_1"
+        var updateManager:BlackboardManager = BlackboardManager.sharedInstance
+
         /*
         Alamofire.request( "https://learn.hanyang.ac.kr/ultra/institution-page/effective").responseString { response in
             //debugPrint(response)
@@ -40,6 +44,9 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         }*/
         print("user id is \(userID)")
         
+        
+        //how to get the courseId
+        /*
         Alamofire.request( "https://learn.hanyang.ac.kr/learn/api/public/v1/users/\(userID)/courses").responseJSON { response in
             //debugPrint(response)
             //var json_String:String = response.result.value!
@@ -52,6 +59,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
                 print(aa[0].object(forKey: "courseId"))
             }
         }
+        */
         
         frameSize=0
     }
