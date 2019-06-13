@@ -44,7 +44,13 @@ class WebViewController: UIViewController, UIWebViewDelegate {
             //debugPrint(response)
             //var json_String:String = response.result.value!
             //print(json_String)
-            print(response.data!)
+            if let result = response.result.value {
+                let JSON = result as! NSDictionary
+                print(JSON.count)
+                print(JSON)
+                let aa = JSON.object(forKey: "results") as! [NSDictionary]
+                print(aa[0].object(forKey: "courseId"))
+            }
         }
         
         frameSize=0
