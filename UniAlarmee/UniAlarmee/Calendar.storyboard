@@ -51,7 +51,7 @@
                                             <state key="normal" title="AddTodo"/>
                                             <connections>
                                                 <action selector="addWorkWithSender:" destination="zZq-2N-zcY" eventType="touchUpInside" id="b70-et-UrP"/>
-                                                <segue destination="GHH-mD-QiL" kind="modal" id="fhV-BK-Ma9"/>
+                                                <segue destination="GHH-mD-QiL" kind="presentation" id="u90-DJ-FZ2"/>
                                             </connections>
                                         </button>
                                     </subviews>

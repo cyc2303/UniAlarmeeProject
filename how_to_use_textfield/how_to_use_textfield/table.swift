@@ -12,6 +12,10 @@ class table: UIViewController,UITableViewDelegate,UITableViewDataSource {
     //
     
     //
+    @IBOutlet weak var tableView: UITableView!
+    @IBAction func toBase(sender: UIStoryboardSegue){
+        self.tableView.reloadData()
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return YunniArray.count
@@ -20,8 +24,8 @@ class table: UIViewController,UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "asdf", for: indexPath)
-        cell.textLabel?.text = String(indexPath.row)
-        cell.detailTextLabel?.text = YunniArray[indexPath.row].id
+        cell.textLabel!.text = String(indexPath.row)
+        cell.detailTextLabel!.text = "asdf"//[indexPath.row].id
         //cell.imageView 텍스트라벨, 디테일텍스트라벨, 이미지뷰는 기본적으로 있지만 나타나지 않는 경우가 존재하기 때문에 이렇게 옵셔널로 지정이 되어 있음
         return cell
     }
@@ -35,7 +39,6 @@ class table: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
     }
     

@@ -13,10 +13,21 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var textid: UITextField!
     @IBAction func setID() {
-        YunniArray.append(Yunni(id:textid.text))
+        //YunniArray.append(Yunni(id:textid.text))
+        //print(YunniArray)
+        print("append!!!")
+        //dismiss(animated: false, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+        YunniArray.append(Yunni(_id:String(textid.text!)))
         print(YunniArray)
         print("append!!!")
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

@@ -84,7 +84,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="XET-Mb-Dsv"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="6T6-W3-MXB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -125,7 +125,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Set"/>
                                 <connections>
-                                    <action selector="setID" destination="BYZ-38-t0r" eventType="touchUpInside" id="qrY-pu-yLP"/>
+                                    <segue destination="C4u-bM-urh" kind="unwind" unwindAction="toBaseWithSender:" id="Iaw-iO-D45"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -137,6 +137,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="C4u-bM-urh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="98.4375"/>
         </scene>

@@ -8,8 +8,11 @@
 
 import Foundation
 
-struct Yunni{
-    var id:String?
+class Yunni{
+    var id:String
+    init(_id: String){
+        self.id=_id
+    }
 }
 
-var YunniArray:Array<Yunni> = [Yunni(id:"asdf"),Yunni(id:"Yunni")]
+var YunniArray:Array<Yunni> = [Yunni(_id:String("asdf")),Yunni(_id:String("Yunni"))]
