@@ -186,6 +186,7 @@ class AlarmManager{
 }
 
 class Post{
+    var id:String
     var title:String
     var detail:String?
     var dueDate:CSHDate?
@@ -210,52 +211,105 @@ class Post{
         }
     }
     
-    init(title:String, detail:String, type:PostType) {
+    init(id:String, title:String, detail:String, type:PostType) {
+        self.id=id
         self.title=title
         self.detail=detail
         self.type = type
     }
     
-    convenience init(title:String, detail:String, dueDate:CSHDate, dueTime:CSHTime, type:PostType) {
-        self.init(title:title, detail:detail, type:type)
+    convenience init(id:String, title:String, detail:String, dueDate:CSHDate, dueTime:CSHTime, type:PostType) {
+        self.init(id:id, title:title, detail:detail, type:type)
         self.dueDate=dueDate
         self.dueTime=dueTime
     }
     
 }
 
+class Board{
+    var course_id:String = ""
+    var id:String=""
+    var title:String=""
+    var hasChildren:Bool=false
+    var posts:[Post] = []
+    init(cid:String, bid:String, title:String, hasChild:Bool){
+        self.course_id=cid
+        self.id=bid
+        self.title=title
+        self.hasChildren=hasChild
+    }
+    func RenewPosts(){    Alamofire.request("https://learn.hanyang.ac.kr/learn/api/public/v1/courses/\(self.course_id)/contents/\(self.id)/children").responseJSON { response in
+            if let result = response.result.value {
+                let JSON = result as! NSDictionary
+                let posts = JSON.object(forKey: "results") as! [NSDictionary]
+                for post_idx in 0..<posts.count {
+                    var pid:String = posts[post_idx].object(forKey: "id") as! String
+                    var ptitle:String = posts[post_idx].object(forKey: "title") as! String
+                    var pdetail:String = String(" ")
+                    self.posts.append(Post(id: pid, title: ptitle, detail: pdetail, type: .Normal))
+                    print("boardId: \(self.id), board title: \(self.title), postId: \(pid), postTitle: \(ptitle)")
+                }
+            }
+        }
+    }
+}
+
 class Course{
     var id:String = ""
-    var announcementPostId:String = ""
-    init(id:String) {
-        self.id=id
+    var announcementBoard:Board = Board(cid: "0", bid: "0", title: "0", hasChild: false)
+    var assignmentBoard:Board = Board(cid: "0", bid: "0", title: "0", hasChild: false)
+    //var otherBoards:[Board]
+    
+    init(id_:String) {
+        self.id=id_
     }
-    func RenewPostInformation(){
+    
+    func RenewAssignmentBoard(){
     Alamofire.request("https://learn.hanyang.ac.kr/learn/api/public/v1/courses/\(id)/contents/").responseJSON { response in
             if let result = response.result.value {
                 let JSON = result as! NSDictionary
-                let postsD = JSON.object(forKey: "results") as! [NSDictionary]
-                for pidx in 0...0 {
-                    var wid:String = postsD[pidx].object(forKey: "id") as! String
-                    print(wid)
-                    self.announcementPostId = wid
-                    
+                let boardDictionary = JSON.object(forKey: "results") as! [NSDictionary]
+                if boardDictionary.count==0{
+                    return
                 }
+                for board_idx in 0...0 {
+                    if boardDictionary[board_idx].object(forKey: "hasChildren") == nil {
+                        return
+                    }
+                    var board_id:String = boardDictionary[board_idx].object(forKey: "id") as! String
+                    var board_title:String = boardDictionary[board_idx].object(forKey: "title") as! String
+                    var board_hasChildren:Bool = boardDictionary[board_idx].object(forKey: "hasChildren") as! Bool
+                    print("courseId: \(self.id), assignment board : \(board_id), title: \(board_title)")
+                    self.assignmentBoard = Board(cid: self.id, bid: board_id, title: board_title, hasChild: board_hasChildren)
+                }
+                self.assignmentBoard.RenewPosts()
             }
         }
     }
-    func RenewAssignmentsInformation(){
-    Alamofire.request("https://learn.hanyang.ac.kr/learn/api/public/v1/courses/\(self.id)/contents/\(self.announcementPostId)/children").responseJSON { response in
+    
+    func RenewAnnouncementBoard(){
+    Alamofire.request("https://learn.hanyang.ac.kr/learn/api/public/v1/courses/\(id)/contents/").responseJSON { response in
             if let result = response.result.value {
                 let JSON = result as! NSDictionary
-                let childrens = JSON.object(forKey: "results") as! [NSDictionary]
-                for cidx in 0..<childrens.count {
-                    var wid:String = childrens[cidx].object(forKey: "title") as! String
-                    print(wid)
+                let boardDictionary = JSON.object(forKey: "results") as! [NSDictionary]
+                if boardDictionary.count <= 1{
+                    return
                 }
+                for board_idx in 1...1 {
+                    if boardDictionary[board_idx].object(forKey: "hasChildren") == nil {
+                        return
+                    }
+                    var board_id:String = boardDictionary[board_idx].object(forKey: "id") as! String
+                    var board_title:String = boardDictionary[board_idx].object(forKey: "title") as! String
+                    var board_hasChildren:Bool = boardDictionary[board_idx].object(forKey: "hasChildren") as! Bool
+                    print("courseId: \(self.id), announcement board : \(board_id), title: \(board_title)")
+                    self.announcementBoard = Board(cid: self.id, bid: board_id, title: board_title, hasChild: board_hasChildren)
+                }
+                self.announcementBoard.RenewPosts()
             }
         }
     }
+    
 }
 
 class BlackboardManager{
@@ -267,23 +321,30 @@ class BlackboardManager{
     var userId:String = ""
     var courses:[Course] = []
     init(){
-        Alamofire.request( "https://learn.hanyang.ac.kr/ultra/institution-page/effective").responseString { response in
-            //debugPrint(response)
-            var html_String:String = response.result.value!
-            self.userId = self.KMP(S: Array("/" + html_String), P: Array(String("/,\"id\":\"")))
-        }
+        RenewUserId()
     }
     
+    func RenewUserId(){
+        Alamofire.request( "https://learn.hanyang.ac.kr/ultra/institution-page/effective").responseString { response in
+            var html_String:String = response.result.value!
+            self.userId = self.KMP(S: Array("/" + html_String), P: Array(String("/,\"id\":\"")))
+            self.RenewCourseInformation()
+        }
+    }
     func RenewCourseInformation(){
         Alamofire.request( "https://learn.hanyang.ac.kr/learn/api/public/v1/users/\(self.userId)/courses").responseJSON { response in
             if let result = response.result.value {
                 let JSON = result as! NSDictionary
-                let courseD = JSON.object(forKey: "results") as! [NSDictionary]
-                for cidx in 0..<courseD.count{
-                    var cid:String = courseD[cidx].object(forKey: "courseId") as! String
+                let courseDictionary = JSON.object(forKey: "results") as! [NSDictionary]
+                for course_idx in 0..<courseDictionary.count{
+                    var cid:String = courseDictionary[course_idx].object(forKey: "courseId") as! String
                     print(cid)
-                    self.courses.append(Course(id: cid))
-                    self.courses[cidx].RenewPostInformation()
+                    
+                    //append방식이여서, 계속하면 쌓일것이다. 나중에 생각해서 고쳐라.
+                    self.courses.append(Course(id_: cid))
+                    self.courses[course_idx].RenewAssignmentBoard()
+                    self.courses[course_idx].RenewAnnouncementBoard()
+
                 }
             }
         }

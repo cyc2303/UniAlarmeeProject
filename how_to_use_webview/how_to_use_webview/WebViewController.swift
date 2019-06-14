@@ -32,7 +32,8 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         
         //how to get the userId
         var userID:String = "_30883_1"
-        var updateManager:BlackboardManager = BlackboardManager.sharedInstance
+        //var updateManager:BlackboardManager = BlackboardManager.sharedInstance
+        var myAPI:BlackboardManager = BlackboardManager.sharedInstance
 
         /*
         Alamofire.request( "https://learn.hanyang.ac.kr/ultra/institution-page/effective").responseString { response in
@@ -41,9 +42,9 @@ class WebViewController: UIViewController, UIWebViewDelegate {
             print(html_String)
             
             userID = self.KMP(S: Array("/" + html_String), P: Array(String("/,\"id\":\"")), answerLength:8)
-        }*/
+        }
         print("user id is \(userID)")
-        
+        */
         
         //how to get the courseId
         /*
