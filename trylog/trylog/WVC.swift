@@ -1,14 +1,14 @@
 //
-//  WebViewController.swift
-//  UniAlarmee
+//  WVC.swift
+//  trylog
 //
-//  Created by Choi Yechan on 13/06/2019.
-//  Copyright © 2019 CSH. All rights reserved.
+//  Created by yuni on 14/06/2019.
+//  Copyright © 2019 yuni. All rights reserved.
 //
 
 import UIKit
 import Alamofire
-class WebViewController: UIViewController, UIWebViewDelegate {
+class WVC: UIViewController, UIWebViewDelegate {
     
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     
@@ -38,11 +38,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
                 print("Data: \(utf8Text)") // original server data as UTF8 string
             }
         }
-        if let uvc = storyboard?.instantiateViewController(withIdentifier: "TabBar"){
-            self.present(uvc,animated: false)
-        }
-        //dismiss(animated: false, completion: nil)
-        //frameSize=0
+        frameSize=0
     }
     
     override func viewDidLoad() {
@@ -61,8 +57,9 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         frame.size.height = frameSize
         //frame.origin.x = 240
         webView.frame = frame
+        
         while (webView.isLoading){
-            Go(WebViewController())
+            Go(WVC())
             break
         }
         print("webViewDidFinishLoad")
@@ -71,6 +68,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     
     func webViewDidStartLoad(_ webView: UIWebView) {
         print("webViewDidStartLoad")
+   
     }
     
     /*
