@@ -10,6 +10,9 @@
 		4E56F49722B2438800C9A1A2 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E56F49622B2438800C9A1A2 /* Calendar.storyboard */; };
 		4E56F49922B2449800C9A1A2 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E56F49822B2449800C9A1A2 /* WebViewController.swift */; };
 		4E80EDBF22B25D80009DAC16 /* vc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E80EDBE22B25D80009DAC16 /* vc.swift */; };
+		4EA1E6C822B38D8900D0B985 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA1E6C722B38D7A00D0B985 /* SettingViewController.swift */; };
+		4EA1E6CA22B399C200D0B985 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1E6C922B399C200D0B985 /* List.storyboard */; };
+		4EA1E6CC22B39A8A00D0B985 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA1E6CB22B39A8A00D0B985 /* ListViewController.swift */; };
 		4EE8A00C22B23B9C00B2C810 /* AddToDo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EE8A00B22B23B9C00B2C810 /* AddToDo.storyboard */; };
 		501E51897EDB5E7E70DEA4E9 /* Pods_UniAlarmeeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335662C517E06B77EDDF8B23 /* Pods_UniAlarmeeUITests.framework */; };
 		87830BA841FB84C2EA69D061 /* Pods_UniAlarmee_UniAlarmeeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8676198415266AC6B955611E /* Pods_UniAlarmee_UniAlarmeeTests.framework */; };
@@ -85,6 +88,9 @@
 		4E56F49622B2438800C9A1A2 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		4E56F49822B2449800C9A1A2 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		4E80EDBE22B25D80009DAC16 /* vc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc.swift; sourceTree = "<group>"; };
+		4EA1E6C722B38D7A00D0B985 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		4EA1E6C922B399C200D0B985 /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
+		4EA1E6CB22B39A8A00D0B985 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		4EE8A00B22B23B9C00B2C810 /* AddToDo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddToDo.storyboard; sourceTree = "<group>"; };
 		8676198415266AC6B955611E /* Pods_UniAlarmee_UniAlarmeeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UniAlarmee_UniAlarmeeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9582E90822928D7A00BD3F2A /* UniAlarmee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniAlarmee.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -281,13 +287,16 @@
 				9582E90D22928D7A00BD3F2A /* ViewController.swift */,
 				9582E97422928FCB00BD3F2A /* FSCalendarScopeViewController.swift */,
 				95BCE7B12296CBD8000B0690 /* AddTodoViewController.swift */,
-				9582E90F22928D7A00BD3F2A /* Main.storyboard */,
 				4E80EDBE22B25D80009DAC16 /* vc.swift */,
 				4E56F49822B2449800C9A1A2 /* WebViewController.swift */,
+				4EA1E6C722B38D7A00D0B985 /* SettingViewController.swift */,
+				9582E90F22928D7A00BD3F2A /* Main.storyboard */,
+				4EA1E6C922B399C200D0B985 /* List.storyboard */,
+				4EA1E6CB22B39A8A00D0B985 /* ListViewController.swift */,
 				4E56F49622B2438800C9A1A2 /* Calendar.storyboard */,
 				4EE8A00B22B23B9C00B2C810 /* AddToDo.storyboard */,
-				9582E91222928D7B00BD3F2A /* Assets.xcassets */,
 				9582E91422928D7B00BD3F2A /* LaunchScreen.storyboard */,
+				9582E91222928D7B00BD3F2A /* Assets.xcassets */,
 				9582E97622928FFD00BD3F2A /* DataCenter.swift */,
 				9582E91722928D7B00BD3F2A /* Info.plist */,
 			);
@@ -648,6 +657,7 @@
 				9582E91622928D7B00BD3F2A /* LaunchScreen.storyboard in Resources */,
 				9582E91322928D7B00BD3F2A /* Assets.xcassets in Resources */,
 				4E56F49722B2438800C9A1A2 /* Calendar.storyboard in Resources */,
+				4EA1E6CA22B399C200D0B985 /* List.storyboard in Resources */,
 				9582E91122928D7A00BD3F2A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -784,9 +794,11 @@
 				9582E97722928FFD00BD3F2A /* DataCenter.swift in Sources */,
 				9582E96B22928DCE00BD3F2A /* FSCalendarHeaderView.m in Sources */,
 				9582E96322928DCE00BD3F2A /* FSCalendarStickyHeader.m in Sources */,
+				4EA1E6CC22B39A8A00D0B985 /* ListViewController.swift in Sources */,
 				9582E96222928DCE00BD3F2A /* FSCalendarCell.m in Sources */,
 				9582E96722928DCE00BD3F2A /* FSCalendarSeparatorDecorationView.m in Sources */,
 				9582E96622928DCE00BD3F2A /* FSCalendarWeekdayView.m in Sources */,
+				4EA1E6C822B38D8900D0B985 /* SettingViewController.swift in Sources */,
 				9582E96922928DCE00BD3F2A /* FSCalendarConstants.m in Sources */,
 				9582E96A22928DCE00BD3F2A /* FSCalendarCalculator.m in Sources */,
 				9582E96422928DCE00BD3F2A /* FSCalendar.m in Sources */,

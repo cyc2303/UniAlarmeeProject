@@ -23,9 +23,9 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         return webView
     }()
     
-    var frameSize: CGFloat = 700.0
+    var frameSize: CGFloat = 2000.0
     var text: String = "https://learn.hanyang.ac.kr/learn/api/public/v1/courses/_9776_1/contents/_177603_1/children"
-    @IBAction func Go(_ sender: Any) {
+    func Go(_ sender: Any) {
         let request: NSURLRequest = NSURLRequest(url: URL(string: text)!)
         webView.loadRequest(request as URLRequest)
         Alamofire.request( "https://learn.hanyang.ac.kr/learn/api/public/v1/courses/_9776_1/contents/_177603_1/children").responseJSON { response in
@@ -38,16 +38,24 @@ class WebViewController: UIViewController, UIWebViewDelegate {
                 print("Data: \(utf8Text)") // original server data as UTF8 string
             }
         }
-        if let uvc = storyboard?.instantiateViewController(withIdentifier: "TabBar"){
-            self.present(uvc,animated: false)
-        }
         //dismiss(animated: false, completion: nil)
-        //frameSize=0
+        //self.navigationController?.popViewController(animated: false)
+        //frameSize=0.0
+        //dismiss(animated: false, completion: nil)
+        self.navigationController?.popViewController(animated: false)
+        //self.navigationController?.popViewController(animated: false)
+        //self.navigationController?.popViewController(animated: false)
+        //self.navigationController?.popViewController(animated: false)
+        //self.navigationController?.popViewController(animated: false)
+        //dismiss(animated: false, completion: nil)
+        
     }
-    
+    var didLogin = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addSubview(self.webView)
+        if didLogin==false {
+            self.view.addSubview(self.webView)
+        }
         
         // Do any additional setup after loading the view.
     }
@@ -63,8 +71,15 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         webView.frame = frame
         while (webView.isLoading){
             Go(WebViewController())
+            //frameSize = 0.0
+            //frame.size.height = frameSize
+            //webView.frame = frame
+            //didLogin = true
+            //dismiss(animated: false, completion: nil)
+            //self.navigationController?.popViewController(animated: false)
             break
         }
+        didLogin = true
         print("webViewDidFinishLoad")
         //Go(WebViewController())
     }

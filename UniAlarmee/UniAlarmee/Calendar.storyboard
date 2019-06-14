@@ -131,8 +131,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PML-zZ-gqJ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="vBS-Yc-mjt"/>
-                    <navigationItem key="navigationItem" title="FSCalendar" id="php-3u-qeW"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" id="vBS-Yc-mjt"/>
+                    <navigationItem key="navigationItem" title="Calendar" id="php-3u-qeW"/>
                     <connections>
                         <outlet property="calendar" destination="Lwg-vf-EMf" id="eoo-Mi-z50"/>
                         <outlet property="calendarHeightConstraint" destination="i7p-Ls-pkx" id="UDh-gp-eEb"/>
