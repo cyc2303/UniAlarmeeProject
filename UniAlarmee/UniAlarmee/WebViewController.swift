@@ -42,7 +42,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         //self.navigationController?.popViewController(animated: false)
         //frameSize=0.0
         //dismiss(animated: false, completion: nil)
-        self.navigationController?.popViewController(animated: false)
+        self.navigationController?.popViewController(animated: true)
         //self.navigationController?.popViewController(animated: false)
         //self.navigationController?.popViewController(animated: false)
         //self.navigationController?.popViewController(animated: false)

@@ -33,17 +33,6 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*
-        var didLogin:Bool = false
-        if didLogin == false {
-            let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let uvc = storyboard.instantiateViewController(withIdentifier: "Webview")
-            //self.navigationController?.pushViewController(uvc, animated: false)
-            self.present(uvc,animated: false, completion: nil)
-            print("ㅁㄴㅇㄹ")
-            didLogin = true
-        }
-        캘린더를 시작화면으로 지정한 후 로그인을 모달로 띄우는 코드. 웬진 모르겠지만 안됨*/
         if UIDevice.current.model.hasPrefix("iPad") {
             self.calendarHeightConstraint.constant = 400
         }
@@ -150,7 +139,6 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
         var myManager:PlannerManager = PlannerManager.sharedInstance
         let selectedDate=myManager.selectedDate
         let oneDayPlanner = myManager.planner[selectedDate.year][selectedDate.month][selectedDate.day]!
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
         if indexPath.section == 0 {
             let tmpList = oneDayPlanner.todoList.filter{$0.type.typeTitle == "Assignment"}
@@ -203,17 +191,7 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
         print("asdfasdfasdfasdf")
     }
     
-    @IBAction func addWork(sender: AnyObject) {
-        /*
-        var cshtoday:CSHDate = CSHDate(y: 2019, m: 5, d: 5, wd: 0)
-        var myManager:PlannerManager = PlannerManager.sharedInstance
-        var myAlarm:AlarmManager = AlarmManager.sharedInstance
-        var newTodo:Todo = Todo(title: "Soybean souce", detail: "hot souce", type: .Assignment)
-        */
-        //myManager.AddTodo(newDate: cshtoday, newTodo: newTodo)
-        //print("add")
-        //tableView.reloadData()
-    }
+    
     @IBAction func testAPI(_ sender: Any) {
         print("result")
     }

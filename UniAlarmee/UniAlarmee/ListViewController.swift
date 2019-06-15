@@ -16,7 +16,10 @@ class ListViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func toList(segue:UIStoryboardSegue){
+        //tableView.reloadData()
+        print("asdfasdfasdfasdf")
+    }
     /*
     // MARK: - Navigation
 

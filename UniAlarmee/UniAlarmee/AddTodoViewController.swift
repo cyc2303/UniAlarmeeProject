@@ -31,9 +31,6 @@ class AddTodoViewController: ViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -41,9 +38,10 @@ class AddTodoViewController: ViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         
-        let button = sender as! UIButton
-        
+        //let button = sender as! UIButton
+        let button = sender as! UIBarButtonItem
         //tag=100 : Add new todo
+        
         if (button.tag == 100){
             guard let dateYear = Int(Date_year.text!) else{
                 //call error pop-up
