@@ -112,6 +112,7 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
 
     func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
         print("\(self.dateFormatter.string(from: calendar.currentPage))")
+        
     }
     
     // MARK:- UITableViewDataSource
@@ -133,6 +134,7 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
         let NOA:Int = oneDayPlanner.NumOfAssignment()
         let NOT:Int = oneDayPlanner.NumOfNormal()
         return [NOA, NOT][section]
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

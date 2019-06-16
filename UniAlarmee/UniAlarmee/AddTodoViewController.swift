@@ -71,6 +71,7 @@ class AddTodoViewController: ViewController {
             
             let myManager:PlannerManager = PlannerManager.sharedInstance
             myManager.AddTodo(newDate: cshDate, newTodo: newTodo)
+            //myManager.SavePlanner()
         }
     }
 }
