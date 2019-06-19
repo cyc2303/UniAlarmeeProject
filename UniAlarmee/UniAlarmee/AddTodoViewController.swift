@@ -9,7 +9,18 @@
 import UIKit
 
 class AddTodoViewController: ViewController {
-
+ 
+    @IBAction func Picdate(_ sender: UIDatePicker) {
+        
+        sender.addTarget(self, action: #selector(change(sender:)), for: .valueChanged)
+    }
+    @objc func change(sender: UIDatePicker){
+        let dateformatter : DateFormatter = DateFormatter()
+        dateformatter.dateStyle = .medium
+        dateformatter.timeStyle = .medium
+        let a = dateformatter.string(from: sender.date)
+        print(a)
+    }
     @IBOutlet weak var Date_year: UITextField!
     
     @IBOutlet weak var Date_month: UITextField!
