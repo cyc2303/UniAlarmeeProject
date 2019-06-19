@@ -292,14 +292,16 @@ class Board{
                 self.posts.append(Post(id: pid, title: ptitle, detail: pdetail, type: .Normal))
                 print("boardId: \(self.id), board title: \(self.title), postId: \(pid), postTitle: \(ptitle)")
                 
-                //add to JSON
+                //add to JSON and Alarm
                 if self.title == "과제" {
+                    var myAlarm:AlarmManager = AlarmManager.sharedInstance
+                    myAlarm.announcements.append(Post(id: pid, title: ptitle, detail: pdetail, type: .Announcement))
                     posts_for_save.append(JSON_Post(title: ptitle, detail: pdetail, type: "Announcement"))
                 }
                 else{
                     posts_for_save.append(JSON_Post(title: ptitle, detail: pdetail, type: "Normal"))
                 }
-                //add to JSON
+                
             }
         }
         }
