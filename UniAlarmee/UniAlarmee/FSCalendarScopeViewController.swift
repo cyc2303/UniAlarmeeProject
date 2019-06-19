@@ -52,7 +52,8 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
         var cshtoday:CSHDate = CSHDate(y: 2019, m: 5, d: 5, wd: 0)
         var myManager:PlannerManager = PlannerManager.sharedInstance
         var myAlarm:AlarmManager = AlarmManager.sharedInstance
-        
+        var myboard:BlackboardManager = BlackboardManager.sharedInstance
+
         let selectedDates = self.calendar.selectedDates.map({self.dateFormatter.string(from: $0)})
         let date_String =  selectedDates[0].components(separatedBy: "/")
         let date_Int = date_String.map({Int($0)!})

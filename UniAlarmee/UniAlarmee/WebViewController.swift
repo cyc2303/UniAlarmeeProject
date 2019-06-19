@@ -46,6 +46,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         //frameSize=0.0
         //dismiss(animated: false, completion: nil)
         var myboard:BlackboardManager = BlackboardManager.sharedInstance
+        myboard.RenewUserId()
         hakbun = myboard.userId
         print("###################################학번:"+hakbun)
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(5)){

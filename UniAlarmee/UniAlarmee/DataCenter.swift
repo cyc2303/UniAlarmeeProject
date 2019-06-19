@@ -117,7 +117,11 @@ class PlannerManager{
     var planner:[[[OneDayPlanner?]]] = Array(repeating:Array(repeating:Array(repeating:nil, count:32),count:13),count:3000)
     
     private init(){
-        load_json()
+        load_user()
+        print(user_info)
+        print("%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+        
+        load_todos()
         print(todos_for_load.count)
         for i in 0..<todos_for_load.count{
             print(todos_for_load[i])
@@ -141,7 +145,6 @@ class PlannerManager{
                 }
                 AddTodo(newDate:todos_for_load[i].createDate, newTodo:tmpTodo)
             }
-            
         }
     }
     
@@ -182,7 +185,7 @@ class PlannerManager{
             jsonTodo.dueTime = newTodo.dueTime!
         }
         todos_for_save.append(jsonTodo)
-        save_json()
+        save_todos()
         //end codable
     }
     func DeleteTodo(){
@@ -296,11 +299,12 @@ class Board{
                 if self.title == "과제" {
                     var myAlarm:AlarmManager = AlarmManager.sharedInstance
                     myAlarm.announcements.append(Post(id: pid, title: ptitle, detail: pdetail, type: .Announcement))
-                    posts_for_save.append(JSON_Post(title: ptitle, detail: pdetail, type: "Announcement"))
+                    posts_for_save.append(JSON_Post(id: pid, title: ptitle, detail: pdetail, type: "Announcement"))
                 }
                 else{
-                    posts_for_save.append(JSON_Post(title: ptitle, detail: pdetail, type: "Normal"))
+                    posts_for_save.append(JSON_Post(id: pid, title: ptitle, detail: pdetail, type: "Normal"))
                 }
+                save_posts()
                 
             }
         }
@@ -375,13 +379,37 @@ class BlackboardManager{
     var userId:String = ""
     var courses:[Course] = []
     init(){
-        RenewUserId()
+        load_user()
+        load_posts()
+        print("post num : \(posts_for_load.count)")
+        for i in 0..<posts_for_load.count{
+            posts_for_save.append(posts_for_load[i])
+            save_posts()
+            
+            print(posts_for_load[i])
+            if posts_for_load[i].type == "Announcement"{
+                var tmpPost:Post = Post(id: posts_for_load[i].postId, title: posts_for_load[i].postTitle, detail: posts_for_load[i].postDetail, type: .Announcement)
+                if posts_for_load[i].dueDate != nil{
+                    tmpPost.dueDate = posts_for_load[i].dueDate!
+                }
+                if posts_for_load[i].dueTime != nil{
+                    tmpPost.dueTime = posts_for_load[i].dueTime!
+                }
+                var myAlarm:AlarmManager = AlarmManager.sharedInstance
+                myAlarm.AddAnnouncement(newAnnouncement: tmpPost)
+            }
+        }
     }
     
     func RenewUserId(){
+        posts_for_save.removeAll()
         Alamofire.request( "https://learn.hanyang.ac.kr/ultra/institution-page/effective").responseString { response in
             var html_String:String = response.result.value!
             self.userId = self.KMP(S: Array("/" + html_String), P: Array(String("/,\"id\":\"")))
+            user_info.ID=self.userId
+            user_info.userName = "Sung Joo Eon"
+            user_info.userId = "2017xxxxxx"
+            save_user()
             self.RenewCourseInformation()
         }
         
@@ -495,18 +523,27 @@ struct JSON_Todo : Codable{
 }
 
 struct JSON_Post : Codable {
+    var postId:String
     var postTitle:String
     var postDetail:String
-    var postDate:CSHDate? = nil
-    var postTime:CSHTime? = nil
+    var dueDate:CSHDate? = nil
+    var dueTime:CSHTime? = nil
     var type:String
-    init(title:String, detail:String, type:String){
+    init(id:String, title:String, detail:String, type:String){
+        self.postId=id
         self.postTitle=title
         self.postDetail=detail
         self.type=type
     }
 }
 
+struct User:Codable{
+    var userName:String
+    var userId:String
+    var ID:String
+}
+
+var user_info:User = User(userName: "", userId: "", ID: "")
 var todos_for_load:[JSON_Todo] = []
 var posts_for_load:[JSON_Post] = []
 var todos_for_save:[JSON_Todo] = []
@@ -520,6 +557,9 @@ func save_json(){
 }
 
 func load_json(){
+    if let data = UserDefaults.standard.object(forKey: "user") as? Data{
+        user_info = try! PropertyListDecoder().decode(User.self, from: data)
+    }
     if let data = UserDefaults.standard.object(forKey: "todos") as? Data{
         todos_for_load = try! PropertyListDecoder().decode([JSON_Todo].self, from: data)
     }
@@ -528,3 +568,28 @@ func load_json(){
     }
 }
 
+func load_user(){
+    if let data = UserDefaults.standard.object(forKey: "user") as? Data{
+        user_info = try! PropertyListDecoder().decode(User.self, from: data)
+    }
+}
+func load_todos(){
+    if let data = UserDefaults.standard.object(forKey: "todos") as? Data{
+        todos_for_load = try! PropertyListDecoder().decode([JSON_Todo].self, from: data)
+    }
+}
+func load_posts(){
+    if let data = UserDefaults.standard.object(forKey: "posts") as? Data{
+        posts_for_load = try! PropertyListDecoder().decode([JSON_Post].self, from: data)
+    }
+}
+
+func save_user(){
+    UserDefaults.standard.set(try? PropertyListEncoder().encode(user_info), forKey: "user")
+}
+func save_todos(){
+    UserDefaults.standard.set(try? PropertyListEncoder().encode(todos_for_save), forKey: "todos")
+}
+func save_posts(){
+    UserDefaults.standard.set(try? PropertyListEncoder().encode(posts_for_save), forKey: "posts")
+}
