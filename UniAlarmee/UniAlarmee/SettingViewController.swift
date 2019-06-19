@@ -8,8 +8,9 @@
 
 import UIKit
 
-class SettingViewController: UIViewController {
-
+class SettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var loginID:String = "로그인 되지 않음"
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +22,36 @@ class SettingViewController: UIViewController {
             //self.present(uvc,animated: false)
         }
     }
-
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let loginCell = tableView.dequeueReusableCell(withIdentifier: "Login", for: indexPath)
+        loginCell.textLabel?.text = "로그인"
+        loginCell.detailTextLabel?.text = loginID
+        loginCell.detailTextLabel?.textColor = .gray
+        if indexPath.row==0 {
+            return loginCell
+        }
+        else{
+            return tableView.dequeueReusableCell(withIdentifier: "nothing", for: indexPath)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row==0 {
+            performSegue(withIdentifier: "LoginSelect", sender: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    }
     /*
     // MARK: - Navigation
 
