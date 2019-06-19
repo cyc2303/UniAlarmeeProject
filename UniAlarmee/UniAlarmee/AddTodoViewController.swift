@@ -74,6 +74,9 @@ class AddTodoViewController: UIViewController  {
         dyear = parseDate(date:a)[0]
         dmonth = parseDate(date: a)[1]
         dday = parseDate(date: a)[2]
+        print(dyear)
+        print(dmonth)
+        print(dday)
     }
     
     
@@ -101,10 +104,21 @@ class AddTodoViewController: UIViewController  {
         //tag=100 : Add new todo
         
         if (button.tag == 100){
-            let dateYear = dyear
-            let dateMonth = dmonth
-            let dateDay = dday
+            let myManager:PlannerManager = PlannerManager.sharedInstance
+
+            var dateYear = dyear
+            var dateMonth = dmonth
+            var dateDay = dday
             
+            if dateYear==0 {
+                dateYear = myManager.selectedDate.year
+            }
+            if dateMonth==0 {
+                dateMonth = myManager.selectedDate.month
+            }
+            if dateDay==0 {
+                dateDay = myManager.selectedDate.day
+            }
             guard let todoTitle = tle.text else{
                 //call error pop-up
                 return
@@ -118,7 +132,6 @@ class AddTodoViewController: UIViewController  {
             
             var newTodo:Todo = Todo(title: todoTitle, detail: todoDetail, type: .Assignment)
             
-            let myManager:PlannerManager = PlannerManager.sharedInstance
             myManager.AddTodo(newDate: cshDate, newTodo: newTodo)
             //myManager.SavePlanner()
         }

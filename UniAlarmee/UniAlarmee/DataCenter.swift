@@ -125,6 +125,9 @@ class PlannerManager{
         print(todos_for_load.count)
         for i in 0..<todos_for_load.count{
             print(todos_for_load[i])
+            print(todos_for_load[i].createDate.year)
+            print(todos_for_load[i].createDate.month)
+            print(todos_for_load[i].createDate.day)
             if todos_for_load[i].type == "Normal"{
                 var tmpTodo:Todo = Todo(title: todos_for_load[i].todoTitle, detail: todos_for_load[i].todoDetail, type:.Normal)
                 if todos_for_load[i].dueDate != nil{
