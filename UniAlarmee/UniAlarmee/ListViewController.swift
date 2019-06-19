@@ -9,6 +9,7 @@
 import UIKit
 
 class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet weak var tableView: UITableView!
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -24,6 +25,16 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let myAlarm:AlarmManager = AlarmManager.sharedInstance
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 25
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Assignment"
+        }
     }
     
 
