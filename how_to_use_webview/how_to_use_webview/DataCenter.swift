@@ -120,25 +120,25 @@ class PlannerManager{
         load_json()
         print(todos_for_load.count)
         for i in 0..<todos_for_load.count{
-            if todos[i].type == "Normal"{
-                var tmpTodo:Todo = Todo(title: todos[i].todoTitle, detail: todos[i].todoDetail, type:.Normal)
-                if todos[i].dueDate != nil{
-                    tmpTodo.dueDate = todos[i].dueDate!
+            if todos_for_load[i].type == "Normal"{
+                var tmpTodo:Todo = Todo(title: todos_for_load[i].todoTitle, detail: todos_for_load[i].todoDetail, type:.Normal)
+                if todos_for_load[i].dueDate != nil{
+                    tmpTodo.dueDate = todos_for_load[i].dueDate!
                 }
-                if todos[i].dueTime != nil{
-                    tmpTodo.dueTime = todos[i].dueTime!
+                if todos_for_load[i].dueTime != nil{
+                    tmpTodo.dueTime = todos_for_load[i].dueTime!
                 }
-                AddTodo(newDate:todos[i].createDate, newTodo:tmpTodo)
+                AddTodo(newDate:todos_for_load[i].createDate, newTodo:tmpTodo)
             }
             else{
-                var tmpTodo:Todo = Todo(title: todos[i].todoTitle, detail: todos[i].todoDetail, type:.Assignment)
-                if todos[i].dueDate != nil{
-                    tmpTodo.dueDate = todos[i].dueDate!
+                var tmpTodo:Todo = Todo(title: todos_for_load[i].todoTitle, detail: todos_for_load[i].todoDetail, type:.Assignment)
+                if todos_for_load[i].dueDate != nil{
+                    tmpTodo.dueDate = todos_for_load[i].dueDate!
                 }
-                if todos[i].dueTime != nil{
-                    tmpTodo.dueTime = todos[i].dueTime!
+                if todos_for_load[i].dueTime != nil{
+                    tmpTodo.dueTime = todos_for_load[i].dueTime!
                 }
-                AddTodo(newDate:todos[i].createDate, newTodo:tmpTodo)
+                AddTodo(newDate:todos_for_load[i].createDate, newTodo:tmpTodo)
             }
             
         }
