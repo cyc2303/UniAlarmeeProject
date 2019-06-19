@@ -23,8 +23,11 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let myAlarm:AlarmManager = AlarmManager.sharedInstance
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        //if indexPath.section == 0 {
+        cell.textLabel!.text = myAlarm.alarms[indexPath.row].todoTitle
+        return cell
+        //}
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -32,9 +35,9 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
+        //if section == 0 {
             return "Assignment"
-        }
+        //}
     }
     
 
