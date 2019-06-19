@@ -17,7 +17,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let myAlarm:AlarmManager = AlarmManager.sharedInstance
-        let NOA:Int = myAlarm.alarms.count
+        let NOA:Int = myAlarm.assignments.count
         return [NOA][section]
     }
     
@@ -25,7 +25,9 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let myAlarm:AlarmManager = AlarmManager.sharedInstance
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
         //if indexPath.section == 0 {
-        cell.textLabel!.text = myAlarm.alarms[indexPath.row].todoTitle
+        cell.textLabel!.text = myAlarm.assignments[indexPath.row].todoTitle
+        //cell.detailTextLabel!.text = "\(myAlarm.alarms[indexPath.row].dueDate!.year)/\(myAlarm.alarms[indexPath.row].dueDate!.month)/\(myAlarm.alarms[indexPath.row].dueDate!.day)"
+        
         return cell
         //}
     }
@@ -43,12 +45,13 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.reloadData()
 
         // Do any additional setup after loading the view.
     }
     
     @IBAction func toList(segue:UIStoryboardSegue){
-        //tableView.reloadData()
+        tableView.reloadData()
         print("asdfasdfasdfasdf")
     }
 

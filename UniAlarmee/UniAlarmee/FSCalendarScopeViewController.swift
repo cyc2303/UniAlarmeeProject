@@ -33,6 +33,7 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.reloadData()
         if UIDevice.current.model.hasPrefix("iPad") {
             self.calendarHeightConstraint.constant = 400
         }
@@ -51,14 +52,6 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
         var cshtoday:CSHDate = CSHDate(y: 2019, m: 5, d: 5, wd: 0)
         var myManager:PlannerManager = PlannerManager.sharedInstance
         var myAlarm:AlarmManager = AlarmManager.sharedInstance
-        var newTodo:Todo = Todo(title: "study souce", detail: "chili souce", type: .Assignment)
-        var newTodo2:Todo = Todo(title: "watch end game", detail: "no spo", type: .Normal)
-        
-        myManager.AddTodo(newDate: cshtoday, newTodo: newTodo)
-        myManager.AddTodo(newDate: cshtoday, newTodo: newTodo2)
-        
-        var newTodo3:Todo = Todo(title: "성주놀리기", detail:"우냐?", type: .Normal)
-        myManager.AddTodo(newDate: cshtoday, newTodo: newTodo3)
         
         let selectedDates = self.calendar.selectedDates.map({self.dateFormatter.string(from: $0)})
         let date_String =  selectedDates[0].components(separatedBy: "/")

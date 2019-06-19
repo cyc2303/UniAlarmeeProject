@@ -120,6 +120,7 @@ class PlannerManager{
         load_json()
         print(todos_for_load.count)
         for i in 0..<todos_for_load.count{
+            print(todos_for_load[i])
             if todos_for_load[i].type == "Normal"{
                 var tmpTodo:Todo = Todo(title: todos_for_load[i].todoTitle, detail: todos_for_load[i].todoDetail, type:.Normal)
                 if todos_for_load[i].dueDate != nil{
@@ -168,7 +169,7 @@ class PlannerManager{
         self.planner[newDate.year][newDate.month][newDate.day]!.todoList.append(newTodo)
         if newTodo.type.typeTitle != "Normal"{
             let myAlarm = AlarmManager.sharedInstance
-            myAlarm.AddAlarm(newAlarm: newTodo)
+            myAlarm.AddAssignment(newAssignment: newTodo)
         }
         
         //add to Codable
@@ -199,7 +200,8 @@ class AlarmManager{
     }()
     
     var today:CSHDate = CSHDate(y: 1997, m: 4, d: 7, wd: 1)
-    var alarms:[Todo] = []
+    var assignments:[Todo] = []
+    var announcements:[Post] = []
     
     private init(){
     }
@@ -218,8 +220,11 @@ class AlarmManager{
         
     }
     
-    func AddAlarm(newAlarm:Todo){
-        self.alarms.append(newAlarm)
+    func AddAssignment(newAssignment:Todo){
+        self.assignments.append(newAssignment)
+    }
+    func AddAnnouncement(newAnnouncement:Post){
+        self.announcements.append(newAnnouncement)
     }
 }
 
@@ -287,6 +292,14 @@ class Board{
                 self.posts.append(Post(id: pid, title: ptitle, detail: pdetail, type: .Normal))
                 print("boardId: \(self.id), board title: \(self.title), postId: \(pid), postTitle: \(ptitle)")
                 
+                //add to JSON
+                if self.title == "과제" {
+                    posts_for_save.append(JSON_Post(title: ptitle, detail: pdetail, type: "Announcement"))
+                }
+                else{
+                    posts_for_save.append(JSON_Post(title: ptitle, detail: pdetail, type: "Normal"))
+                }
+                //add to JSON
             }
         }
         }
@@ -482,15 +495,13 @@ struct JSON_Todo : Codable{
 struct JSON_Post : Codable {
     var postTitle:String
     var postDetail:String
-    var createDate:CSHDate
     var postDate:CSHDate? = nil
     var postTime:CSHTime? = nil
     var type:String
-    init(title:String, detail:String, type:String, date:CSHDate){
+    init(title:String, detail:String, type:String){
         self.postTitle=title
         self.postDetail=detail
         self.type=type
-        self.createDate=date
     }
 }
 
@@ -498,6 +509,8 @@ var todos_for_load:[JSON_Todo] = []
 var posts_for_load:[JSON_Post] = []
 var todos_for_save:[JSON_Todo] = []
 var posts_for_save:[JSON_Post] = []
+var todos_for_reset:[JSON_Todo] = []
+var posts_for_reset:[JSON_Post] = []
 
 func save_json(){
     UserDefaults.standard.set(try? PropertyListEncoder().encode(todos_for_save), forKey: "todos")
