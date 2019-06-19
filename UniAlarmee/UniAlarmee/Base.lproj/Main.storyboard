@@ -35,7 +35,7 @@
         <scene sceneID="WWo-Hw-edE">
             <objects>
                 <viewControllerPlaceholder storyboardName="Calendar" referencedIdentifier="Calendar" id="spx-Sk-Eah" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Calendar" id="AhX-dU-fjM"/>
+                    <navigationItem key="navigationItem" title="캘린더" id="AhX-dU-fjM"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QzK-Ks-LzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -136,11 +136,11 @@
             </objects>
             <point key="canvasLocation" x="-542" y="335"/>
         </scene>
-        <!--Setting-->
+        <!--설정-->
         <scene sceneID="SoV-Zc-Ya6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VQf-bg-J63" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Setting" id="EgE-p8-0Wl"/>
+                    <tabBarItem key="tabBarItem" title="설정" id="EgE-p8-0Wl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zy2-1z-zTR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -155,11 +155,11 @@
             </objects>
             <point key="canvasLocation" x="188" y="1065"/>
         </scene>
-        <!--Calendar-->
+        <!--캘린더-->
         <scene sceneID="Qdt-gE-Fm7">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q8p-Km-uy7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Calendar" id="idD-ET-QXk"/>
+                    <tabBarItem key="tabBarItem" title="캘린더" id="idD-ET-QXk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Szr-mf-LUr">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -174,11 +174,11 @@
             </objects>
             <point key="canvasLocation" x="-1345" y="1065"/>
         </scene>
-        <!--Notice-->
+        <!--공지-->
         <scene sceneID="PAZ-Ek-fQY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OZS-VQ-Q2Z" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Notice" id="FrL-i0-qjz"/>
+                    <tabBarItem key="tabBarItem" title="공지" id="FrL-i0-qjz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="k67-vf-m36">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

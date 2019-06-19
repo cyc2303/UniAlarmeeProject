@@ -175,9 +175,20 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 10
+        return 25
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0{
+            return "Assignment"
+        }
+        else if section == 1{
+            return "Normal"
+        }
+        else {
+            return "nothing"
+        }
+    }
     // MARK:- Target actions
     
     @IBAction func toggleClicked(sender: AnyObject) {
