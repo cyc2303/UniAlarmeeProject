@@ -10,6 +10,8 @@ import UIKit
 
 class SettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var tableView: UITableView!
+    
     var loginID:String = "로그인 되지 않음"
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +50,18 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         if indexPath.row==0 {
             performSegue(withIdentifier: "LoginSelect", sender: nil)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 25
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 25
+    }
+    //unwind segue
+    @IBAction func log(segue:UIStoryboardSegue){
+        self.tableView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

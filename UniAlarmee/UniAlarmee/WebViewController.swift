@@ -11,6 +11,7 @@ import Alamofire
 class WebViewController: UIViewController, UIWebViewDelegate {
     
     @IBOutlet weak var indicator: UIActivityIndicatorView!
+    var hakbun:String = ""
     
     lazy var webView: UIWebView = {
         let webView = UIWebView()
@@ -26,6 +27,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     var frameSize: CGFloat = 2000.0
     var text: String = "https://learn.hanyang.ac.kr/learn/api/public/v1/courses/_9776_1/contents/_177603_1/children"
     func Go(_ sender: Any) {
+        /*
         let request: NSURLRequest = NSURLRequest(url: URL(string: text)!)
         webView.loadRequest(request as URLRequest)
         Alamofire.request( "https://learn.hanyang.ac.kr/learn/api/public/v1/courses/_9776_1/contents/_177603_1/children").responseJSON { response in
@@ -38,18 +40,24 @@ class WebViewController: UIViewController, UIWebViewDelegate {
                 print("Data: \(utf8Text)") // original server data as UTF8 string
             }
         }
+ */
         //dismiss(animated: false, completion: nil)
         //self.navigationController?.popViewController(animated: false)
         //frameSize=0.0
         //dismiss(animated: false, completion: nil)
-        self.navigationController?.popViewController(animated: true)
-        //self.navigationController?.popViewController(animated: false)
-        //self.navigationController?.popViewController(animated: false)
-        //self.navigationController?.popViewController(animated: false)
-        //self.navigationController?.popViewController(animated: false)
-        //dismiss(animated: false, completion: nil)
+        var myboard:BlackboardManager = BlackboardManager.sharedInstance
+        hakbun = myboard.userId
+        print("###################################학번:"+hakbun)
+        performSegue(withIdentifier: "exit", sender: nil)
+        //self.navigationController?.popViewController(animated: true)
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination as! SettingViewController
+        dest.loginID = hakbun
+    }
+    
     var didLogin = false
     override func viewDidLoad() {
         super.viewDidLoad()
