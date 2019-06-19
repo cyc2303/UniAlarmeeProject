@@ -8,38 +8,85 @@
 
 import UIKit
 
-class AddTodoViewController: ViewController {
- 
+class AddTodoViewController: UIViewController  {
+    //@IBOutlet weak var TableView: UITableView!
+    
+    @IBOutlet weak var place: UITextField!
+    @IBOutlet weak var tle: UITextField!
+    /*
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell1 = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
+        if indexPath.row==0 {
+            return cell1
+        }
+        else{
+            return tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath)
+        }
+    }
+    
+    
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int{
+        return 1    }
+    
+    */
     @IBAction func Picdate(_ sender: UIDatePicker) {
         
         sender.addTarget(self, action: #selector(change(sender:)), for: .valueChanged)
     }
+    func parseDate(date:String) -> [Int]{
+        var chars:[Character] = Array(date)
+        var days:[Int]=[0,0,0]
+        var idx:Int = 0
+        
+        for i in 0..<chars.count{
+            if chars[i] == "." {
+                idx = idx+1
+                if idx == 3 {
+                    break
+                }
+            }
+            else if chars[i] == " "{
+                continue
+            }
+            else{
+                days[idx] = days[idx]*10 + Int(String(chars[i]))!
+            }
+        }
+        return days
+    }
+    
+    var dyear : Int = 0
+    var dmonth : Int = 0
+    var dday : Int = 0
+    
+    
     @objc func change(sender: UIDatePicker){
         let dateformatter : DateFormatter = DateFormatter()
         dateformatter.dateStyle = .medium
         dateformatter.timeStyle = .medium
         let a = dateformatter.string(from: sender.date)
-        print(a)
+        
+        dyear = parseDate(date:a)[0]
+        dmonth = parseDate(date: a)[1]
+        dday = parseDate(date: a)[2]
     }
-    @IBOutlet weak var Date_year: UITextField!
     
-    @IBOutlet weak var Date_month: UITextField!
     
-    @IBOutlet weak var Date_day: UITextField!
+// @IBOutlet weak var Todo_title: UITextField!
     
-    @IBOutlet weak var Todo_title: UITextField!
-    
-    @IBOutlet weak var Todo_detail: UITextField!
+// @IBOutlet weak var Todo_detail: UITextField!
     
     @IBOutlet weak var Todo_type: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let myManager:PlannerManager = PlannerManager.sharedInstance
-        Date_year.text=String(myManager.selectedDate.year)
-        Date_month.text=String(myManager.selectedDate.month)
-        Date_day.text=String(myManager.selectedDate.day)
-
+        
         // Do any additional setup after loading the view.
     }
     // MARK: - Navigation
@@ -54,24 +101,15 @@ class AddTodoViewController: ViewController {
         //tag=100 : Add new todo
         
         if (button.tag == 100){
-            guard let dateYear = Int(Date_year.text!) else{
+            let dateYear = dyear
+            let dateMonth = dmonth
+            let dateDay = dday
+            
+            guard let todoTitle = tle.text else{
                 //call error pop-up
                 return
             }
-            guard let dateMonth = Int(Date_month.text!) else{
-                //call error pop-up
-                return
-            }
-            guard let dateDay = Int(Date_day.text!) else{
-                //call error pop-up
-                return
-            }
-  
-            guard let todoTitle = Todo_title.text else{
-                //call error pop-up
-                return
-            }
-            guard let todoDetail = Todo_detail.text else{
+            guard let todoDetail = place.text else{
                 //call error pop-up
                 return
             }
