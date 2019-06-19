@@ -12,20 +12,27 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var tableView: UITableView!
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let myAlarm:AlarmManager = AlarmManager.sharedInstance
-        let NOA:Int = myAlarm.alarms.count
-        return [NOA][section]
+        let NOA:Int = myAlarm.assignments.count
+        let NOP:Int = myAlarm.announcements.count
+        return [NOA, NOP][section]
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let myAlarm:AlarmManager = AlarmManager.sharedInstance
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-        //if indexPath.section == 0 {
-        cell.textLabel!.text = myAlarm.alarms[indexPath.row].todoTitle
+        if indexPath.section == 0 {
+            cell.textLabel!.text = myAlarm.assignments[indexPath.row].todoTitle
+        }
+        else{
+            cell.textLabel!.text = myAlarm.announcements[indexPath.row].title
+        }
+        //cell.detailTextLabel!.text = "\(myAlarm.alarms[indexPath.row].dueDate!.year)/\(myAlarm.alarms[indexPath.row].dueDate!.month)/\(myAlarm.alarms[indexPath.row].dueDate!.day)"
+        
         return cell
         //}
     }
@@ -35,20 +42,24 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        //if section == 0 {
+        if section == 0 {
             return "Assignment"
-        //}
+        }
+        else{
+            return "Announcement"
+        }
     }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.reloadData()
 
         // Do any additional setup after loading the view.
     }
     
     @IBAction func toList(segue:UIStoryboardSegue){
-        //tableView.reloadData()
+        tableView.reloadData()
         print("asdfasdfasdfasdf")
     }
 
