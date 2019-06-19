@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 
-class CSHTime{
+class CSHTime : Codable {
     var hour:Int
     var minute:Int
     
@@ -31,7 +31,7 @@ class ClassTime{
     }
 }
 
-class CSHDate{
+class CSHDate : Codable {
     var year:Int
     var month:Int
     var day:Int
@@ -47,7 +47,7 @@ class CSHDate{
 
 class Todo{
     var todoTitle:String
-    var todoDetail:String?
+    var todoDetail:String
     var dueDate:CSHDate?
     var dueTime:CSHTime?
     var type:TodoType
@@ -117,6 +117,31 @@ class PlannerManager{
     var planner:[[[OneDayPlanner?]]] = Array(repeating:Array(repeating:Array(repeating:nil, count:32),count:13),count:3000)
     
     private init(){
+        load_json()
+        print(todos_for_load.count)
+        for i in 0..<todos_for_load.count{
+            if todos[i].type == "Normal"{
+                var tmpTodo:Todo = Todo(title: todos[i].todoTitle, detail: todos[i].todoDetail, type:.Normal)
+                if todos[i].dueDate != nil{
+                    tmpTodo.dueDate = todos[i].dueDate!
+                }
+                if todos[i].dueTime != nil{
+                    tmpTodo.dueTime = todos[i].dueTime!
+                }
+                AddTodo(newDate:todos[i].createDate, newTodo:tmpTodo)
+            }
+            else{
+                var tmpTodo:Todo = Todo(title: todos[i].todoTitle, detail: todos[i].todoDetail, type:.Assignment)
+                if todos[i].dueDate != nil{
+                    tmpTodo.dueDate = todos[i].dueDate!
+                }
+                if todos[i].dueTime != nil{
+                    tmpTodo.dueTime = todos[i].dueTime!
+                }
+                AddTodo(newDate:todos[i].createDate, newTodo:tmpTodo)
+            }
+            
+        }
     }
     
     // manage the disk data
@@ -141,10 +166,23 @@ class PlannerManager{
             planner[newDate.year][newDate.month][newDate.day] = OneDayPlanner(date: newDate)
         }
         self.planner[newDate.year][newDate.month][newDate.day]!.todoList.append(newTodo)
-        if (newTodo.type.typeTitle != "Normal"){
+        if newTodo.type.typeTitle != "Normal"{
             let myAlarm = AlarmManager.sharedInstance
             myAlarm.AddAlarm(newAlarm: newTodo)
         }
+        
+        //add to Codable
+        var jsonTodo:JSON_Todo=JSON_Todo(title: newTodo.todoTitle, detail: newTodo.todoDetail, type: newTodo.type.typeTitle, date: newDate)
+   
+        if newTodo.dueDate != nil{
+            jsonTodo.dueDate = newTodo.dueDate!
+        }
+        if newTodo.dueTime != nil{
+            jsonTodo.dueTime = newTodo.dueTime!
+        }
+        todos_for_save.append(jsonTodo)
+        save_json()
+        //end codable
     }
     func DeleteTodo(){
         
@@ -248,6 +286,7 @@ class Board{
                     var pdetail:String = String(" ")
                     self.posts.append(Post(id: pid, title: ptitle, detail: pdetail, type: .Normal))
                     print("boardId: \(self.id), board title: \(self.title), postId: \(pid), postTitle: \(ptitle)")
+                    
                 }
             }
         }
@@ -330,6 +369,7 @@ class BlackboardManager{
             self.userId = self.KMP(S: Array("/" + html_String), P: Array(String("/,\"id\":\"")))
             self.RenewCourseInformation()
         }
+
     }
     func RenewCourseInformation(){
         Alamofire.request( "https://learn.hanyang.ac.kr/learn/api/public/v1/users/\(self.userId)/courses").responseJSON { response in
@@ -423,3 +463,53 @@ func getUserId(completion: @escaping (String) -> Void) {
     }
 }
 */
+
+struct JSON_Todo : Codable{
+    var todoTitle:String
+    var todoDetail:String
+    var createDate:CSHDate
+    var dueDate:CSHDate? = nil
+    var dueTime:CSHTime? = nil
+    var type:String
+    init(title:String, detail:String, type:String, date:CSHDate){
+        self.todoTitle=title
+        self.todoDetail=detail
+        self.type=type
+        self.createDate=date
+    }
+}
+
+struct JSON_Post : Codable {
+    var postTitle:String
+    var postDetail:String
+    var createDate:CSHDate
+    var postDate:CSHDate? = nil
+    var postTime:CSHTime? = nil
+    var type:String
+    init(title:String, detail:String, type:String, date:CSHDate){
+        self.postTitle=title
+        self.postDetail=detail
+        self.type=type
+        self.createDate=date
+    }
+}
+
+var todos_for_load:[JSON_Todo] = []
+var posts_for_load:[JSON_Post] = []
+var todos_for_save:[JSON_Todo] = []
+var posts_for_save:[JSON_Post] = []
+
+func save_json(){
+    UserDefaults.standard.set(try? PropertyListEncoder().encode(todos_for_save), forKey: "todos")
+    UserDefaults.standard.set(try? PropertyListEncoder().encode(posts_for_save), forKey: "posts")
+}
+
+func load_json(){
+    if let data = UserDefaults.standard.object(forKey: "todos") as? Data{
+        todos_for_load = try! PropertyListDecoder().decode([JSON_Todo].self, from: data)
+    }
+    if let data = UserDefaults.standard.object(forKey: "posts") as? Data{
+        posts_for_load = try! PropertyListDecoder().decode([JSON_Post].self, from: data)
+    }
+}
+

@@ -25,8 +25,18 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     
     var frameSize: CGFloat = 700.0
     var text: String = "https://learn.hanyang.ac.kr/learn/api/public/v1/courses/_9776_1/contents/_177603_1/children"
+    
     @IBAction func Go(_ sender: Any) {
+        var myPlanner:PlannerManager = PlannerManager.sharedInstance
+        myPlanner.AddTodo(newDate: CSHDate(y: 2019, m: 6, d: 19, wd: 1), newTodo: Todo(title: "ZASAL", detail: "Hangang", type: .Normal))
+        print("asdfasdfasdfasdf")
+        for i in 0..<myPlanner.planner[2019][6][19]!.todoList.count {
+            print(myPlanner.planner[2019][6][19]!.todoList[i].todoTitle)
+        }
+        print("endend\(myPlanner.planner[2019][6][19]!.todoList.count)endend")
+        
         let request: NSURLRequest = NSURLRequest(url: URL(string: text)!)
+        
         webView.loadRequest(request as URLRequest)
     
         
@@ -34,7 +44,6 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         var userID:String = "_30883_1"
         //var updateManager:BlackboardManager = BlackboardManager.sharedInstance
         var myAPI:BlackboardManager = BlackboardManager.sharedInstance
-
         /*
         Alamofire.request( "https://learn.hanyang.ac.kr/ultra/institution-page/effective").responseString { response in
             //debugPrint(response)
