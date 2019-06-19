@@ -48,7 +48,11 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         var myboard:BlackboardManager = BlackboardManager.sharedInstance
         hakbun = myboard.userId
         print("###################################학번:"+hakbun)
-        performSegue(withIdentifier: "exit", sender: nil)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(5)){
+            //5초 기다린 후에 화면이 전환 됨
+            self.performSegue(withIdentifier: "exit", sender: nil)
+        }
+        
         //self.navigationController?.popViewController(animated: true)
         
     }
