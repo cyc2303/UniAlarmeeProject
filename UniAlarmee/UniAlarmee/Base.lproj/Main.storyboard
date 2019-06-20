@@ -103,7 +103,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4bE-k0-yDb"/>
                     </view>
                     <navigationItem key="navigationItem" title="설정" id="hFv-Cq-RU8"/>
@@ -140,11 +140,12 @@
         <scene sceneID="SoV-Zc-Ya6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VQf-bg-J63" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="설정" id="EgE-p8-0Wl"/>
+                    <tabBarItem key="tabBarItem" title="설정" image="settings_black" landscapeImage="settings_black" largeContentSizeImage="settings_black" selectedImage="settings" id="EgE-p8-0Wl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zy2-1z-zTR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -159,11 +160,12 @@
         <scene sceneID="Qdt-gE-Fm7">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q8p-Km-uy7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="캘린더" id="idD-ET-QXk"/>
+                    <tabBarItem key="tabBarItem" title="캘린더" image="calendar_black" landscapeImage="calendar_black" largeContentSizeImage="calendar_black" selectedImage="calendar" id="idD-ET-QXk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Szr-mf-LUr">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -178,11 +180,12 @@
         <scene sceneID="PAZ-Ek-fQY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OZS-VQ-Q2Z" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="공지" id="FrL-i0-qjz"/>
+                    <tabBarItem key="tabBarItem" title="공지" image="list_black" landscapeImage="list_black" largeContentSizeImage="list_black" selectedImage="list" id="FrL-i0-qjz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="k67-vf-m36">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -194,4 +197,12 @@
             <point key="canvasLocation" x="-542" y="1065"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="calendar" width="29" height="29"/>
+        <image name="calendar_black" width="29" height="29"/>
+        <image name="list" width="29" height="29"/>
+        <image name="list_black" width="29" height="29"/>
+        <image name="settings" width="29" height="29"/>
+        <image name="settings_black" width="29" height="29"/>
+    </resources>
 </document>

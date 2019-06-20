@@ -56,7 +56,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 25
+        return 30
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -78,11 +78,12 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     
     @IBAction func refresh(_ sender: Any) {
-        let myBlackboard=BlackboardManager.sharedInstance
+        /* 블랙보드 API를 받아온 후 추후 설계할 예정
+         let myBlackboard=BlackboardManager.sharedInstance
         tableView.reloadData()
         if myBlackboard.userId != "" {
             myBlackboard.RenewCourseInformation()
-        }
+        }*/
     }
     
     @IBAction func toList(segue:UIStoryboardSegue){
