@@ -8,7 +8,32 @@
 
 import UIKit
 
-class AddTodoViewController: UIViewController  {
+class AddTodoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
+    
+    @IBOutlet weak var pic: UIPickerView!
+    private let values: [String] = ["Assignment", "Normal"]
+    var isAssignment: Bool = false
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return values.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return values[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if row == 0 {
+            isAssignment = true
+        }
+        else {
+            isAssignment = false
+        }
+    }
+    
     //@IBOutlet weak var TableView: UITableView!
     
     @IBOutlet weak var place: UITextField!
@@ -90,6 +115,8 @@ class AddTodoViewController: UIViewController  {
         super.viewDidLoad()
         let myManager:PlannerManager = PlannerManager.sharedInstance
         
+        //AllDaySwitch.isOn = true
+        
         // Do any additional setup after loading the view.
     }
     // MARK: - Navigation
@@ -129,9 +156,10 @@ class AddTodoViewController: UIViewController  {
             }
        
             var cshDate:CSHDate = CSHDate(y: dateYear, m: dateMonth, d:dateDay, wd: 0)
-            
-            var newTodo:Todo = Todo(title: todoTitle, detail: todoDetail, type: .Assignment)
-            
+            var newTodo:Todo = Todo(title: todoTitle, detail: todoDetail, type: .Normal)
+            if isAssignment {
+                newTodo = Todo(title: todoTitle, detail: todoDetail, type: .Assignment)
+            }
             myManager.AddTodo(newDate: cshDate, newTodo: newTodo)
             //myManager.SavePlanner()
         }
