@@ -385,7 +385,7 @@ class BlackboardManager{
         if user_info.ID != "" {
             userId=user_info.ID
         }
-        /*
+        
         load_posts()
         print("post num : \(posts_for_load.count)")
         for i in 0..<posts_for_load.count{
@@ -405,7 +405,7 @@ class BlackboardManager{
                 myAlarm.AddAnnouncement(newAnnouncement: tmpPost)
             }
          }
-         */
+         
     }
     
     func RenewUserId(){
