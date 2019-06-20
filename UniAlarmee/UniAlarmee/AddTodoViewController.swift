@@ -11,7 +11,7 @@ import UIKit
 class AddTodoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
     
     @IBOutlet weak var pic: UIPickerView!
-    private let values: [String] = ["Assignment", "Normal"]
+    private let values: [String] = ["Normal", "Assignment"]
     var isAssignment: Bool = false
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -27,10 +27,10 @@ class AddTodoViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if row == 0 {
-            isAssignment = true
+            isAssignment = false
         }
         else {
-            isAssignment = false
+            isAssignment = true
         }
     }
     

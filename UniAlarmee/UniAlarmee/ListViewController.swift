@@ -85,9 +85,16 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         //when click the todo cell
         if segue.identifier == "L2D" {
             let dest = segue.destination as! DetailViewController
-            dest.selectedTodo=self.selectedTodo
-            dest.selectedType="Todo"
+            
+            dest.selectedType=self.selectedType
             dest.backState="List"
+
+            if self.selectedType == "Todo" {
+                dest.selectedTodo = self.selectedTodo
+            }
+            else {
+                dest.selectedPost = self.selectedPost
+            }
         }
     }
 }

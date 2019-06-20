@@ -117,6 +117,7 @@ class PlannerManager{
     var planner:[[[OneDayPlanner?]]] = Array(repeating:Array(repeating:Array(repeating:nil, count:32),count:13),count:3000)
     
     private init(){
+        //reset_json()
         load_user()
         print(user_info)
         print("%%%%%%%%%%%%%%%%%%%%%%%%%%%")
@@ -553,6 +554,11 @@ var todos_for_save:[JSON_Todo] = []
 var posts_for_save:[JSON_Post] = []
 var todos_for_reset:[JSON_Todo] = []
 var posts_for_reset:[JSON_Post] = []
+
+func reset_json(){
+    UserDefaults.standard.set(try? PropertyListEncoder().encode(todos_for_reset), forKey: "todos")
+    UserDefaults.standard.set(try? PropertyListEncoder().encode(posts_for_reset), forKey: "posts")
+}
 
 func save_json(){
     UserDefaults.standard.set(try? PropertyListEncoder().encode(todos_for_save), forKey: "todos")

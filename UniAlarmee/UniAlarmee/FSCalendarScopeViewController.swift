@@ -176,7 +176,6 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
             let tmpList = oneDayPlanner.todoList.filter{$0.type.typeTitle == "Normal"}
             self.selectedTodo = tmpList[indexPath.row]
         }
-      
         performSegue(withIdentifier: "C2D", sender: nil)
     }
     
@@ -217,10 +216,9 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //when click the todo cell
         if segue.identifier == "C2D" {
-            print("OKOK")
             let dest = segue.destination as! DetailViewController
             dest.selectedTodo = self.selectedTodo!
-            dest.selectedType = self.selectedTodo!.type.typeTitle
+            dest.selectedType = "Todo"
             dest.backState="FSCalendar"
         }
         else{

@@ -12,7 +12,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var tableView: UITableView!
     
     var backState:String = ""
-    var selectedType:String = ""
+    var selectedType:String = "" //Todo or Post
     var selectedTodo:Todo = Todo(title: "1", detail: "1", type: .Normal)
     var selectedPost:Post = Post(id: "1", title: "1", detail: "1", type: .Normal)
 
@@ -51,14 +51,19 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
                         cell.textLabel!.text = "\(selectedTodo.dueDate!.year)/\(selectedTodo.dueDate!.month)/\(selectedTodo.dueDate!.day)"
                     }
                     else{
-                        cell.textLabel!.text = "nil"
+                        cell.textLabel!.text = "no due date"
                     }
                 }
                 else if indexPath.row == 1 {
-                    cell.textLabel!.text = "oh"
+                    if selectedTodo.dueTime != nil {
+                        cell.textLabel!.text = "\(selectedTodo.dueTime!.hour)h \(selectedTodo.dueTime!.minute)m"
+                    }
+                    else{
+                        cell.textLabel!.text = "no due time"
+                    }
                 }
                 else if indexPath.row == 2 {
-                    cell.textLabel!.text = "no"
+                    cell.textLabel!.text = "write memo"
                 }
             }
         }
@@ -77,14 +82,18 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
                         cell.textLabel!.text = "\(selectedPost.dueDate!.year)/\(selectedPost.dueDate!.month)/\(selectedPost.dueDate!.day)"
                     }
                     else{
-                        cell.textLabel!.text = "nil"
+                        cell.textLabel!.text = "no due date"
                     }
                 }
                 else if indexPath.row == 1 {
-                    cell.textLabel!.text = "oh"
-                }
+                    if selectedPost.dueTime != nil {
+                        cell.textLabel!.text = "\(selectedPost.dueTime!.hour)h \(selectedPost.dueTime!.minute)m"
+                    }
+                    else{
+                        cell.textLabel!.text = "no due time"
+                    }                }
                 else if indexPath.row == 2 {
-                    cell.textLabel!.text = "no"
+                    cell.textLabel!.text = "write memo"
                 }
             }
         }
@@ -99,11 +108,10 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        /*
-        print("fuckfuckfuck",selectedType, selectedTodo)
+   
         if selectedType == "Todo"{
             if section == 0 {
-                return self.selectedTodo!.type.typeTitle
+                return self.selectedTodo.type.typeTitle
             }
             else{
                 return "Times"
@@ -111,14 +119,13 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         }
         else{
             if section == 0 {
-                return self.selectedPost!.type.typeTitle
+                return self.selectedPost.type.typeTitle
             }
             else{
                 return "Times"
             }
         }
-        */
-        return "test"
+ 
     }
     
     override func viewDidLoad() {
