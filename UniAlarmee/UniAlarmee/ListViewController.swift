@@ -11,6 +11,11 @@ import UIKit
 class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     
+    var selectedTodo:Todo = Todo(title: "1", detail: "1", type: .Normal)
+    var selectedPost:Post = Post(id: "1", title: "1", detail: "1", type: .Normal)
+
+    var selectedType:String = ""
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -36,7 +41,20 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
         //}
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var myAlarm = AlarmManager.sharedInstance
+            
+        if indexPath.section == 0 {
+            self.selectedTodo = myAlarm.assignments[indexPath.row]
+            
+            self.selectedType = "Todo"
+        } else {
+            self.selectedPost = myAlarm.announcements[indexPath.row]
+            self.selectedType = "Post"
+        }
+        performSegue(withIdentifier: "L2D", sender: nil)
+
+    }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 25
     }
@@ -63,4 +81,13 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         print("asdfasdfasdfasdf")
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //when click the todo cell
+        if segue.identifier == "L2D" {
+            let dest = segue.destination as! DetailViewController
+            dest.selectedTodo=self.selectedTodo
+            dest.selectedType="Todo"
+            dest.backState="List"
+        }
+    }
 }

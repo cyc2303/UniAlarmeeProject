@@ -45,6 +45,8 @@
 		9582E97722928FFD00BD3F2A /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9582E97622928FFD00BD3F2A /* DataCenter.swift */; };
 		95BCE7B22296CBD8000B0690 /* AddTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCE7B12296CBD8000B0690 /* AddTodoViewController.swift */; };
 		AA1A6ECB2296F2DC00E0BD69 /* OpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA1A6ECA2296F2DC00E0BD69 /* OpenAPI.framework */; };
+		AA222DAB22BAF09F00EDAFF0 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA222DAA22BAF09F00EDAFF0 /* Detail.storyboard */; };
+		AA222DB122BAF87900EDAFF0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA222DB022BAF87900EDAFF0 /* DetailViewController.swift */; };
 		FA8AB6EE19030A3129480C20 /* Pods_UniAlarmee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 473A5E84B4E92A8E9F5F47F1 /* Pods_UniAlarmee.framework */; };
 /* End PBXBuildFile section */
 
@@ -205,6 +207,8 @@
 		95BCE7B12296CBD8000B0690 /* AddTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewController.swift; sourceTree = "<group>"; };
 		AA1A6EC92296F2CE00E0BD69 /* Briging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Briging-Header.h"; sourceTree = "<group>"; };
 		AA1A6ECA2296F2DC00E0BD69 /* OpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenAPI.framework; sourceTree = "<group>"; };
+		AA222DAA22BAF09F00EDAFF0 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		AA222DB022BAF87900EDAFF0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CF90D35CD2425CA0F8516849 /* Pods-UniAlarmee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniAlarmee.debug.xcconfig"; path = "Target Support Files/Pods-UniAlarmee/Pods-UniAlarmee.debug.xcconfig"; sourceTree = "<group>"; };
 		D216C155EF6BBB7733CA4521 /* Pods-UniAlarmee-UniAlarmeeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniAlarmee-UniAlarmeeTests.release.xcconfig"; path = "Target Support Files/Pods-UniAlarmee-UniAlarmeeTests/Pods-UniAlarmee-UniAlarmeeTests.release.xcconfig"; sourceTree = "<group>"; };
 		E4270A31805AC027983B3B75 /* Pods-UniAlarmeeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniAlarmeeUITests.debug.xcconfig"; path = "Target Support Files/Pods-UniAlarmeeUITests/Pods-UniAlarmeeUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -290,10 +294,12 @@
 				4E80EDBE22B25D80009DAC16 /* vc.swift */,
 				4E56F49822B2449800C9A1A2 /* WebViewController.swift */,
 				4EA1E6CB22B39A8A00D0B985 /* ListViewController.swift */,
+				AA222DB022BAF87900EDAFF0 /* DetailViewController.swift */,
 				4EA1E6C722B38D7A00D0B985 /* SettingViewController.swift */,
 				9582E90F22928D7A00BD3F2A /* Main.storyboard */,
 				4EA1E6C922B399C200D0B985 /* List.storyboard */,
 				4E56F49622B2438800C9A1A2 /* Calendar.storyboard */,
+				AA222DAA22BAF09F00EDAFF0 /* Detail.storyboard */,
 				4EE8A00B22B23B9C00B2C810 /* AddToDo.storyboard */,
 				9582E91422928D7B00BD3F2A /* LaunchScreen.storyboard */,
 				9582E91222928D7B00BD3F2A /* Assets.xcassets */,
@@ -657,6 +663,7 @@
 				9582E91622928D7B00BD3F2A /* LaunchScreen.storyboard in Resources */,
 				9582E91322928D7B00BD3F2A /* Assets.xcassets in Resources */,
 				4E56F49722B2438800C9A1A2 /* Calendar.storyboard in Resources */,
+				AA222DAB22BAF09F00EDAFF0 /* Detail.storyboard in Resources */,
 				4EA1E6CA22B399C200D0B985 /* List.storyboard in Resources */,
 				9582E91122928D7A00BD3F2A /* Main.storyboard in Resources */,
 			);
@@ -799,6 +806,7 @@
 				9582E96722928DCE00BD3F2A /* FSCalendarSeparatorDecorationView.m in Sources */,
 				9582E96622928DCE00BD3F2A /* FSCalendarWeekdayView.m in Sources */,
 				4EA1E6C822B38D8900D0B985 /* SettingViewController.swift in Sources */,
+				AA222DB122BAF87900EDAFF0 /* DetailViewController.swift in Sources */,
 				9582E96922928DCE00BD3F2A /* FSCalendarConstants.m in Sources */,
 				9582E96A22928DCE00BD3F2A /* FSCalendarCalculator.m in Sources */,
 				9582E96422928DCE00BD3F2A /* FSCalendar.m in Sources */,

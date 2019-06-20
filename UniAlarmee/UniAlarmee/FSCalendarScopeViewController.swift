@@ -16,6 +16,8 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
     @IBOutlet weak var animationSwitch: UISwitch!
     @IBOutlet weak var calendarHeightConstraint: NSLayoutConstraint!
     
+    var selectedTodo:Todo?=nil
+    
     fileprivate lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd"
@@ -131,6 +133,7 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
         
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var myManager:PlannerManager = PlannerManager.sharedInstance
         let selectedDate=myManager.selectedDate
@@ -161,11 +164,20 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
     // MARK:- UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        
+        var myManager:PlannerManager = PlannerManager.sharedInstance
+        let selectedDate=myManager.selectedDate
+        let oneDayPlanner = myManager.planner[selectedDate.year][selectedDate.month][selectedDate.day]!
+
         if indexPath.section == 0 {
-            let scope: FSCalendarScope = (indexPath.row == 0) ? .month : .week
-            self.calendar.setScope(scope, animated: self.animationSwitch.isOn)
+            let tmpList = oneDayPlanner.todoList.filter{$0.type.typeTitle == "Assignment"}
+            self.selectedTodo = tmpList[indexPath.row]
+        } else {
+            let tmpList = oneDayPlanner.todoList.filter{$0.type.typeTitle == "Normal"}
+            self.selectedTodo = tmpList[indexPath.row]
         }
+      
+        performSegue(withIdentifier: "C2D", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -201,5 +213,18 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
     
     @IBAction func testAPI(_ sender: Any) {
         print("result")
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //when click the todo cell
+        if segue.identifier == "C2D" {
+            print("OKOK")
+            let dest = segue.destination as! DetailViewController
+            dest.selectedTodo = self.selectedTodo!
+            dest.selectedType = self.selectedTodo!.type.typeTitle
+            dest.backState="FSCalendar"
+        }
+        else{
+            // go to addTodo
+        }
     }
 }

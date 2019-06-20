@@ -54,7 +54,6 @@
         <!--Setting-->
         <scene sceneID="RV7-eG-Kkw">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="urL-gS-w4N" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Setting" id="Ibe-5r-4mG" customClass="SettingViewController" customModule="UniAlarmee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gGx-of-4iO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -113,6 +112,7 @@
                         <segue destination="bVF-aK-sHQ" kind="show" identifier="LoginSelect" id="5Ui-Sm-lVD"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="urL-gS-w4N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="186.95652173913044" y="1773.8839285714284"/>
         </scene>

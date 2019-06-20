@@ -23,11 +23,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="CP1-gk-Atb" detailTextLabel="x19-sx-34B" style="IBUITableViewCellStyleValue1" id="g8n-VB-1cd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="cell" textLabel="CP1-gk-Atb" detailTextLabel="x19-sx-34B" style="IBUITableViewCellStyleValue1" id="g8n-VB-1cd">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g8n-VB-1cd" id="txd-Bl-4YP">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CP1-gk-Atb">
@@ -38,7 +38,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="x19-sx-34B">
-                                                    <rect key="frame" x="350" y="12" width="44" height="20.5"/>
+                                                    <rect key="frame" x="298" y="12" width="44" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -60,7 +60,7 @@
                     <tabBarItem key="tabBarItem" title="공지" id="1Iz-6a-mWv"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="공지" id="tL2-6q-9Mk">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZQA-Oq-wE4">
+                        <barButtonItem key="rightBarButtonItem" tag="100" systemItem="add" id="ZQA-Oq-wE4">
                             <connections>
                                 <segue destination="wiu-IT-j1F" kind="push" id="o3H-Fh-d77"/>
                             </connections>
@@ -70,11 +70,22 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="bb1-mM-TST" id="dGk-5u-EGW"/>
+                        <segue destination="t8M-NJ-irx" kind="push" identifier="L2D" id="uZU-52-WWO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eOw-AS-qti" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="95.652173913043484" y="208.92857142857142"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="ger-wK-Mjv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Detail" referencedIdentifier="Detail" id="t8M-NJ-irx" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="tBi-3J-j5Z"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LUa-RA-U6q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="938" y="38"/>
         </scene>
         <!--AddToDoList-->
         <scene sceneID="KPE-go-cmA">
