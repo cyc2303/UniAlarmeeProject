@@ -78,6 +78,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     
     @IBAction func refresh(_ sender: Any) {
+        tableView.reloadData()
         /* 블랙보드 API를 받아온 후 추후 설계할 예정
          let myBlackboard=BlackboardManager.sharedInstance
         tableView.reloadData()
