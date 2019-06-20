@@ -60,11 +60,18 @@
                     <tabBarItem key="tabBarItem" title="공지" id="1Iz-6a-mWv"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="공지" id="tL2-6q-9Mk">
-                        <barButtonItem key="rightBarButtonItem" tag="100" systemItem="add" id="ZQA-Oq-wE4">
-                            <connections>
-                                <segue destination="wiu-IT-j1F" kind="push" id="o3H-Fh-d77"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem tag="100" systemItem="add" id="ZQA-Oq-wE4">
+                                <connections>
+                                    <segue destination="wiu-IT-j1F" kind="push" id="o3H-Fh-d77"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="refresh" id="9dw-yE-8bF">
+                                <connections>
+                                    <action selector="refresh:" destination="OjW-g7-cVX" id="hz0-pj-jE0"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>

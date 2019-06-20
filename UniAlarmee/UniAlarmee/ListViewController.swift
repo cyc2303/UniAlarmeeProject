@@ -72,8 +72,17 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.reloadData()
-
+        
         // Do any additional setup after loading the view.
+    }
+    
+    
+    @IBAction func refresh(_ sender: Any) {
+        let myBlackboard=BlackboardManager.sharedInstance
+        tableView.reloadData()
+        if myBlackboard.userId != "" {
+            myBlackboard.RenewCourseInformation()
+        }
     }
     
     @IBAction func toList(segue:UIStoryboardSegue){

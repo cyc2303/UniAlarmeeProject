@@ -118,9 +118,7 @@ class PlannerManager{
     
     private init(){
         //reset_json()
-        load_user()
-        print(user_info)
-        print("%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+        let myBlackboard=BlackboardManager.sharedInstance
         
         load_todos()
         print(todos_for_load.count)
@@ -384,12 +382,16 @@ class BlackboardManager{
     var courses:[Course] = []
     init(){
         load_user()
+        if user_info.ID != "" {
+            userId=user_info.ID
+        }
+        /*
         load_posts()
         print("post num : \(posts_for_load.count)")
         for i in 0..<posts_for_load.count{
             posts_for_save.append(posts_for_load[i])
             save_posts()
-            
+ 
             print(posts_for_load[i])
             if posts_for_load[i].type == "Announcement"{
                 var tmpPost:Post = Post(id: posts_for_load[i].postId, title: posts_for_load[i].postTitle, detail: posts_for_load[i].postDetail, type: .Announcement)
@@ -402,7 +404,8 @@ class BlackboardManager{
                 var myAlarm:AlarmManager = AlarmManager.sharedInstance
                 myAlarm.AddAnnouncement(newAnnouncement: tmpPost)
             }
-        }
+         }
+         */
     }
     
     func RenewUserId(){
