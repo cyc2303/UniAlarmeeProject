@@ -471,7 +471,7 @@ class Course{
             if let result = response.result.value {
                 let JSON = result as! NSDictionary
                 let boardDictionary = JSON.object(forKey: "results") as! [NSDictionary]
-                if boardDictionary.count==0{
+                if boardDictionary.count == 0{
                     return
                 }
                 for board_idx in 0...0 {
