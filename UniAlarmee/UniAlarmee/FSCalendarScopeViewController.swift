@@ -160,7 +160,25 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
         }
         */
     }
-    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        // 데이터 삭제
+        var myManager:PlannerManager = PlannerManager.sharedInstance
+        let selectedDate=myManager.selectedDate
+        let oneDayPlanner = myManager.planner[selectedDate.year][selectedDate.month][selectedDate.day]!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        let deleteItem:Todo!
+        if indexPath.section == 0 {
+            let tmpList = oneDayPlanner.todoList.filter{$0.type.typeTitle == "Assignment"}
+            deleteItem = tmpList[indexPath.row]
+        } else {
+            let tmpList = oneDayPlanner.todoList.filter{$0.type.typeTitle == "Normal"}
+            deleteItem = tmpList[indexPath.row]
+        }
+        myManager.DeleteTodo(delTodo: deleteItem)
+        tableView.reloadData()
+        // 셀 삭제
+        //tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
     
     // MARK:- UITableViewDelegate
     

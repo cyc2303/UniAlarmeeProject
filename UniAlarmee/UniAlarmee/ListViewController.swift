@@ -11,7 +11,7 @@ import UIKit
 class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     
-    var selectedTodo:Todo = Todo(title: "1", detail: "1", type: .Normal)
+    var selectedTodo:Todo = Todo(title: "1", detail: "1", _createDate: CSHDate(y: 1997, m: 4, d: 7, wd: 1), type: .Normal)
     var selectedPost:Post = Post(id: "1", title: "1", detail: "1", type: .Normal)
 
     var selectedType:String = ""
@@ -41,6 +41,26 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
         //}
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        // 데이터 삭제
+        let myManager = PlannerManager.sharedInstance
+        let myAlarm:AlarmManager = AlarmManager.sharedInstance
+        let selectedDate=myManager.selectedDate
+        let oneDayPlanner = myManager.planner[selectedDate.year][selectedDate.month][selectedDate.day]!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        let deleteItem:Todo!
+
+        if indexPath.section == 0 {
+            deleteItem = myAlarm.assignments[indexPath.row]
+            myManager.DeleteTodo(delTodo: deleteItem)
+        }
+        tableView.reloadData()
+        // 셀 삭제
+        //tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var myAlarm = AlarmManager.sharedInstance
             

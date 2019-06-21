@@ -48,7 +48,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         var myboard:BlackboardManager = BlackboardManager.sharedInstance
         myboard.RenewUserId()
         hakbun = myboard.userId
-        print("###################################학번:"+hakbun)
+        print("#################비동기여서 업데이트 바로안됨주의##################학번:"+hakbun)
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(5)){
             //5초 기다린 후에 화면이 전환 됨
             self.performSegue(withIdentifier: "exit", sender: nil)

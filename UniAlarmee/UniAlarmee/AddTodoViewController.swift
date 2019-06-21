@@ -180,9 +180,9 @@ class AddTodoViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             }
        
             var cshDate:CSHDate = CSHDate(y: dateYear, m: dateMonth, d:dateDay, wd: 0)
-            var newTodo:Todo = Todo(title: todoTitle, detail: todoDetail, type: .Normal)
+            var newTodo:Todo = Todo(title: todoTitle, detail: todoDetail, _createDate: cshDate, type: .Normal)
             if isAssignment {
-                newTodo = Todo(title: todoTitle, detail: todoDetail, type: .Assignment)
+                newTodo = Todo(title: todoTitle, detail: todoDetail, _createDate:cshDate, type: .Assignment)
             }
             myManager.AddTodo(newDate: cshDate, newTodo: newTodo)
             //myManager.SavePlanner()

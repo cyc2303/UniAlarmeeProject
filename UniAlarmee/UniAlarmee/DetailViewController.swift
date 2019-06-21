@@ -13,7 +13,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     
     var backState:String = ""
     var selectedType:String = "" //Todo or Post
-    var selectedTodo:Todo = Todo(title: "1", detail: "1", type: .Normal)
+    var selectedTodo:Todo = Todo(title: "1", detail: "1", _createDate: CSHDate(y: 1997, m: 4, d: 7, wd: 1), type: .Normal)
     var selectedPost:Post = Post(id: "1", title: "1", detail: "1", type: .Normal)
 
     @IBAction func unwind(_ sender: Any) {
