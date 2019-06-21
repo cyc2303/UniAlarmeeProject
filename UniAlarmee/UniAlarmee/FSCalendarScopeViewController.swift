@@ -91,14 +91,15 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
     }
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        print("did select date \(self.dateFormatter.string(from: date))")
+        
+        //print("did select date \(self.dateFormatter.string(from: date))")
         let selectedDates = calendar.selectedDates.map({self.dateFormatter.string(from: $0)})
-        print("selected dates is \(selectedDates)")
+        //print("selected dates is \(selectedDates)")
         if monthPosition == .next || monthPosition == .previous {
             calendar.setCurrentPage(date, animated: true)
         }
-        
         let date_String =  selectedDates[0].components(separatedBy: "/")
+        //print(date_String)
         let date_Int = date_String.map({Int($0)!})
         let myManager:PlannerManager = PlannerManager.sharedInstance
         myManager.RenewSelectedDate( selected_date: CSHDate(y: date_Int[0], m: date_Int[1], d: date_Int[2], wd: 0))
@@ -107,7 +108,7 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
     }
 
     func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
-        print("\(self.dateFormatter.string(from: calendar.currentPage))")
+        print("current is: \(self.dateFormatter.string(from: calendar.currentPage))")
         
     }
     
@@ -118,7 +119,7 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(calendar.currentPage)
+        //print("now is: ", calendar.currentPage)
     
         let myManager:PlannerManager = PlannerManager.sharedInstance
         let selectedDate=myManager.selectedDate

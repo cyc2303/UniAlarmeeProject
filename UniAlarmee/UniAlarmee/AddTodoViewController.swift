@@ -10,9 +10,14 @@ import UIKit
 
 class AddTodoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
     
+
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    
     @IBOutlet weak var pic: UIPickerView!
     private let values: [String] = ["Normal", "Assignment"]
     var isAssignment: Bool = false
+
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -67,19 +72,19 @@ class AddTodoViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         var chars:[Character] = Array(date)
         var days:[Int]=[0,0,0]
         var idx:Int = 0
-        
+        print("day is : ", date)
         for i in 0..<chars.count{
-            if chars[i] == "." {
+            if chars[i] == "-" || chars[i] == " " {
                 idx = idx+1
                 if idx == 3 {
                     break
                 }
             }
-            else if chars[i] == " "{
-                continue
-            }
             else{
                 days[idx] = days[idx]*10 + Int(String(chars[i]))!
+            }
+            if chars[i] == " "{
+                continue
             }
         }
         return days
@@ -94,14 +99,16 @@ class AddTodoViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         let dateformatter : DateFormatter = DateFormatter()
         dateformatter.dateStyle = .medium
         dateformatter.timeStyle = .medium
-        let a = dateformatter.string(from: sender.date)
-        
-        dyear = parseDate(date:a)[0]
-        dmonth = parseDate(date: a)[1]
-        dday = parseDate(date: a)[2]
-        print(dyear)
-        print(dmonth)
-        print(dday)
+        //let a = dateformatter.string(from: sender.date)
+        let result:[Int]=parseDate(date:sender.date.description)
+        print(result)
+        dyear=result[0]
+        dmonth=result[1]
+        dday=result[2]
+
+       // print(result[0])
+        //print(dm)
+        //print(dday)
     }
     
     
@@ -111,14 +118,31 @@ class AddTodoViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var Todo_type: UISegmentedControl!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let myManager:PlannerManager = PlannerManager.sharedInstance
+        print("viewDidLoad:", myManager.selectedDate)
         
+        let calendar = Calendar(identifier: .gregorian)
+        //let comps = DateComponents(year:myManager.selectedDate.year, month:myManager.selectedDate.month, day:myManager.selectedDate.day)
+
+        let targetDate: Date? = {
+            let comps = DateComponents(calendar:calendar, year:myManager.selectedDate.year, month:myManager.selectedDate.month, day:myManager.selectedDate.day)
+            return comps.date
+        }()
+        print(datePicker.date)
+        datePicker.setDate(targetDate!, animated: true)
+        print(datePicker.date)
+ 
+    
         //AllDaySwitch.isOn = true
-        
         // Do any additional setup after loading the view.
     }
+    
+    
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -162,6 +186,7 @@ class AddTodoViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             }
             myManager.AddTodo(newDate: cshDate, newTodo: newTodo)
             //myManager.SavePlanner()
+            
         }
     }
 }

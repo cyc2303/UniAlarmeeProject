@@ -86,7 +86,7 @@
                                 <rect key="frame" x="0.0" y="308" width="414" height="168"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="5" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Cg-T5-Bdb">
+                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="1Cg-T5-Bdb">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="168"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <date key="date" timeIntervalSinceReferenceDate="582746005.74688804">
@@ -145,6 +145,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="datePicker" destination="1Cg-T5-Bdb" id="eTS-O9-SSu"/>
                         <outlet property="pic" destination="i0P-gH-2B3" id="evA-Nv-tXS"/>
                         <outlet property="place" destination="S61-Ma-zbv" id="xlP-nx-k3z"/>
                         <outlet property="tle" destination="F7J-6f-Ljc" id="WuG-Ha-Xwx"/>
@@ -231,7 +232,7 @@
                                 <rect key="frame" x="0.0" y="308" width="414" height="168"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="5" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKo-bF-7a5">
+                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="tKo-bF-7a5">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="168"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <date key="date" timeIntervalSinceReferenceDate="582746005.74688804">
