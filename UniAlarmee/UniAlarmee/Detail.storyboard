@@ -56,7 +56,7 @@
                         <viewLayoutGuide key="safeArea" id="KLi-Kv-gs7"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <navigationItem key="navigationItem" title="Detail" id="5wh-Uo-8Sr" userLabel="Detail" colorLabel="IBBuiltInLabel-Gray">
+                    <navigationItem key="navigationItem" title="상세 보기" id="5wh-Uo-8Sr" userLabel="Detail" colorLabel="IBBuiltInLabel-Gray">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" style="plain" id="bV8-2i-4oJ">
                             <connections>
                                 <action selector="unwind:" destination="35y-J8-zqS" id="lpc-6V-CRB"/>

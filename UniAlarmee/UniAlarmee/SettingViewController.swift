@@ -53,12 +53,13 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 25
+        return 20
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 25
+        return 20
     }
+ 
     //unwind segue
     @IBAction func log(segue:UIStoryboardSegue){
         self.tableView.reloadData()

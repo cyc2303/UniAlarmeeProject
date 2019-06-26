@@ -44,7 +44,7 @@ class FSCalendarScopeViewController: UIViewController, UITableViewDataSource, UI
         
         self.view.addGestureRecognizer(self.scopeGesture)
         self.tableView.panGestureRecognizer.require(toFail: self.scopeGesture)
-        self.calendar.scope = .week
+        self.calendar.scope = .month
         
         // For UITest
         self.calendar.accessibilityIdentifier = "calendar"
